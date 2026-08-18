@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Old-school quick-scroll grip: grey rounded tab with three lines; the RecyclerView fast scroller
-     stretches the tab to the list proportion and keeps the lines centred. -->
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item>
-        <shape android:shape="rectangle">
-            <solid android:color="#B3808080" />
-            <corners android:radius="4dp" />
-            <size
-                android:width="34dp"
-                android:height="52dp" />
-        </shape>
-    </item>
+<!-- Quick-scroll grip. RecyclerView requires the thumb to be a StateListDrawable (it casts on
+     inflate), so this selector wraps the grey tab; the layer-lists hold the actual look. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:width="20dp"
-        android:height="14dp"
-        android:drawable="@drawable/ic_grip_lines"
-        android:gravity="center" />
-</layer-list>
+        android:drawable="@drawable/fast_scroll_thumb_pressed"
+        android:state_pressed="true" />
+    <item android:drawable="@drawable/fast_scroll_thumb_normal" />
+</selector>
