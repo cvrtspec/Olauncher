@@ -57,6 +57,19 @@
             tools:text="Thu, 30 Dec" />
     </LinearLayout>
 
+    <!-- All apps (opens the app list; swipe up still works too) -->
+    <ImageView
+        android:id="@+id/allApps"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="62dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/all_apps"
+        android:padding="12dp"
+        android:src="@drawable/ic_folder" />
+
     <!-- Screen time-->
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvScreenTime"

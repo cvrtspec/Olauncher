@@ -46,7 +46,9 @@
     <string name="follow">Follow</string>
     <string name="email">Email</string>
     <string name="donate">Donate</string>
-    <string name="swipe_up_for_apps">1. Swipe up for all apps\n2. Long press anywhere for settings</string>
+    <string name="swipe_up_for_apps">1. Swipe up, or tap the folder icon, for all apps\n2. Settings: gear icon at the top of the app list\n3. Swipe right for the Oasis panel</string>
+    <string name="all_apps">All apps</string>
+    <string name="settings">Settings</string>
     <string name="apps_on_home_screen">Apps on home screen</string>
     <string name="daily_wallpaper_update">Daily new wallpaper</string>
     <string name="left">Left</string>

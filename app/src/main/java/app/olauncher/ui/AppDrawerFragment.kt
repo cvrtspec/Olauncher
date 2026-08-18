@@ -14,6 +14,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.activityViewModels
+import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -80,6 +81,8 @@ class AppDrawerFragment : BaseFragment() {
     }
 
     private fun initViews() {
+        // The settings gear only belongs to the plain app list, not to the "pick an app" pickers.
+        binding.appSettings.isVisible = flag == Constants.FLAG_LAUNCH_APP
         if (flag == Constants.FLAG_HIDDEN_APPS)
             binding.search.queryHint = getString(R.string.hidden_apps)
         else if (flag in Constants.FLAG_SET_HOME_APP_1..Constants.FLAG_SET_CALENDAR_APP)
@@ -306,6 +309,11 @@ class AppDrawerFragment : BaseFragment() {
     }
 
     private fun initClickListeners() {
+        binding.appSettings.setOnClickListener {
+            binding.search.hideKeyboard()
+            if (findNavController().currentDestination?.id == R.id.appListFragment)
+                findNavController().navigate(R.id.action_appListFragment_to_settingsFragment2)
+        }
         binding.appRename.setOnClickListener {
             val name = binding.search.query.toString().trim()
             if (name.isEmpty()) {
