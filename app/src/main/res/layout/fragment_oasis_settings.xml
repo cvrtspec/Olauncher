@@ -4,6 +4,7 @@
     android:id="@+id/oasisSettingsLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/primaryShadeDarkColor"
     tools:context=".ui.oasis.OasisSettingsFragment">
 
     <ScrollView
@@ -20,15 +21,16 @@
 
             <TextView
                 android:id="@+id/settingsTitle"
+                style="@style/TextSmallBold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingBottom="16dp"
                 android:text="@string/oasis_settings"
-                android:textSize="22sp"
-                android:textStyle="bold" />
+                android:textSize="22sp" />
 
             <TextView
                 android:id="@+id/toggleTodo"
+                style="@style/TextSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingVertical="14dp"
@@ -36,6 +38,7 @@
 
             <TextView
                 android:id="@+id/toggleNotes"
+                style="@style/TextSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingVertical="14dp"
@@ -43,6 +46,7 @@
 
             <TextView
                 android:id="@+id/toggleCalendar"
+                style="@style/TextSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingVertical="14dp"
@@ -50,6 +54,7 @@
 
             <TextView
                 android:id="@+id/togglePomodoro"
+                style="@style/TextSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingVertical="14dp"

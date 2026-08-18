@@ -9,10 +9,12 @@
     <androidx.appcompat.widget.AppCompatCheckBox
         android:id="@+id/todoCheck"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:buttonTint="?attr/primaryColor" />
 
     <TextView
         android:id="@+id/todoText"
+        style="@style/TextSmall"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -22,6 +24,7 @@
 
     <TextView
         android:id="@+id/todoDelete"
+        style="@style/TextSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"

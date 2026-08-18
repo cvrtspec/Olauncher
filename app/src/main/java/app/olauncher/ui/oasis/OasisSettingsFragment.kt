@@ -8,7 +8,6 @@ import android.widget.TextView
 import app.olauncher.R
 import app.olauncher.data.Prefs
 import app.olauncher.databinding.FragmentOasisSettingsBinding
-import app.olauncher.helper.getColorFromAttr
 import app.olauncher.ui.BaseFragment
 
 /** Per-block show/hide toggles for the Oasis panel. */
@@ -29,13 +28,6 @@ class OasisSettingsFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        val bg = requireContext().getColorFromAttr(android.R.attr.colorBackground)
-        val textColor = requireContext().getColorFromAttr(android.R.attr.textColorPrimary)
-        binding.oasisSettingsLayout.setBackgroundColor(bg)
-        binding.settingsTitle.setTextColor(textColor)
-        listOf(binding.toggleTodo, binding.toggleNotes, binding.toggleCalendar, binding.togglePomodoro)
-            .forEach { it.setTextColor(textColor) }
 
         bindRow(binding.toggleTodo, R.string.oasis_show_todo, prefs.oasisShowTodo) {
             prefs.oasisShowTodo = it

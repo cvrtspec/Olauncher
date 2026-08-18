@@ -10,12 +10,12 @@
 
     <TextView
         android:id="@+id/todoHeader"
+        style="@style/TextSmallBold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingBottom="8dp"
         android:text="@string/oasis_todo"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textSize="18sp" />
 
     <LinearLayout
         android:id="@+id/todoContainer"
@@ -25,6 +25,7 @@
 
     <TextView
         android:id="@+id/todoEmpty"
+        style="@style/TextSmallLight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingVertical="4dp"
@@ -40,6 +41,7 @@
 
         <EditText
             android:id="@+id/todoInput"
+            style="@style/TextSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -47,15 +49,17 @@
             android:imeOptions="actionDone"
             android:importantForAutofill="no"
             android:inputType="text|textCapSentences"
+            android:textColorHint="?attr/primaryColorTrans50"
             android:textSize="15sp" />
 
         <TextView
             android:id="@+id/todoAdd"
+            style="@style/TextSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:minWidth="40dp"
             android:gravity="center"
+            android:minWidth="40dp"
             android:padding="6dp"
             android:text="@string/oasis_add"
             android:textSize="20sp" />

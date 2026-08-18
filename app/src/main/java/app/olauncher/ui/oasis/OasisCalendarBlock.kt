@@ -13,7 +13,6 @@ import app.olauncher.R
 import app.olauncher.data.Prefs
 import app.olauncher.databinding.OasisCalendarBinding
 import app.olauncher.databinding.OasisEventRowBinding
-import app.olauncher.helper.getColorFromAttr
 import app.olauncher.helper.openCalendar
 import app.olauncher.helper.showToast
 import java.text.SimpleDateFormat
@@ -37,20 +36,8 @@ class OasisCalendarBlock(
     private val day: Calendar = Calendar.getInstance().apply { toDayStart() }
     private val dateFormat = SimpleDateFormat("d MMM ''yy", Locale.getDefault())
 
-    private val textColor get() = context.getColorFromAttr(android.R.attr.textColorPrimary)
-
     fun bind() {
         binding.apply {
-            calHeader.setTextColor(textColor)
-            calToday.setTextColor(textColor)
-            calOpen.setTextColor(textColor)
-            calRefresh.setTextColor(textColor)
-            calPrev.setTextColor(textColor)
-            calNext.setTextColor(textColor)
-            calDate.setTextColor(textColor)
-            calEmpty.setTextColor(textColor)
-            calPermission.setTextColor(textColor)
-
             calPrev.setOnClickListener { shiftDay(-1) }
             calNext.setOnClickListener { shiftDay(1) }
             calToday.setOnClickListener {
@@ -137,9 +124,7 @@ class OasisCalendarBlock(
         rows.forEach { e ->
             val row = OasisEventRowBinding.inflate(inflater, container, false)
             row.eventTime.text = if (e.allDay) allDay else timeFormat.format(Date(e.begin))
-            row.eventTime.setTextColor(textColor)
             row.eventTitle.text = e.title.ifBlank { untitled }
-            row.eventTitle.setTextColor(textColor)
             container.addView(row.root)
         }
     }

@@ -14,12 +14,12 @@ import androidx.navigation.fragment.findNavController
 import app.olauncher.R
 import app.olauncher.data.Prefs
 import app.olauncher.databinding.FragmentOasisBinding
-import app.olauncher.helper.getColorFromAttr
 import app.olauncher.ui.BaseFragment
 
 /**
- * Oasis panel — a single scrollable page reached by swiping right on the home screen.
- * Hosts the To-do, Notes, Calendar and Pomodoro blocks and a link to the Oasis settings.
+ * Oasis panel — a single scrollable page reached by swiping right on the home screen; swiping
+ * left on the panel returns home. Hosts the To-do, Notes, Calendar and Pomodoro blocks and a
+ * link to the Oasis settings.
  */
 class OasisFragment : BaseFragment() {
 
@@ -49,11 +49,9 @@ class OasisFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val bg = requireContext().getColorFromAttr(android.R.attr.colorBackground)
-        val textColor = requireContext().getColorFromAttr(android.R.attr.textColorPrimary)
-        binding.oasisLayout.setBackgroundColor(bg)
-        binding.oasisTitle.setTextColor(textColor)
-        binding.oasisSettingsButton.setTextColor(textColor)
+        // Swipe left anywhere on the panel returns to the home screen (the panel is opened by
+        // swiping right on the home screen).
+        binding.oasisLayout.onSwipeLeft = { close() }
 
         // Keep content clear of the status bar, navigation bar and keyboard.
         val basePaddingTop = binding.oasisContent.paddingTop
@@ -103,6 +101,12 @@ class OasisFragment : BaseFragment() {
     private fun openSettings() {
         if (findNavController().currentDestination?.id == R.id.oasisFragment) {
             findNavController().navigate(R.id.action_oasisFragment_to_oasisSettingsFragment)
+        }
+    }
+
+    private fun close() {
+        if (findNavController().currentDestination?.id == R.id.oasisFragment) {
+            findNavController().popBackStack()
         }
     }
 

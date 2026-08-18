@@ -1,17 +1,14 @@
 package app.olauncher.ui.oasis
 
 import android.content.Context
-import android.content.res.ColorStateList
 import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.inputmethod.EditorInfo
 import android.widget.TextView
 import androidx.core.view.isVisible
-import androidx.core.widget.CompoundButtonCompat
 import app.olauncher.data.Prefs
 import app.olauncher.databinding.OasisTodoBinding
 import app.olauncher.databinding.OasisTodoRowBinding
-import app.olauncher.helper.getColorFromAttr
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -29,17 +26,8 @@ class OasisTodoBlock(
 
     private val items = mutableListOf<Item>()
 
-    private val textColor get() = context.getColorFromAttr(android.R.attr.textColorPrimary)
-    private val hintColor get() = context.getColorFromAttr(android.R.attr.textColorHint)
-
     fun bind() {
         binding.apply {
-            todoHeader.setTextColor(textColor)
-            todoEmpty.setTextColor(textColor)
-            todoAdd.setTextColor(textColor)
-            todoInput.setTextColor(textColor)
-            todoInput.setHintTextColor(hintColor)
-
             todoAdd.setOnClickListener { addItem() }
             todoInput.setOnEditorActionListener { _, actionId, _ ->
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
@@ -78,10 +66,8 @@ class OasisTodoBlock(
         items.forEach { item ->
             val row = OasisTodoRowBinding.inflate(inflater, container, false)
             row.todoText.text = item.text
-            row.todoText.setTextColor(textColor)
             applyDoneStyle(row.todoText, item.done)
 
-            CompoundButtonCompat.setButtonTintList(row.todoCheck, ColorStateList.valueOf(textColor))
             row.todoCheck.isChecked = item.done
             row.todoCheck.setOnCheckedChangeListener { _, checked ->
                 item.done = checked
@@ -89,7 +75,6 @@ class OasisTodoBlock(
                 applyDoneStyle(row.todoText, checked)
             }
 
-            row.todoDelete.setTextColor(textColor)
             row.todoDelete.setOnClickListener {
                 items.remove(item)
                 persist()

@@ -9,7 +9,6 @@ import android.widget.TextView
 import app.olauncher.R
 import app.olauncher.data.Prefs
 import app.olauncher.databinding.OasisPomodoroBinding
-import app.olauncher.helper.getColorFromAttr
 import app.olauncher.helper.showToast
 
 /**
@@ -29,20 +28,8 @@ class OasisPomodoroBlock(
     private var running = false
     private var timer: CountDownTimer? = null
 
-    private val textColor get() = context.getColorFromAttr(android.R.attr.textColorPrimary)
-    private val hintColor get() = context.getColorFromAttr(android.R.attr.textColorHint)
-
     fun bind() {
         binding.apply {
-            pomoHeader.setTextColor(textColor)
-            pomoWork.setTextColor(textColor)
-            pomoShort.setTextColor(textColor)
-            pomoLong.setTextColor(textColor)
-            pomoTime.setTextColor(textColor)
-            pomoStart.setTextColor(textColor)
-            pomoReset.setTextColor(textColor)
-            pomoHint.setTextColor(hintColor)
-
             pomoWork.setOnClickListener { selectMode(Mode.WORK) }
             pomoShort.setOnClickListener { selectMode(Mode.SHORT) }
             pomoLong.setOnClickListener { selectMode(Mode.LONG) }
