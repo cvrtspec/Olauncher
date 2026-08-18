@@ -3,7 +3,6 @@
     <string name="app">App</string>
     <string name="set_as_default_launcher">Als Standard-Launcher festlegen</string>
     <string name="set_as_default_launcher_u"><u>Als Standard-Launcher festlegen</u></string>
-    <string name="set_as_default_launcher_first">Als Standard-Launcher festlegen</string>
     <string name="_0">0</string>
     <string name="_1">1</string>
     <string name="_2">2</string>
@@ -17,8 +16,6 @@
     <string name="okay">Okay</string>
     <string name="cool">Cool!</string>
     <string name="tip_start_typing_for_rename">Tipp: Beginnen Sie mit der Eingabe der Option „App RENAME“.</string>
-    <string name="your_wallpaper_will_update_shortly">Ihr Hintergrundbild wird in Kürze aktualisiert</string>
-    <string name="olauncher_is_not_default_launcher">Olauncher ist kein Standard-Launcher. Die tägliche Aktualisierung des Hintergrundbilds schlägt möglicherweise fehl.</string>
     <string name="long_press_to_enable">Zum Aktivieren lange drücken</string>
     <string name="no_hidden_apps">Keine versteckten Apps</string>
     <string name="hidden_apps">Versteckte Apps</string>
@@ -69,7 +66,6 @@
     <string name="donate">Spenden</string>
     <string name="swipe_up_for_apps">1. Für alle Apps nach oben wischen\n2. Drücken Sie lange auf eine beliebige Stelle, um Einstellungen vorzunehmen</string>
     <string name="apps_on_home_screen">Apps auf dem Startbildschirm</string>
-    <string name="daily_wallpaper_update">Täglich neue Hintergrundbilder</string>
     <string name="left">Links</string>
     <string name="right">Rechts</string>
     <string name="center">Mitte</string>
@@ -100,8 +96,6 @@
         \n\nHinweis: Es werden keine Daten zur App-Nutzung gesammelt. Alles wird auf Ihrem Gerät verarbeitet.</string>
     <string name="pro_message">Olauncher hat auch eine Pro-Version namens Pro Launcher. Sie bietet zusätzliche Funktionen wie Wetter, Widgets, Schriftarten, Ordner, AMOLED-Hintergründe usw.
         \n\nEs ist auch der beste Weg, die Entwickler von Olauncher zu unterstützen. Schau es dir an!</string>
-    <string name="wallpaper_message">Olauncher bietet täglich wunderschöne neue Wallpapers. Verleihe deinem Homescreen jeden Tag ein frisches Aussehen – kostenlos!
-        \n\nMöchtest du es ausprobieren?</string>
     <string name="accessibility_service_description">Die Zugriffsberechtigung ist erforderlich, um das Sperren durch Doppeltippen und die Home-Taste zum Anzeigen der letzten Apps zu ermöglichen. Die von Olauncher über diesen Dienst erfassten Daten verlassen Ihr Gerät nicht.</string>
     <string name="support_olauncher_for_free">Unterstützen Sie Olauncher kostenlos, indem Sie unseren Amazon-Partnerlink verwenden.</string>
     <string name="support_olauncher_message">Jedes Mal, wenn Sie über unseren Link etwas kaufen, erhalten wir eine kleine Provision. Bitte speichern Sie den Link und verwenden Sie ihn bei jedem Online-Einkauf. Dan­ke­schön!</string>
@@ -125,7 +119,6 @@
     <string name="screen_time">Bildschirmzeit</string>
     <string name="about_olauncher">Über Olauncher</string>
     <string name="learn_more">Erfahren Sie mehr</string>
-    <string name="did_you_know">Wussten Sie?</string>
     <string name="leave_a_review">Rezension</string>
     <string name="review_message">Olauncher ist und bleibt völlig kostenlos. Es gibt keine Werbung. Es werden keine Daten erfasst. Am wichtigsten ist, dass es Ihnen dabei hilft, Ihre Bildschirmzeit zu verkürzen und ein gesünderes digitales Leben zu führen.
         \n\nWir glauben, dass der Wechsel zu einem Minimal Launcher eine ausgezeichnete Entscheidung ist. Obwohl wir offensichtlich voreingenommen sind, hoffen wir, dass Ihnen die Erfahrung gefällt. Teilen Sie uns gerne Ihre Gedanken mit!</string>
