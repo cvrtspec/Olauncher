@@ -35,15 +35,12 @@
         android:visibility="gone"
         tools:visibility="visible">
 
-        <TextClock
+        <app.olauncher.ui.AnalogClockView
             android:id="@+id/clock"
-            style="@style/TextDefault"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-light"
-            android:format12Hour="h:mm"
-            android:textSize="@dimen/time_size"
-            tools:text="02:34" />
+            android:layout_width="@dimen/analog_clock_size"
+            android:layout_height="@dimen/analog_clock_size"
+            android:layout_marginBottom="6dp"
+            android:contentDescription="@string/time" />
 
         <TextView
             android:id="@+id/date"
