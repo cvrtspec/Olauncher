@@ -16,20 +16,14 @@
     <string name="swipe_down_for">下にスワイプして</string>
     <string name="search">検索</string>
     <string name="notifications">通知</string>
-    <string name="accessibility_disclosure">ダブルタップでロックまたはホームボタンで最近のアプリのジェスチャーを有効にするには、デバイスの設定で Olauncher のアクセシビリティ サービスをオンにしてください。\n\nこのサービスはこれらのジェスチャーにのみ使用されます。アクセシビリティ サービスはデータを収集したり共有したりすることはありません。</string>
     <string name="accept">受け入れる</string>
     <string name="double_tap_lock">ダブルタップしてロックします</string>
     <string name="home_button_show_recents">ホームボタンで最近のアプリ</string>
-    <string name="enable">有効</string>
-    <string name="disable">無効にする</string>
-    <string name="not_working"><u>機能しない場合</u></string>
     <string name="info">情報</string>
     <string name="delete">消去</string>
     <string name="text_size">文字サイズ</string>
     <string name="enabled">有効</string>
     <string name="disabled">無効</string>
-    <string name="please_turn_on_double_tap_to_unlock">ダブルタップしてロックをオンにしてください</string>
-    <string name="launcher_failed_to_lock_device">Olauncher がデバイスをロックできませんでした。 アプリの設定を確認してください。</string>
     <string name="long_press_to_select_app">長押ししてアプリを選択します</string>
     <string name="unable_to_open_app">アプリ情報を開けません</string>
     <string name="copied">コピーされました</string>
@@ -38,8 +32,6 @@
     <string name="adapter_show">見せる</string>
     <string name="adapter_hide">隠れる</string>
     <string name="app_text_color">テキストの色</string>
-    <string name="double_tap_to_lock_screen">ダブルタップしてロックします</string>
-    <string name="admin_permission_message">Olauncher は、ロック画面のアクセス許可を責任を持って使用することを約束します。 Olauncher はデータを収集または共有しません。</string>
     <string name="about">アバウト</string>
     <string name="off">オフ</string>
     <string name="on">オン</string>
@@ -75,7 +67,6 @@
     <string name="keyboard_message">こんにちは、キーボードは Olauncher でアプリを見つけて起動する最も速い方法です。もう数日間これをオンにしてから判断していただくようお願いできますか?選択は常にあなた次第です。</string>
     <string name="pro_message">OlauncherにはPro Launcherというプロ版もあります。天気、ウィジェット、フォント、フォルダー、AMOLED壁紙などの追加機能があります。
         \n\nOlauncherの開発者をサポートするための最良の方法でもあります。チェックしてみてください！</string>
-    <string name="accessibility_service_description">ダブルタップしてロックおよびホームボタンで最近のアプリを表示するには、アクセシビリティ許可が必要です。このサービスを通じて Olauncher が取得したデータは、デバイスから流出することはありません。</string>
     <string name="support_olauncher_for_free">Amazon アフィリエイト リンクを使用して、Olauncher を無料でサポートしてください。</string>
     <string name="support_olauncher_message">あなたが私たちのリンクを使用して何かを購入するたびに、私たちは少額の手数料を受け取ります。リンクを保存し、オンライン ショッピングの際には必ずご利用ください。 ありがとう！</string>
     <string name="open">リンクを開く</string>

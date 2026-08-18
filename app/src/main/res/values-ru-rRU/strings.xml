@@ -4,8 +4,6 @@
     <string name="set_as_default_launcher">Сделать лаунчером по умолчанию</string>
     <string name="set_as_default_launcher_u"><u>Сделать лаунчером по умолчанию</u></string>
     <string name="app_text_color">Цвет текста</string>
-    <string name="double_tap_to_lock_screen">Блокировка двойным тапом</string>
-    <string name="admin_permission_message">Olauncher обещает ответственно использовать разрешение экрана блокировки. Olauncher не собирает и не передает какие-либо данные.</string>
     <string name="about">О нас</string>
     <string name="off">Выкл</string>
     <string name="on">Вкл</string>
@@ -46,7 +44,6 @@
         \n\nВыбор всегда за вами.</string>
     <string name="pro_message">У Olauncher также есть профессиональная версия под названием Pro Launcher. Она имеет дополнительные функции, такие как погода, виджеты, шрифты, папки, обои AMOLED и так далее.
         \n\nЭто также лучший способ поддержать разработчиков Olauncher. Ознакомьтесь!</string>
-    <string name="accessibility_service_description">Разрешение на доступ требуется, чтобы включить двойное касание для блокировки и кнопку «Домой» для показа недавних приложений. Любые данные, полученные Olauncher через этот сервис, не покинут ваше устройство.</string>
     <string name="support_olauncher_for_free">Поддержите Olauncher бесплатно, используя нашу партнерскую ссылку Amazon.</string>
     <string name="support_olauncher_message">Каждый раз, когда вы покупаете что-то по нашей ссылке, мы получаем небольшую комиссию. Пожалуйста, сохраните ссылку и используйте ее при совершении покупок в Интернете.\nСпасибо!</string>
     <string name="open">Открыть ссылку</string>
@@ -64,20 +61,14 @@
     <string name="swipe_down_for">Проведите вниз для</string>
     <string name="search">Поиск</string>
     <string name="notifications">Уведомления</string>
-    <string name="accessibility_disclosure">Включите службу специальных возможностей Olauncher в настройках вашего устройства, чтобы включить жесты двойного касания для блокировки или кнопки «Домой» для недавних приложений.\n\nОбратите внимание, что эта служба используется только для этих жестов. Наша служба специальных возможностей не собирает и не передаёт никакие данные.</string>
     <string name="accept">Принять</string>
     <string name="double_tap_lock">Блокировка двойным касанием</string>
     <string name="home_button_show_recents">Кнопка домой для недавних</string>
-    <string name="enable">Включить</string>
-    <string name="disable">Выключить</string>
-    <string name="not_working"><u>Не работает?</u></string>
     <string name="info">Информация</string>
     <string name="delete">Удалить</string>
     <string name="text_size">Размер текста</string>
     <string name="enabled">Включено</string>
     <string name="disabled">Выключено</string>
-    <string name="please_turn_on_double_tap_to_unlock">Пожалуйста, включите двойное касание для блокировки</string>
-    <string name="launcher_failed_to_lock_device">Olauncher не удалось заблокировать устройство.\nПожалуйста, проверьте настройки вашего приложения.</string>
     <string name="long_press_to_select_app">Длительное нажатие для выбора приложения</string>
     <string name="unable_to_open_app">Не удалось открыть информацию о приложении</string>
     <string name="copied">Скопировано</string>

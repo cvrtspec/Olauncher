@@ -3,8 +3,6 @@
     <string name="set_as_default_launcher">הגדרה בתור משגר ברירת המחדל</string>
     <string name="set_as_default_launcher_u">הגדר תחילה את Olauncher כברירת מחדל</string>
     <string name="app_text_color">צבע הטקסט</string>
-    <string name="double_tap_to_lock_screen">נעילת המסך בהקשה כפולה</string>
-    <string name="admin_permission_message">יישום Olauncher ישתמש בהרשאה של נעילת המסך באופן מתון. יישום Olauncher אינו אוסף או משתף נתונים כלל.</string>
     <string name="about">מידע כללי</string>
     <string name="off">כבוי</string>
     <string name="on">מופעל</string>
@@ -42,7 +40,6 @@
         \n\nהיית רוצה אולי לספר לחברים שלך על Olauncher? זה יכול לסייע לנו מאוד. תודה רבה!</string>
     <string name="keyboard_message">היי, יותר מהיר למצוא ולפתוח יישומים ב־Olauncher בעזרת ההקלדה. אולי בכל זאת היית רוצה להשאיר את ההגדרה הזאת ולתת לה עוד הזדמנות?
         \n\nThe choice is always yours.</string>
-    <string name="accessibility_service_description">הרשאת הנגישות נחוצה להפעלת הנעילה בהקשה כפולה ולחצן הבית להצגת אפליקציות אחרונות. כל הנתונים שייאספו על ידי Olauncher דרך השירות הזה לא יועברו הלאה ממכשירך.</string>
     <string name="support_olauncher_for_free">אפשר לתמוך ב־Olauncher מבלי לשלם שקל, בעזרת שימוש בקישור ה־Amazon affiliate שלנו.</string>
     <string name="support_olauncher_message">על כל רכישה שתבוצע דרך הקישור שלנו אנחנו נקבל עמלה קטנה. נשמח אם תשמרו את הקישור ותשתמשו בו בקניות מהאינטרנט.\nתודה רבה!</string>
     <string name="open">פתיחת קישור</string>
@@ -59,20 +56,14 @@
     <string name="swipe_down_for">פעולה בעת החלקה למטה</string>
     <string name="search">חיפוש</string>
     <string name="notifications">התראות</string>
-    <string name="accessibility_disclosure">נא להפעיל את שירות הנגישות של Olauncher בהגדרות המכשיר שלך כדי להפעיל את מחוות הנעילה בהקשה כפולה או לחצן הבית לאפליקציות אחרונות.\n\nשימו לב ששירות זה משמש רק למחוות אלה. שירות הנגישות שלנו אינו אוסף או משתף נתונים כלשהם.</string>
     <string name="accept">הסכמה</string>
     <string name="double_tap_lock">לחיצה כפולה לנעילת המסך</string>
     <string name="home_button_show_recents">כפתור הבית לאחרונים</string>
-    <string name="enable">הפעלה</string>
-    <string name="disable">השבתהe</string>
-    <string name="not_working"><u>לא עובד?</u></string>
     <string name="info">מידע</string>
     <string name="delete">מחיקה</string>
     <string name="text_size">גודל הטקסט</string>
     <string name="enabled">מופעל</string>
     <string name="disabled">מושבת</string>
-    <string name="please_turn_on_double_tap_to_unlock">נא להפעיל את מחוות ההקשה הכפולה בשביל לצורך הנעילה</string>
-    <string name="launcher_failed_to_lock_device">ל־Olauncher אין אפשרות לנעול את המסך.\nנא לבדוק את הגדרות היישום.</string>
     <string name="long_press_to_select_app">לבחירת יישום יש ללחוץ לחיצה ארוכה</string>
     <string name="unable_to_open_app">אין אפשרות לפתוח את המידע על היישום</string>
     <string name="copied">הועתק ללוח</string>

@@ -4,8 +4,6 @@
     <string name="set_as_default_launcher">Beállítás alapért. indítóként</string>
     <string name="set_as_default_launcher_u"><u>Beállítás alapért. indítóként</u></string>
     <string name="app_text_color">Szövegszín</string>
-    <string name="double_tap_to_lock_screen">Dupla koppintás a képernyő lezárásához</string>
-    <string name="admin_permission_message">Az Olauncher vállalja, hogy felelősségteljesen használja a képernyő lezárásához szükséges engedélyt. Az Olauncher nem gyűjt vagy oszt meg semmilyen adatot.</string>
     <string name="about">Névjegy</string>
     <string name="off">Ki</string>
     <string name="on">Be</string>
@@ -47,7 +45,6 @@
         \n\nA választás mindig az Öné.</string>
     <string name="pro_message">Az Olauncher-nek van egy pro verziója is, amely Pro Launcher néven ismert. További funkciókat kínál, mint például időjárás, widgetek, betűtípusok, mappák, AMOLED háttérképek stb.
         \n\nEz a legjobb módja annak, hogy támogassa az Olauncher fejlesztőit. Tekintse meg őket!</string>
-    <string name="accessibility_service_description">A hozzáférhetőségi engedély szükséges a dupla koppintás általi zároláshoz és a kezdőgomb megnyomásával a legutóbbi alkalmazások megjelenítéséhez. Az Olauncher által ezen a szolgáltatáson keresztül megszerzett adatok nem hagyják el a készüléket.</string>
     <string name="support_olauncher_for_free">Támogasson minket ingyenesen az Amazon affiliate linkünk használatával.</string>
     <string name="support_olauncher_message">Minden alkalommal, amikor vásárol valamit a linkünket használva, egy kis jutalékot kapunk. Kérjük, mentse el a linket, és használja fel, amikor csak online vásárol.
         \n\nKöszönjük!</string>
@@ -66,20 +63,14 @@
     <string name="swipe_down_for">Simítson lefelé a következőért</string>
     <string name="search">Keresés</string>
     <string name="notifications">Értesítések</string>
-    <string name="accessibility_disclosure">Kérjük, kapcsolja be az Olauncher hozzáférhetőségi szolgáltatását az eszköz beállításaiban a dupla koppintás zároláshoz vagy a kezdőgomb a legutóbbi alkalmazásokhoz gesztusok engedélyezéséhez.\n\nKérjük, vegye figyelembe, hogy ez a szolgáltatás csak ezekhez a gesztusokhoz használatos. Hozzáférhetőségi szolgáltatásunk nem gyűjt és nem oszt meg semmilyen adatot.</string>
     <string name="accept">Elfogad</string>
     <string name="double_tap_lock">Dupla koppintás a lezáráshoz</string>
     <string name="home_button_show_recents">Kezdőlap gomb a legutóbbiakhoz</string>
-    <string name="enable">Engedélyezés</string>
-    <string name="disable">Letiltás</string>
-    <string name="not_working"><u>Nem működik?</u></string>
     <string name="info">Információ</string>
     <string name="delete">Törlés</string>
     <string name="text_size">Szövegméret</string>
     <string name="enabled">Engedélyezve</string>
     <string name="disabled">Letiltva</string>
-    <string name="please_turn_on_double_tap_to_unlock">Kérjük, kapcsolja be a dupla koppintást a lezáráshoz</string>
-    <string name="launcher_failed_to_lock_device">Az Olauncher nem tudta lezárni az eszközt.\nKérjük, ellenőrizze az alkalmazás beállításait.</string>
     <string name="long_press_to_select_app">Hosszan nyomva tartás az alkalmazás kiválasztásához</string>
     <string name="unable_to_open_app">Nem lehet megnyitni az alkalmazás infóit</string>
     <string name="copied">Másolva</string>

@@ -13,7 +13,6 @@ class Prefs(context: Context) {
     private val FIRST_SETTINGS_OPEN = "FIRST_SETTINGS_OPEN"
     private val FIRST_HIDE = "FIRST_HIDE"
     private val USER_STATE = "USER_STATE"
-    private val LOCK_MODE = "LOCK_MODE"
     private val HOME_APPS_NUM = "HOME_APPS_NUM"
     private val AUTO_SHOW_KEYBOARD = "AUTO_SHOW_KEYBOARD"
     private val KEYBOARD_MESSAGE = "KEYBOARD_MESSAGE"
@@ -127,10 +126,6 @@ class Prefs(context: Context) {
     var userState: String
         get() = prefs.getString(USER_STATE, Constants.UserState.START).toString()
         set(value) = prefs.edit { putString(USER_STATE, value).apply() }
-
-    var lockModeOn: Boolean
-        get() = prefs.getBoolean(LOCK_MODE, false)
-        set(value) = prefs.edit { putBoolean(LOCK_MODE, value).apply() }
 
     // ----- Oasis panel -----
     // JSON blobs (org.json) for the to-do list and the notes pages

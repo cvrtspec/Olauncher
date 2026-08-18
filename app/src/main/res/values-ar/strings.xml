@@ -15,21 +15,14 @@
     <string name="swipe_down_for">اسحب لأسفل من أجل</string>
     <string name="search">يبحث</string>
     <string name="notifications">إشعارات</string>
-    <string name="accessibility_disclosure">يرجى تشغيل خدمة الوصول في Olauncher في إعدادات جهازك لتمكين إيماءة النقر المزدوج للقفل أو زر الشاشة الرئيسية لعرض التطبيقات الأخيرة.
-    \n\nيرجى ملاحظة أن هذه الخدمة تُستخدم فقط لهذه الإيماءات. خدمة الوصول لدينا لا تجمع أو تشارك أي بيانات.</string>
     <string name="accept">يقبل</string>
     <string name="double_tap_lock">النقر المزدوج للقفل</string>
     <string name="home_button_show_recents">زر الرئيسية للتطبيقات الأخيرة</string>
-    <string name="enable">تشغيل</string>
-    <string name="disable">إيقاف</string>
-    <string name="not_working">لا يعمل؟</string>
     <string name="info">معلومات</string>
     <string name="delete">يمسح</string>
     <string name="text_size">حجم الخط</string>
     <string name="enabled">ممكّن</string>
     <string name="disabled">مُطفأ</string>
-    <string name="please_turn_on_double_tap_to_unlock">يرجى تشغيل النقر المزدوج لفتح القفل</string>
-    <string name="launcher_failed_to_lock_device">فشل Olauncher في قفل الجهاز. يرجى التحقق من إعدادات التطبيق الخاص بك.</string>
     <string name="long_press_to_select_app">اضغط مطوّلًا لاختيار التطبيق</string>
     <string name="unable_to_open_app">تعذر فتح التطبيق</string>
     <string name="copied">نُسخ</string>
@@ -38,8 +31,6 @@
     <string name="adapter_show">يعرض</string>
     <string name="adapter_hide">يخفي</string>
     <string name="app_text_color">لون الخط</string>
-    <string name="double_tap_to_lock_screen">انقر مرتين لقفل الشاشة</string>
-    <string name="admin_permission_message">يعد Olauncher باستخدام إذن قفل الشاشة بشكل مسؤول. لا يقوم Olauncher بجمع أو مشاركة أي بيانات.</string>
     <string name="about">حول</string>
     <string name="off">ﻻ</string>
     <string name="on">نعم</string>
@@ -74,7 +65,6 @@
     <string name="keyboard_message">مرحبًا ، لوحة المفاتيح هي أسرع طريقة للعثور على التطبيقات وتشغيلها في Olauncher. هل يمكننا أن نطلب منك الاحتفاظ بهذا الأمر لبضعة أيام أخرى ثم اتخاذ القرار؟ الاختيار دائما لك.</string>
     <string name="pro_message">يحتوي Olauncher أيضًا على إصدار احترافي يسمى Pro Launcher. يحتوي على ميزات إضافية مثل الطقس، والأدوات، والخطوط، والمجلدات، وخلفيات AMOLED، وما إلى ذلك.
         \n\nإنه أيضًا أفضل طريقة لدعم مطوري Olauncher. تحقق من ذلك!</string>
-    <string name="accessibility_service_description">إذن الوصول مطلوب لتمكين النقر المزدوج للقفل وزر الشاشة الرئيسية لعرض التطبيقات الأخيرة. أي بيانات حصل عليها Olauncher عبر هذه الخدمة لن تترك جهازك.</string>
     <string name="support_olauncher_for_free">ادعم Olauncher مجانًا باستخدام رابط الشراكة التابع لشركة Amazon.</string>
     <string name="support_olauncher_message">في كل مرة تشتري شيئًا باستخدام الرابط الخاص بنا ، نحصل على عمولة صغيرة. يرجى حفظ الرابط واستخدامه في أي وقت تتسوق فيه عبر الإنترنت. شكرًا لك!</string>
     <string name="open">افتح الرابط</string>

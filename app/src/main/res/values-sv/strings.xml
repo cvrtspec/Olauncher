@@ -4,8 +4,6 @@
     <string name="set_as_default_launcher">Ange som förvald startskärmsapp</string>
     <string name="set_as_default_launcher_u"><u>Ange som förvald startskärmsapp</u></string>
     <string name="app_text_color">Textfärg</string>
-    <string name="double_tap_to_lock_screen">Dubbeltryck för att låsa</string>
-    <string name="admin_permission_message">Olauncher lovar att använda skärmlåsningsbehörigheten ansvarsfullt. Olauncher varken samlar in eller delar några data.</string>
     <string name="about">Om</string>
     <string name="off">Av</string>
     <string name="on">På</string>
@@ -45,7 +43,6 @@
         \n\nValet är alltid ditt.</string>
     <string name="pro_message">Olauncher har också en pro-version som kallas Pro Launcher. Den har extra funktioner som väder, widgets, typsnitt, mappar, AMOLED-bakgrunder och så vidare.
         \n\nDet är också det bästa sättet att stödja utvecklarna av Olauncher. Kolla in det!</string>
-    <string name="accessibility_service_description">Tillgänglighetsbehörigheten krävs för att aktivera dubbeltryck för att låsa och hemknappen för att visa senaste appar. Eventuella data förvärvade av Olauncher genom denna tjänst kommer inte att lämna din enhet.</string>
     <string name="support_olauncher_for_free">Stöd Olauncher utan kostnad genom att använda vår Amazon-affiliatelänk.</string>
     <string name="support_olauncher_message">Varje gång du köper något via vår länk får vi en liten provision. Vänligen spara länken och använd den när du handlar på nätet.\nTack!</string>
     <string name="open">Öppna länk</string>
@@ -62,20 +59,14 @@
     <string name="swipe_down_for">Svep nedåt för</string>
     <string name="search">Sök</string>
     <string name="notifications">Aviseringar</string>
-    <string name="accessibility_disclosure">Vänligen sätt på Olaunchers tillgänglighetstjänst i din enhets inställningar för att aktivera gesterna dubbeltryck för att låsa eller hemknappen för senaste appar.\n\nObservera att denna tjänst bara används för dessa gester. Vår tillgänglighetstjänst samlar inte in eller delar några data.</string>
     <string name="accept">Godkänn</string>
     <string name="double_tap_lock">Dubbeltryck för att låsa</string>
     <string name="home_button_show_recents">Hemknapp för senaste appar</string>
-    <string name="enable">Aktivera</string>
-    <string name="disable">Inaktivera</string>
-    <string name="not_working"><u>Fungerar inte?</u></string>
     <string name="info">Info</string>
     <string name="delete">Radera</string>
     <string name="text_size">Textstorlek</string>
     <string name="enabled">Aktiverad</string>
     <string name="disabled">Inaktiverad</string>
-    <string name="please_turn_on_double_tap_to_unlock">Vänligen sätt på dubbeltryck för att låsa</string>
-    <string name="launcher_failed_to_lock_device">Olauncher lyckades inte låsa enheten.\nVänligen kontrollera dina appinställningar.</string>
     <string name="long_press_to_select_app">Långtryck för att välja app</string>
     <string name="unable_to_open_app">Kunde inte öppna appinfon</string>
     <string name="copied">Kopierad</string>

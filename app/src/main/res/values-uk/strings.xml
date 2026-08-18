@@ -4,8 +4,6 @@
     <string name="set_as_default_launcher">Зробити лаунчером за замовчування</string>
     <string name="set_as_default_launcher_u"><u>Зробити лаунчером за замовчування</u></string>
     <string name="app_text_color">Кольор тексту</string>
-    <string name="double_tap_to_lock_screen">Блокування подвійним тапом</string>
-    <string name="admin_permission_message">Olauncher обіцяє відповідально використовувати роздільну здатність екрана блокування. Olauncher не збирає і не передає будь-які дані.</string>
     <string name="about">Про нас</string>
     <string name="off">Викл</string>
     <string name="on">Вкл</string>
@@ -46,7 +44,6 @@
         \n\nВибір завжди за вами.</string>
     <string name="pro_message">Olauncher також має професійну версію під назвою Pro Launcher. Вона має додаткові функції, такі як погода, віджети, шрифти, папки, фони AMOLED тощо.
         \n\nЦе також найкращий спосіб підтримати розробників Olauncher. Ознайомтеся!</string>
-    <string name="accessibility_service_description">Дозвіл на доступ потрібний, щоб увімкнути подвійне торкання для блокування та кнопку «Домому» для показу нещодавніх додатків. Будь-які дані, отримані Olauncher через цей сервіс, не залишать ваш пристрій.</string>
     <string name="support_olauncher_for_free">Підтримайте Olauncher безкоштовно, використовуючи наше партнерське посилання Amazon.</string>
     <string name="support_olauncher_message">Щоразу, коли ви купуєте щось за нашим посиланням, ми отримуємо невелику комісію. Будь ласка, збережіть посилання та використовуйте його для здійснення покупок в Інтернеті.\nСпасибі!</string>
     <string name="open">Відкрити посилання</string>
@@ -64,20 +61,14 @@
     <string name="swipe_down_for">Проведіть вниз для</string>
     <string name="search">Пошук</string>
     <string name="notifications">Повідомлення</string>
-    <string name="accessibility_disclosure">Увімкніть службу доступності Olauncher у налаштуваннях Вашого пристрою, щоб увімкнути жести подвійного торкання для блокування або кнопки «Домому» для нещодавніх додатків.\n\nЗверніть увагу, що ця служба використовується лише для цих жестів. Наша служба доступності не збирає та не поширює жодних даних.</string>
     <string name="accept">Прийняти</string>
     <string name="double_tap_lock">Блокування подвійним дотиком</string>
     <string name="home_button_show_recents">Кнопка додому для нещодавніх</string>
-    <string name="enable">Включити</string>
-    <string name="disable">Виключити</string>
-    <string name="not_working"><u>Не працює?</u></string>
     <string name="info">Інформація</string>
     <string name="delete">Видалити</string>
     <string name="text_size">Розмір тексту</string>
     <string name="enabled">Включено</string>
     <string name="disabled">Виключено</string>
-    <string name="please_turn_on_double_tap_to_unlock">Будь ласка, увімкніть подвійний дотик для блокування</string>
-    <string name="launcher_failed_to_lock_device">Olauncher не вдалося заблокувати пристрій.\nБудь ласка, перевірте налаштування вашої програми.</string>
     <string name="long_press_to_select_app">Тривале натискання для вибору програми</string>
     <string name="unable_to_open_app">Неможливо відкрити інформацію про програму</string>
     <string name="copied">Скопійовано</string>

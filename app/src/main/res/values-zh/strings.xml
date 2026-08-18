@@ -15,21 +15,14 @@
     <string name="swipe_down_for">向下滑动查看</string>
     <string name="search">搜索</string>
     <string name="notifications">通知</string>
-    <string name="accessibility_disclosure">请在您设备的设置中打开 Olauncher 的辅助服务，以启用双击锁屏或主页键显示最近应用手势。
-        \n\n请注意，此服务仅用于这些手势。我们的辅助服务不会收集或共享任何数据。</string>
     <string name="accept">接受</string>
     <string name="double_tap_lock">双击即可锁定</string>
     <string name="home_button_show_recents">主页键用于最近应用</string>
-    <string name="enable">启用</string>
-    <string name="disable">禁用</string>
-    <string name="not_working"><u>不工作？</u></string>
     <string name="info">信息</string>
     <string name="delete">删除</string>
     <string name="text_size">字体大小</string>
     <string name="enabled">启用</string>
     <string name="disabled">禁用</string>
-    <string name="please_turn_on_double_tap_to_unlock">请打开双击以锁定</string>
-    <string name="launcher_failed_to_lock_device">Olauncher 无法锁定设备。 请检查您的应用程序设置。</string>
     <string name="long_press_to_select_app">长按选择应用程序</string>
     <string name="unable_to_open_app">无法打开应用程序信息</string>
     <string name="copied">已复制</string>
@@ -38,8 +31,6 @@
     <string name="adapter_show">显示</string>
     <string name="adapter_hide">隐藏</string>
     <string name="app_text_color">文字颜色</string>
-    <string name="double_tap_to_lock_screen">双击即可锁定</string>
-    <string name="admin_permission_message">Olauncher 承诺负责任地使用锁屏权限。 Olauncher 不收集或共享任何数据。</string>
     <string name="about">关于</string>
     <string name="off">否</string>
     <string name="on">是</string>
@@ -77,7 +68,6 @@
         \n\n然后再决定吗？选择权永远在你手中。</string>
     <string name="pro_message">Olauncher 还有一个名为 Pro Launcher 的专业版。它具有额外的功能，如天气、部件、字体、文件夹、AMOLED 壁纸等。
         \n\n这也是支持 Olauncher 开发者的最佳方式。快来看看吧！</string>
-    <string name="accessibility_service_description">需要无障碍权限才能启用双击锁屏和主页键显示最近应用。Olauncher 通过此服务获取的任何数据都不会离开您的设备。</string>
     <string name="support_olauncher_for_free">使用我们的亚马逊附属链接免费支持 Olauncher。</string>
     <string name="support_olauncher_message">每次您使用我们的链接购买商品时，我们都会获得少量佣金。请保存链接并在网上购物时使用它。 谢谢！</string>
     <string name="open">打开链接</string>
