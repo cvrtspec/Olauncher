@@ -73,7 +73,6 @@
     <string name="left">Lewo</string>
     <string name="right">Prawo</string>
     <string name="center">Środek</string>
-    <string name="home_layout_alignment">Wyrównanie aplikacji</string>
     <string name="swipe_left_app">Przesuń w lewo aplikację</string>
     <string name="swipe_right_app">Przesuń w prawo aplikację</string>
     <string name="auto_show_keyboard">Automatyczne wyświetlanie klawiatury</string>
@@ -112,9 +111,6 @@
     <string name="roadmap">Mapa drogowa</string>
     <string name="date">Data</string>
     <string name="date_only">Tylko data</string>
-    <string name="bottom_on">Dół: włączony</string>
-    <string name="bottom_off">Dół: wyłączone</string>
-    <string name="please_set_olauncher_as_default_first">Najpierw ustaw Olauncher jako domyślny program uruchamiający</string>
     <string name="affiliate">Przyłącz</string>
     <string name="app_not_found">Nie znaleziono aplikacji</string>
     <string name="unable_to_launch_app">Nie można uruchomić aplikacji</string>
@@ -131,7 +127,6 @@
     <string name="leave_a_review">Ucz się więcej</string>
     <string name="review_message">Olauncher jest i zawsze będzie całkowicie darmowy. Nie zawiera reklam. Nie zbiera żadnych danych. Co najważniejsze, pomaga skrócić czas spędzany przed ekranem i prowadzić zdrowsze cyfrowe życie.
         \n\nWierzymy, że przejście na minimalny program uruchamiający to doskonała decyzja. Chociaż jesteśmy oczywiście stronniczy, mamy nadzieję, że spodoba ci się to doświadczenie. Podziel się z nami swoimi przemyśleniami!</string>
-    <string name="alignment_changed">Wyrównanie zmienione ✅</string>
     <string name="home_screen">Ekran główny</string>
     <string name="hey">Hej</string>
     <string name="more_features">Więcej funkcji…</string>

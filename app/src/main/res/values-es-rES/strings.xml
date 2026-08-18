@@ -28,7 +28,6 @@
     <string name="left">Izquierda</string>
     <string name="right">Derecha</string>
     <string name="center">Centrado</string>
-    <string name="home_layout_alignment">Posición de aplicaciones</string>
     <string name="swipe_left_app">Deslizar a la izquierda para abrir</string>
     <string name="swipe_right_app">Deslizar a la derecha para abrir</string>
     <string name="_0">0</string>
@@ -81,9 +80,6 @@
     <string name="roadmap">Hoja de ruta</string>
     <string name="date">Fecha</string>
     <string name="date_only">Solo fecha</string>
-    <string name="bottom_on">Abajo: Sí</string>
-    <string name="bottom_off">Abajo: No</string>
-    <string name="please_set_olauncher_as_default_first">Primero seleccione Olauncher como su iniciador predeterminado</string>
     <string name="affiliate">Afiliado</string>
     <string name="tip_start_typing_for_rename">Sugerencia: Comienza a escribir para RENOMBRAR la aplicación</string>
     <string name="hidden_apps_message">Nota: pulsa \'Olauncher\' en la parte superior de esta página de Configuración para encontrar las aplicaciones ocultas.
@@ -133,7 +129,6 @@
     <string name="leave_a_review">Dejar un comentario</string>
     <string name="review_message">Olauncher es y será siempre completamente gratuito. No tiene anuncios. No recopila datos. Lo más importante es que te ayuda a reducir el tiempo que pasa frente a la pantalla y a vivir una vida digital más saludable.
         \n\nCreemos que cambiar a un lanzador mínimo es una excelente decisión. Aunque obviamente somos parciales, esperamos que disfrutes la experiencia. ¡No dudes en compartir tus pensamientos con nosotros!</string>
-    <string name="alignment_changed">Alineación cambiada ✅</string>
     <string name="home_screen">Pantalla de inicio</string>
     <string name="hey">Hola</string>
     <string name="more_features">Más funciones…</string>

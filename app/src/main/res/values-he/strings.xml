@@ -26,7 +26,6 @@
     <string name="left">ימין</string>
     <string name="right">שמאל</string>
     <string name="center">מרכז</string>
-    <string name="home_layout_alignment">יישור היישומים</string>
     <string name="swipe_left_app">יישום לפתיחה בהחלקה שמאלה</string>
     <string name="swipe_right_app">יישום לפתיחה בהחלקה ימינה</string>
     <string name="_0">0</string>
@@ -72,9 +71,6 @@
     <string name="roadmap">Roadmap</string>
     <string name="date">תאריך</string>
     <string name="date_only">תאריך בלבד</string>
-    <string name="bottom_on">הצגה למטה: מופעל</string>
-    <string name="bottom_off">הצגה למטה: כבוי</string>
-    <string name="please_set_olauncher_as_default_first">ראשית, נא להגדיר את Olauncher בתור ברירת המחדל למסך בית.</string>
     <string name="affiliate">Affiliate</string>
     <string name="tip_start_typing_for_rename">עצה: אפשר להתחיל להקליד בשביל להגיע לאפשרות לשינוי שם של יישומים</string>
     <string name="hidden_apps_message">הערה: בשביל להגיע ליישומים המוסתרים, יש ללחוץ על הכיתוב \'Olauncher\' שנמצא בראש עמוד ההגדרות.\n\nפרטים נוספים אפשר למצוא בעמוד ה"מידע כללי" שלנו למטה.</string>
@@ -127,7 +123,6 @@
     <string name="did_you_know">האם ידעת?</string>
     <string name="leave_a_review">השאירו ביקורת</string>
     <string name="review_message">‏Olauncher חינמית ותמיד תהיה. אין בה פרסומות, היא אינה אוספת נתונים, והיא מפחיתה את זמן המסך שלכם – מה שמוביל לחיים בריאים יותר.</string>
-    <string name="alignment_changed">היישור השתנה ✅</string>
     <string name="home_screen">מסך הבית</string>
     <string name="digital_wellbeing_message">אם ברצונך להגדיר מגבלות זמן עבור אפליקציות מסוימות, תכונת Digital Wellbeing של אנדרואיד יכולה לעזור לך לעשות זאת. חפש את Digital Wellbeing בהגדרות הטלפון שלך והפעל אותה.</string>
     <string name="app_usage_message">כדי להציג/להסתיר את זמן המסך שלך במסך הבית, אנא אפשר או בטל את הרשאת השימוש באפליקציה. הערה: לא נאספים נתוני שימוש באפליקציה. הכל מעובד במכשיר שלך.</string>

@@ -27,7 +27,6 @@
     <string name="left">Lijevo</string>
     <string name="right">Desno</string>
     <string name="center">Sredina</string>
-    <string name="home_layout_alignment">Poravnanje aplikacija</string>
     <string name="swipe_left_app">Aplikacija za lijevi potez</string>
     <string name="swipe_right_app">Aplikacija za desni potez</string>
     <string name="_0">0</string>
@@ -80,9 +79,6 @@
     <string name="roadmap">Plan razvoja</string>
     <string name="date">Datum</string>
     <string name="date_only">Samo datum</string>
-    <string name="bottom_on">Dno: uklj.</string>
-    <string name="bottom_off">Dno: isklj.</string>
-    <string name="please_set_olauncher_as_default_first">Prvo postavite Olauncher kao zadani pokretač</string>
     <string name="affiliate">Sponzorstvo</string>
     <string name="tip_start_typing_for_rename">Savjet: počni pisati za opciju preimenovanja aplikacija</string>
     <string name="hidden_apps_message">Pazi: Dodirni \'Olauncher\' na vrhu da pronađeš svoje skrivene aplikacije.\n\nViše detalja dostupno dolje na našoj stranici Informacije.</string>
@@ -132,7 +128,6 @@
     <string name="adapter_hide">Sakrij</string>
     <string name="are_you_using_your_phone_or_is_your_phone_using_you">Koristite li svoj telefon ili vaš telefon koristi vas?</string>
     <string name="about_olauncher">O Olauncher-u i ČPP</string>
-    <string name="alignment_changed">Poravnanje promijenjeno ✅</string>
     <string name="home_screen">Početni ekran</string>
     <string name="hey">Bok</string>
     <string name="more_features">Više značajki…</string>

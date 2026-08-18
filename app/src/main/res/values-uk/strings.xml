@@ -28,7 +28,6 @@
     <string name="left">Ліворуч</string>
     <string name="right">Праворуч</string>
     <string name="center">По центру</string>
-    <string name="home_layout_alignment">Вирівнювання додатків</string>
     <string name="swipe_left_app">Проведіть вліво для</string>
     <string name="swipe_right_app">Проведіть вправо для</string>
     <string name="_0">0</string>
@@ -81,9 +80,6 @@
     <string name="roadmap">Дорожня карта</string>
     <string name="date">Дата</string>
     <string name="date_only">Толільки дата</string>
-    <string name="bottom_on">Внизу: Вкл</string>
-    <string name="bottom_off">Внизу: Викл</string>
-    <string name="please_set_olauncher_as_default_first">Спочатку встановіть Olauncher як стандартний лаунчер.</string>
     <string name="affiliate">Партнер</string>
     <string name="tip_start_typing_for_rename">Порада: почніть вводити текст, щоб перейменувати програму.</string>
     <string name="hidden_apps_message">Примітка. Натисніть «Olauncher» у верхній частині сторінки налаштувань, щоб знайти приховані програми.
@@ -133,7 +129,6 @@
     <string name="leave_a_review">Залиште відгук</string>
     <string name="review_message">Olauncher є і завжди буде абсолютно безкоштовним. У ньому немає реклами. Він не збирає дані. Найважливіше те, що це допомагає вам скоротити час використання екрана та жити здоровішим цифровим життям.
         \n\nМи вважаємо, що перехід на мінімальний лаунчер є відмінним рішенням. Хоча ми явно упереджені, ми сподіваємося, що вам сподобається. Не соромтеся поділитися з нами своїми думками!</string>
-    <string name="alignment_changed">Вирівнювання змінено ✅</string>
     <string name="home_screen">Головний екран</string>
     <string name="hey">Привіт</string>
     <string name="more_features">Більше функцій…</string>

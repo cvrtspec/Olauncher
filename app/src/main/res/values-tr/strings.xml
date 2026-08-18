@@ -73,7 +73,6 @@
     <string name="left">Sol</string>
     <string name="right">Sağ</string>
     <string name="center">Merkez</string>
-    <string name="home_layout_alignment">Uygulama hizalaması</string>
     <string name="swipe_left_app">Sola kaydırma uygulaması</string>
     <string name="swipe_right_app">Sağa kaydırma uygulaması</string>
     <string name="auto_show_keyboard">Klavyeyi otomatik göster</string>
@@ -114,9 +113,6 @@
     <string name="roadmap">Yol Çizelgesi</string>
     <string name="date">Tarih</string>
     <string name="date_only">Sadece tarih</string>
-    <string name="bottom_on">Alt: Açık</string>
-    <string name="bottom_off">Alt: Kapalı</string>
-    <string name="please_set_olauncher_as_default_first">Lütfen önce Olauncher\'ı varsayılan başlatıcınız olarak ayarlayın</string>
     <string name="affiliate">Ortak</string>
     <string name="app_not_found">Uygulama bulunamadı</string>
     <string name="unable_to_launch_app">Uygulama başlatılamadı</string>
@@ -133,7 +129,6 @@
     <string name="leave_a_review">Değerlendirme bırakın</string>
     <string name="review_message">Olauncher tamamen ücretsizdir ve her zaman ücretsiz olacaktır. Reklam yok, veri toplamaz ve en önemlisi ekran sürenizi azaltmanıza ve daha sağlıklı bir dijital yaşam sürmenize yardımcı olur.
         \n\nUmarım hoşunuza gider. Düşüncelerinizi mutlaka bizimle paylaşın!</string>
-    <string name="alignment_changed">Hizalama değiştirildi ✅</string>
     <string name="home_screen">Ana ekran</string>
     <string name="hey">Merhaba</string>
     <string name="more_features">Daha fazla özellik…</string>

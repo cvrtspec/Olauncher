@@ -73,7 +73,6 @@
     <string name="left">Links</string>
     <string name="right">Rechts</string>
     <string name="center">Mitte</string>
-    <string name="home_layout_alignment">App-Ausrichtung</string>
     <string name="swipe_left_app">Wischen Sie nach links über die App</string>
     <string name="swipe_right_app">Wischen Sie nach rechts über die App</string>
     <string name="auto_show_keyboard">Tastatur automatisch anzeigen</string>
@@ -114,9 +113,6 @@
     <string name="roadmap">Roadmap</string>
     <string name="date">Datum</string>
     <string name="date_only">Nur Datum</string>
-    <string name="bottom_on">Unten: Ein</string>
-    <string name="bottom_off">Unten: Aus</string>
-    <string name="please_set_olauncher_as_default_first">Bitte legen Sie zunächst Olauncher als Ihren Standard-Launcher fest</string>
     <string name="affiliate">Affiliate</string>
     <string name="app_not_found">App nicht gefunden</string>
     <string name="unable_to_launch_app">App kann nicht gestartet werden</string>
@@ -133,7 +129,6 @@
     <string name="leave_a_review">Rezension</string>
     <string name="review_message">Olauncher ist und bleibt völlig kostenlos. Es gibt keine Werbung. Es werden keine Daten erfasst. Am wichtigsten ist, dass es Ihnen dabei hilft, Ihre Bildschirmzeit zu verkürzen und ein gesünderes digitales Leben zu führen.
         \n\nWir glauben, dass der Wechsel zu einem Minimal Launcher eine ausgezeichnete Entscheidung ist. Obwohl wir offensichtlich voreingenommen sind, hoffen wir, dass Ihnen die Erfahrung gefällt. Teilen Sie uns gerne Ihre Gedanken mit!</string>
-    <string name="alignment_changed">Ausrichtung geändert ✅</string>
     <string name="home_screen">Startbildschirm</string>
     <string name="hey">Hey</string>
     <string name="more_features">Weitere Funktionen…</string>

@@ -27,7 +27,6 @@
     <string name="left">Bal</string>
     <string name="right">Jobb</string>
     <string name="center">Közép</string>
-    <string name="home_layout_alignment">Ikonok elhelyezkedése</string>
     <string name="swipe_left_app">Balra simítva indítható alkalmazás</string>
     <string name="swipe_right_app">Jobbra simítva indítható alkalmazás</string>
     <string name="_0">0</string>
@@ -83,9 +82,6 @@
     <string name="roadmap">Ütemterv</string>
     <string name="date">Dátum</string>
     <string name="date_only">Csak dátum</string>
-    <string name="bottom_on">Alsó: Be</string>
-    <string name="bottom_off">Alsó: Ki</string>
-    <string name="please_set_olauncher_as_default_first">Kérjük, állítsa be az Olauncher-t alapértelmezett indítóként</string>
     <string name="affiliate">Affiliate</string>
     <string name="tip_start_typing_for_rename">Tipp: Kezdjen el gépelni az alkalmazás ÁTNEVEZÉSE opcióhoz</string>
     <string name="hidden_apps_message">Megjegyzés: A rejtett alkalmazások megtalálásához érintse meg az "Olauncher" elemet ennek a beállítás oldalnak a tetején.
@@ -135,7 +131,6 @@
     <string name="leave_a_review">Hagyjon véleményt</string>
     <string name="review_message">Az Olauncher teljesen ingyenes és mindig is az lesz. Nincsenek hirdetései, nem gyűjt adatokat, és segít csökkenteni a képernyő előtt töltött időt egy egészségesebb digitális élet végett.
         \n\nÚgy gondoljuk, hogy egy minimális indítóra váltás kiváló döntés, és reméljük, hogy élvezni fogja. Ossza meg másokkal is tapasztalatait!</string>
-    <string name="alignment_changed">Az igazítás megváltozott ✅</string>
     <string name="home_screen">Kezdőképernyő</string>
     <string name="hey">Üdvözöljük!</string>
     <string name="more_features">További funkciók…</string>

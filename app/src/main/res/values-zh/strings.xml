@@ -65,7 +65,6 @@
     <string name="left">左对齐</string>
     <string name="right">右对齐</string>
     <string name="center">居中</string>
-    <string name="home_layout_alignment">应用对齐方式</string>
     <string name="swipe_left_app">向左滑动应用程序</string>
     <string name="swipe_right_app">向右滑动应用程序</string>
     <string name="_0">0</string>
@@ -115,9 +114,6 @@
     <string name="roadmap">路线图</string>
     <string name="date">日期</string>
     <string name="date_only">仅限日期</string>
-    <string name="bottom_on">底部：打开</string>
-    <string name="bottom_off">底部：关闭</string>
-    <string name="please_set_olauncher_as_default_first">请先将 Olauncher 设置为默认启动器</string>
     <string name="affiliate">联盟</string>
     <string name="app_not_found">找不到应用程序</string>
     <string name="unable_to_launch_app">无法启动应用程序</string>
@@ -134,7 +130,6 @@
     <string name="leave_a_review">发表评论</string>
     <string name="review_message">Olauncher 现在并且永远是完全免费的。它没有广告。它不收集任何数据。最重要的是，它可以帮助您减少屏幕时间并过上更健康的数字生活。
         \n\n我们相信切换到最小启动器是一个很好的决定。虽然我们显然有偏见，但我们希望您喜欢这次体验。请随时与我们分享您的想法！</string>
-    <string name="alignment_changed">对齐已更改 ✅</string>
     <string name="home_screen">主屏幕</string>
     <string name="hey">嘿</string>
     <string name="more_features">更多功能…</string>

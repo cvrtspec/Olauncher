@@ -5,6 +5,7 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Process
 import android.text.Spannable
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -89,7 +90,7 @@ class AppDrawerFragment : BaseFragment() {
             binding.search.queryHint = "Please select an app"
         try {
             searchTextView = binding.search.findViewById(R.id.search_src_text)
-            searchTextView?.gravity = prefs.appLabelAlignment
+            searchTextView?.gravity = Gravity.START
         } catch (e: Exception) {
             e.printStackTrace()
         }
@@ -152,7 +153,7 @@ class AppDrawerFragment : BaseFragment() {
     private fun initAdapter() {
         adapter = AppDrawerAdapter(
             flag,
-            prefs.appLabelAlignment,
+            Gravity.START,
             appClickListener = { appModel ->
                 viewModel.selectedApp(appModel, flag)
                 if (flag == Constants.FLAG_LAUNCH_APP || flag == Constants.FLAG_HIDDEN_APPS)
