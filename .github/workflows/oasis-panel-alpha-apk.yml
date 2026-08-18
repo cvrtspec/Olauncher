@@ -1,0 +1,33 @@
+name: Oasis panel alpha - debug APK
+
+on:
+  push:
+    branches: [ oasis-panel-alpha ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Build debug APK
+        run: ./gradlew assembleDebug --stacktrace
+
+      - name: Upload debug APK
+        uses: actions/upload-artifact@v7
+        with:
+          name: olauncher-oasis-panel-alpha-debug
+          path: app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
