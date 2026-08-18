@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.isVisible
 import androidx.core.view.updatePadding
 import androidx.navigation.fragment.findNavController
 import app.olauncher.R
@@ -72,15 +71,10 @@ class OasisFragment : BaseFragment() {
             calendarPermissionLauncher.launch(Manifest.permission.READ_CALENDAR)
         }.also { it.bind() }
         pomodoroBlock = OasisPomodoroBlock(requireContext(), prefs, binding.pomoBlock).also { it.bind() }
-
-        binding.oasisSettingsButton.setOnClickListener { openSettings() }
-
-        applyBlockVisibility()
     }
 
     override fun onResume() {
         super.onResume()
-        applyBlockVisibility()
         todoBlock?.reload()
         notesBlock?.reload()
         calendarBlock?.refresh()
@@ -89,19 +83,6 @@ class OasisFragment : BaseFragment() {
     override fun onPause() {
         super.onPause()
         notesBlock?.flush()
-    }
-
-    private fun applyBlockVisibility() {
-        binding.todoBlock.root.isVisible = prefs.oasisShowTodo
-        binding.notesBlock.root.isVisible = prefs.oasisShowNotes
-        binding.calendarBlock.root.isVisible = prefs.oasisShowCalendar
-        binding.pomoBlock.root.isVisible = prefs.oasisShowPomodoro
-    }
-
-    private fun openSettings() {
-        if (findNavController().currentDestination?.id == R.id.oasisFragment) {
-            findNavController().navigate(R.id.action_oasisFragment_to_oasisSettingsFragment)
-        }
     }
 
     private fun close() {

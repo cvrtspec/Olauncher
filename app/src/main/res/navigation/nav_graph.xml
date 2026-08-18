@@ -81,19 +81,6 @@
         android:name="app.olauncher.ui.oasis.OasisFragment"
         android:label="OasisFragment"
         tools:layout="@layout/fragment_oasis">
-        <action
-            android:id="@+id/action_oasisFragment_to_oasisSettingsFragment"
-            app:destination="@id/oasisSettingsFragment"
-            app:enterAnim="@anim/fade_enter"
-            app:exitAnim="@anim/fade_exit"
-            app:popEnterAnim="@anim/fade_enter"
-            app:popExitAnim="@anim/fade_exit" />
     </fragment>
-
-    <fragment
-        android:id="@+id/oasisSettingsFragment"
-        android:name="app.olauncher.ui.oasis.OasisSettingsFragment"
-        android:label="OasisSettingsFragment"
-        tools:layout="@layout/fragment_oasis_settings" />
 
 </navigation>

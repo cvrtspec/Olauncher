@@ -4,8 +4,10 @@ import android.content.Context
 import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.inputmethod.EditorInfo
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.view.isVisible
+import app.olauncher.R
 import app.olauncher.data.Prefs
 import app.olauncher.databinding.OasisTodoBinding
 import app.olauncher.databinding.OasisTodoRowBinding
@@ -68,11 +70,12 @@ class OasisTodoBlock(
             row.todoText.text = item.text
             applyDoneStyle(row.todoText, item.done)
 
-            row.todoCheck.isChecked = item.done
-            row.todoCheck.setOnCheckedChangeListener { _, checked ->
-                item.done = checked
+            applyCheckIcon(row.todoCheck, item.done)
+            row.todoCheck.setOnClickListener {
+                item.done = !item.done
                 persist()
-                applyDoneStyle(row.todoText, checked)
+                applyCheckIcon(row.todoCheck, item.done)
+                applyDoneStyle(row.todoText, item.done)
             }
 
             row.todoDelete.setOnClickListener {
@@ -83,6 +86,9 @@ class OasisTodoBlock(
             container.addView(row.root)
         }
     }
+
+    private fun applyCheckIcon(view: ImageView, done: Boolean) =
+        view.setImageResource(if (done) R.drawable.ic_check_box_checked else R.drawable.ic_check_box_blank)
 
     private fun applyDoneStyle(view: TextView, done: Boolean) {
         view.paintFlags = if (done) view.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG

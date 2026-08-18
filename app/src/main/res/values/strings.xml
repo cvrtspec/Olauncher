@@ -162,8 +162,6 @@
     <string name="private_space">Private space</string>
 
     <!-- Oasis panel -->
-    <string name="oasis_title">Oasis</string>
-    <string name="oasis_settings">Oasis settings</string>
     <string name="oasis_todo">To-do</string>
     <string name="oasis_todo_hint">Add a task…</string>
     <string name="oasis_todo_empty">Nothing to do</string>
@@ -187,11 +185,6 @@
     <string name="oasis_pomo_reset">Reset</string>
     <string name="oasis_pomo_done">Timer finished</string>
     <string name="oasis_pomo_set_title">Set minutes</string>
-    <string name="oasis_pomo_edit_hint">Tap the time to set minutes</string>
-    <string name="oasis_show_todo">Show To-do</string>
-    <string name="oasis_show_notes">Show Notes</string>
-    <string name="oasis_show_calendar">Show Calendar</string>
-    <string name="oasis_show_pomodoro">Show Pomodoro</string>
     <string name="oasis_prev">◀</string>
     <string name="oasis_next">▶</string>
     <string name="oasis_add">＋</string>

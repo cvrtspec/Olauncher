@@ -6,11 +6,14 @@
     android:orientation="horizontal"
     android:paddingVertical="2dp">
 
-    <androidx.appcompat.widget.AppCompatCheckBox
+    <ImageView
         android:id="@+id/todoCheck"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:buttonTint="?attr/primaryColor" />
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/oasis_done"
+        android:padding="6dp"
+        android:src="@drawable/ic_check_box_blank" />
 
     <TextView
         android:id="@+id/todoText"
@@ -20,7 +23,7 @@
         android:layout_weight="1"
         android:ellipsize="end"
         android:maxLines="3"
-        android:textSize="15sp" />
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/todoDelete"
@@ -30,5 +33,5 @@
         android:layout_marginStart="12dp"
         android:padding="4dp"
         android:text="@string/oasis_delete"
-        android:textSize="16sp" />
+        android:textSize="40sp" />
 </LinearLayout>
