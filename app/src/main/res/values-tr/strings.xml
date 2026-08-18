@@ -45,11 +45,7 @@
     <string name="on">Açık</string>
     <string name="black">Siyah</string>
     <string name="white">Beyaz</string>
-    <string name="change_default_launcher">Varsayılan başlatıcıyı değiştir</string>
-    <string name="privacy">Gizlilik</string>
-    <string name="share">Paylaş</string>
     <string name="share_now">Şimdi paylaş</string>
-    <string name="rate">Değerlendir</string>
     <string name="rate_now">Şimdi değerlendir</string>
     <string name="follow">Takip et</string>
     <string name="email">E-posta</string>
@@ -103,7 +99,6 @@
     <string name="swipe_left_app_enabled">Sola kaydırma uygulaması etkin</string>
     <string name="swipe_left_app_disabled">Sola kaydırma uygulaması devre dışı</string>
     <string name="are_you_using_your_phone_or_is_your_phone_using_you">Sen mi telefonunu, kullanıyorsun yoksa telefon mu seni kullanıyor?</string>
-    <string name="about_olauncher">Olauncher Hakkında</string>
     <string name="learn_more">Daha fazla bilgi</string>
     <string name="screen_time">Ekran süresi</string>
     <string name="leave_a_review">Değerlendirme bırakın</string>
@@ -111,7 +106,6 @@
         \n\nUmarım hoşunuza gider. Düşüncelerinizi mutlaka bizimle paylaşın!</string>
     <string name="home_screen">Ana ekran</string>
     <string name="hey">Merhaba</string>
-    <string name="more_features">Daha fazla özellik…</string>
     <string name="new_year_wish">Öncekilerin hepsinden daha iyi bir yıl olsun. Mutlu yıllar!</string>
     <string name="new_year_wish_1">Ocak ayının nasıl geçtiği önemli değil. Her zamankinden daha iyisini yapmak için hala yılın geri kalanı var.</string>
     <string name="cheers">Şerefe!</string>

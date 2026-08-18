@@ -11,11 +11,7 @@
     <string name="on">Вкл</string>
     <string name="black">Чорний</string>
     <string name="white">Білий</string>
-    <string name="change_default_launcher">Змінити лаунчер за замовчуванням</string>
-    <string name="privacy">Конфіденційність</string>
-    <string name="share">Поділитися</string>
     <string name="share_now">Поділитися</string>
-    <string name="rate">Оцінити</string>
     <string name="rate_now">Оцінити</string>
     <string name="follow">Перейти</string>
     <string name="email">Электронна пошта</string>
@@ -103,7 +99,6 @@
     <string name="adapter_show">Показати</string>
     <string name="adapter_hide">Приховати</string>
     <string name="are_you_using_your_phone_or_is_your_phone_using_you">Ви користуєтеся своїм телефоном, чи ваш телефон використовує вас?</string>
-    <string name="about_olauncher">Про нас Olauncher</string>
     <string name="learn_more">Вивчайте більше</string>
     <string name="screen_time">Час екрану</string>
     <string name="leave_a_review">Залиште відгук</string>
@@ -111,7 +106,6 @@
         \n\nМи вважаємо, що перехід на мінімальний лаунчер є відмінним рішенням. Хоча ми явно упереджені, ми сподіваємося, що вам сподобається. Не соромтеся поділитися з нами своїми думками!</string>
     <string name="home_screen">Головний екран</string>
     <string name="hey">Привіт</string>
-    <string name="more_features">Більше функцій…</string>
     <string name="new_year_wish">За рік, кращий за всі попередні. З новим роком!</string>
     <string name="new_year_wish_1">" Неважливо, як пройшов січень. У вас ще є решта року, щоб досягти успіху, як ніколи раніше."</string>
     <string name="cheers">будьмо!</string>

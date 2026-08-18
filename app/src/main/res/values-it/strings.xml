@@ -11,11 +11,7 @@
     <string name="on">On</string>
     <string name="black">Scuro</string>
     <string name="white">Chiaro</string>
-    <string name="change_default_launcher">Cambia il launcher  predefinito</string>
-    <string name="privacy">Privacy</string>
-    <string name="share">Condividi</string>
     <string name="share_now">Condividi</string>
-    <string name="rate">Valuta</string>
     <string name="rate_now">Valuta</string>
     <string name="follow">Segui</string>
     <string name="email">E-mail</string>
@@ -103,7 +99,6 @@
     <string name="adapter_show">mostra</string>
     <string name="adapter_hide">nascondi</string>
     <string name="are_you_using_your_phone_or_is_your_phone_using_you">Stai usando il tuo telefono, o è il tuo telefono che sta usando te?</string>
-    <string name="about_olauncher">Info Olauncher</string>
     <string name="learn_more">Saperne di più</string>
     <string name="screen_time">Tempo di schermo</string>
     <string name="leave_a_review">Lascia una recensione</string>
@@ -111,7 +106,6 @@
         \n\nCrediamo che passare a un launcher minimale sia un\'ottima decisione. Anche se siamo ovviamente di parte, ci auguriamo che l\'esperienza ti piaccia. Sentitevi liberi di condividere i tuoi pensieri con noi!</string>
     <string name="home_screen">Schermata principale</string>
     <string name="hey">Ciao</string>
-    <string name="more_features">Altre funzionalità…</string>
     <string name="new_year_wish">A un anno migliore di tutti i precedenti. Buon anno nuovo!</string>
     <string name="new_year_wish_1">" Non importa come sia andato gennaio. Hai ancora il resto dell'anno per fare meglio che mai."</string>
     <string name="cheers">Saluti!</string>

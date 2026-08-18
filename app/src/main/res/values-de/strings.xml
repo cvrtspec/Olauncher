@@ -45,11 +45,7 @@
     <string name="on">Ein</string>
     <string name="black">Schwarz</string>
     <string name="white">Weiß</string>
-    <string name="change_default_launcher">Standard-Launcher ändern</string>
-    <string name="privacy">Privatsphäre</string>
-    <string name="share">Teilen</string>
     <string name="share_now">Teilen</string>
-    <string name="rate">Bewerten</string>
     <string name="rate_now">Bewerten</string>
     <string name="follow">Folgen</string>
     <string name="email">Email</string>
@@ -104,14 +100,12 @@
     <string name="swipe_left_app_disabled">App nach links wischen deaktiviert</string>
     <string name="are_you_using_your_phone_or_is_your_phone_using_you">Benutzen Sie Ihr Telefon, oder nutzt Ihr Telefon Sie?</string>
     <string name="screen_time">Bildschirmzeit</string>
-    <string name="about_olauncher">Über Olauncher</string>
     <string name="learn_more">Erfahren Sie mehr</string>
     <string name="leave_a_review">Rezension</string>
     <string name="review_message">Olauncher ist und bleibt völlig kostenlos. Es gibt keine Werbung. Es werden keine Daten erfasst. Am wichtigsten ist, dass es Ihnen dabei hilft, Ihre Bildschirmzeit zu verkürzen und ein gesünderes digitales Leben zu führen.
         \n\nWir glauben, dass der Wechsel zu einem Minimal Launcher eine ausgezeichnete Entscheidung ist. Obwohl wir offensichtlich voreingenommen sind, hoffen wir, dass Ihnen die Erfahrung gefällt. Teilen Sie uns gerne Ihre Gedanken mit!</string>
     <string name="home_screen">Startbildschirm</string>
     <string name="hey">Hey</string>
-    <string name="more_features">Weitere Funktionen…</string>
     <string name="new_year_wish">Auf ein Jahr, das besser ist als alle zuvor. Frohes neues Jahr!</string>
     <string name="new_year_wish_1">Egal, wie der Januar gelaufen ist. Du hast noch den Rest des Jahres Zeit, um besser zu sein als je zuvor.</string>
     <string name="cheers">Prost!</string>

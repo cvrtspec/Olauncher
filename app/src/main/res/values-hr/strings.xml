@@ -11,11 +11,7 @@
     <string name="on">Uklj.</string>
     <string name="black">Crno</string>
     <string name="white">Bijelo</string>
-    <string name="change_default_launcher">Promijeni zadani pokretač</string>
-    <string name="privacy">Privatnost</string>
-    <string name="share">Podijeli</string>
     <string name="share_now">Podijeli</string>
-    <string name="rate">Ocijeni</string>
     <string name="rate_now">Ocijeni</string>
     <string name="follow">Prati</string>
     <string name="email">E-pošta</string>
@@ -107,10 +103,8 @@
     <string name="adapter_show">Prikaži</string>
     <string name="adapter_hide">Sakrij</string>
     <string name="are_you_using_your_phone_or_is_your_phone_using_you">Koristite li svoj telefon ili vaš telefon koristi vas?</string>
-    <string name="about_olauncher">O Olauncher-u i ČPP</string>
     <string name="home_screen">Početni ekran</string>
     <string name="hey">Bok</string>
-    <string name="more_features">Više značajki…</string>
     <string name="new_year_wish">Neka je ova godina bolja od svih prije. Sretna nova godina!</string>
     <string name="new_year_wish_1">Nije važno kako je prošao siječanj. Još uvijek imate ostatak godine da budete bolji nego ikad.</string>
     <string name="cheers">Živjeli!</string>

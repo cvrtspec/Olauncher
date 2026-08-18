@@ -337,6 +337,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             prefs.clockAppUser = appModel.user.toString()
             prefs.clockAppClassName = appModel.activityClassName
         }
+        updateSwipeApps()
     }
 
     private fun saveCalendarApp(appModel: AppModel) {

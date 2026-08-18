@@ -11,11 +11,7 @@
     <string name="on">Nyala</string>
     <string name="black">Hitam</string>
     <string name="white">Putih</string>
-    <string name="change_default_launcher">Ubah peluncur default</string>
-    <string name="privacy">Privasi</string>
-    <string name="share">Bagikan</string>
     <string name="share_now">Bagikan sekarang</string>
-    <string name="rate">Peringkat</string>
     <string name="rate_now">Berikan peringkat sekarang</string>
     <string name="follow">Ikuti</string>
     <string name="email">Surel</string>
@@ -101,7 +97,6 @@
     <string name="adapter_show">perlihatkan</string>
     <string name="adapter_hide">sembunyikan</string>
     <string name="are_you_using_your_phone_or_is_your_phone_using_you">Apakah Anda menggunakan ponsel Anda, atau ponsel Anda menggunakan Anda?</string>
-    <string name="about_olauncher">Tentang Olauncher</string>
     <string name="learn_more">Pelajari lebih lanjut</string>
     <string name="screen_time">Waktu layar</string>
     <string name="leave_a_review">Tinggalkan ulasan</string>
@@ -109,7 +104,6 @@
         \n\nKami percaya bahwa beralih ke peluncur minimal adalah keputusan yang sangat baik. Meskipun kami jelas-jelas bias, kami harap Anda menikmati pengalaman ini. Jangan ragu untuk berbagi pemikiran Anda dengan kami!</string>
     <string name="home_screen">Layar beranda</string>
     <string name="hey">Hai</string>
-    <string name="more_features">Fitur lainnya…</string>
     <string name="new_year_wish">Untuk tahun yang lebih baik dari sebelumnya. Selamat tahun baru!</string>
     <string name="new_year_wish_1">Tidak peduli bagaimana bulan Januari berlalu. Anda masih punya sisa tahun untuk melakukan yang lebih baik dari sebelumnya.</string>
     <string name="cheers">Bersulang!</string>

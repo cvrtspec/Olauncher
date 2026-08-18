@@ -11,11 +11,7 @@
     <string name="on">På</string>
     <string name="black">Svart</string>
     <string name="white">Vit</string>
-    <string name="change_default_launcher">Ändra förvald startskärmsapp</string>
-    <string name="privacy">Integritet</string>
-    <string name="share">Dela</string>
     <string name="share_now">Dela nu</string>
-    <string name="rate">Betygsätt</string>
     <string name="rate_now">Betygsätt nu</string>
     <string name="follow">Följ</string>
     <string name="email">E-post</string>
@@ -101,7 +97,6 @@
     <string name="adapter_show">Visa</string>
     <string name="adapter_hide">Dölj</string>
     <string name="are_you_using_your_phone_or_is_your_phone_using_you">Använder du din telefon, eller använder din telefon dig?</string>
-    <string name="about_olauncher">Om Olauncher</string>
     <string name="screen_time">Skärmtid</string>
     <string name="learn_more">Läs mer</string>
     <string name="leave_a_review">Lämna en recension</string>
@@ -109,7 +104,6 @@
           \n\nVi tycker att det är ett utmärkt beslut att byta till en minimalistisk startskärmsapp. Även om vi uppenbarligen är partiska, hoppas vi att du gillar upplevelsen. Vi vill gärna höra dina tankar!</string>
     <string name="home_screen">Startskärm</string>
     <string name="hey">Hej</string>
-    <string name="more_features">Fler funktioner…</string>
     <string name="new_year_wish">För ett år bättre än alla tidigare. Gott nytt år!</string>
     <string name="new_year_wish_1">Det spelar ingen roll hur januari gick. Du har fortfarande resten av året på dig att göra bättre ifrån dig än någonsin.</string>
     <string name="cheers">Skål!</string>

@@ -10,11 +10,7 @@
     <string name="on">מופעל</string>
     <string name="black">שחור</string>
     <string name="white">לבן</string>
-    <string name="change_default_launcher">שינוי משגר ברירת המחדל</string>
-    <string name="privacy">פרטיות</string>
-    <string name="share">שיתוף</string>
     <string name="share_now">שתף עכשיו</string>
-    <string name="rate">דירוג</string>
     <string name="rate_now">דרג עכשיו</string>
     <string name="follow">עקבו אחריי</string>
     <string name="email">דואר אלקטרוני</string>
@@ -95,11 +91,9 @@
     <string name="adapter_hide">הסתרה</string>
     <string name="are_you_using_your_phone_or_is_your_phone_using_you">האם אתם משתמשים בטלפון, או שהוא משתמש בכם?</string>
     <string name="hey">היי</string>
-    <string name="more_features">עוד תכונות…</string>
     <string name="new_year_wish">לעבר שנה טובה יותר מכל מה שקדם. שנה טובה!</string>
     <string name="new_year_wish_1">לא משנה איך עבר ינואר. עדיין יש לך את שאר השנה להצליח יותר מתמיד</string>
     <string name="cheers">לחיים!</string>
-    <string name="about_olauncher">אודות ושאלות נפוצות</string>
     <string name="screen_time">זמן מסך</string>
     <string name="learn_more">למדו עוד</string>
     <string name="leave_a_review">השאירו ביקורת</string>

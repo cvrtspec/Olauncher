@@ -11,11 +11,7 @@
     <string name="on">Sí</string>
     <string name="black">Negro</string>
     <string name="white">Blanco</string>
-    <string name="change_default_launcher">Cambiar lanzador principal</string>
-    <string name="privacy">Privacidad</string>
-    <string name="share">Compartir</string>
     <string name="share_now">Compartir</string>
-    <string name="rate">Calificar</string>
     <string name="rate_now">Calificar</string>
     <string name="follow">Seguir</string>
     <string name="email">Correo electrónico</string>
@@ -103,7 +99,6 @@
     <string name="adapter_show">Mostrar</string>
     <string name="adapter_hide">Ocultar</string>
     <string name="are_you_using_your_phone_or_is_your_phone_using_you">¿Estás usando tu teléfono, o tu teléfono te está usando a ti?</string>
-    <string name="about_olauncher">Acerca de Olauncher</string>
     <string name="learn_more">Aprende más</string>
     <string name="screen_time">Tiempo de pantalla</string>
     <string name="leave_a_review">Dejar un comentario</string>
@@ -111,7 +106,6 @@
         \n\nCreemos que cambiar a un lanzador mínimo es una excelente decisión. Aunque obviamente somos parciales, esperamos que disfrutes la experiencia. ¡No dudes en compartir tus pensamientos con nosotros!</string>
     <string name="home_screen">Pantalla de inicio</string>
     <string name="hey">Hola</string>
-    <string name="more_features">Más funciones…</string>
     <string name="new_year_wish">Por un año mejor que cualquiera anterior. ¡Feliz año nuevo!</string>
     <string name="new_year_wish_1">No importa cómo haya ido enero. Todavía tienes el resto del año para hacerlo mejor que nunca.</string>
     <string name="cheers">¡Salud!</string>

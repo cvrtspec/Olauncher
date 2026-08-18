@@ -46,11 +46,7 @@
     <string name="on">نعم</string>
     <string name="black">أسود</string>
     <string name="white">أبيض</string>
-    <string name="change_default_launcher">تغيير المشغل الافتراضي</string>
-    <string name="privacy">خصوصية</string>
-    <string name="share">شارك</string>
     <string name="share_now">يشارك اﻵن</string>
-    <string name="rate">قيّم</string>
     <string name="rate_now">قيّم اﻵن</string>
     <string name="follow">تابع</string>
     <string name="email">بريد</string>
@@ -100,7 +96,6 @@
     <string name="search_for_Launcher_or_home_app">ابحث عن Launcher أو Home app</string>
     <string name="swipe_left_app_enabled">التمرير لليسار مفعّل</string>
     <string name="are_you_using_your_phone_or_is_your_phone_using_you">هل تستخدم هاتفك أم أن هاتفك يستخدمك؟</string>
-    <string name="about_olauncher">عن Olauncher</string>
     <string name="learn_more">تعلم أكثر</string>
     <string name="leave_a_review">أخبرنا رأيك</string>
     <string name="review_message">Olauncher هو وسيظل دائمًا مجانيًا تمامًا. ليس لديها إعلانات. لا يجمع أي بيانات. والأهم من ذلك أنه يساعدك على تقليل وقت الشاشة والعيش حياة رقمية أكثر صحة.
@@ -108,7 +103,6 @@
     <string name="screen_time">وقت الشاشة</string>
     <string name="home_screen">الشاشة الرئيسية</string>
     <string name="hey">مرحبا</string>
-    <string name="more_features">مزايا إضافية…</string>
     <string name="new_year_wish">إليك عامًا أفضل من كل ما سبقه. سنة جديدة سعيدة!</string>
     <string name="new_year_wish_1">لا يهم كيف مضى شهر يناير. لا يزال لديك بقية العام لتقدم أداءً أفضل من أي وقت مضى.</string>
     <string name="cheers">هتافات!</string>

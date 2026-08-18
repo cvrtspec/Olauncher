@@ -46,11 +46,7 @@
     <string name="on">是</string>
     <string name="black">黑色</string>
     <string name="white">白色</string>
-    <string name="change_default_launcher">更改默认启动器</string>
-    <string name="privacy">隐私</string>
-    <string name="share">分享</string>
     <string name="share_now">分享</string>
-    <string name="rate">评分</string>
     <string name="rate_now">评分</string>
     <string name="follow">关注</string>
     <string name="email">电子邮件</string>
@@ -104,7 +100,6 @@
     <string name="swipe_left_app_enabled">向左滑动应用程序启用</string>
     <string name="swipe_left_app_disabled">向左滑动应用程序已禁用</string>
     <string name="are_you_using_your_phone_or_is_your_phone_using_you">是你在用手机，还是手机在用你？</string>
-    <string name="about_olauncher">关于 Olauncher</string>
     <string name="learn_more">了解更多</string>
     <string name="screen_time">屏幕时间</string>
     <string name="leave_a_review">发表评论</string>
@@ -112,7 +107,6 @@
         \n\n我们相信切换到最小启动器是一个很好的决定。虽然我们显然有偏见，但我们希望您喜欢这次体验。请随时与我们分享您的想法！</string>
     <string name="home_screen">主屏幕</string>
     <string name="hey">嘿</string>
-    <string name="more_features">更多功能…</string>
     <string name="new_year_wish">愿新的一年胜过以往所有。新年快乐！</string>
     <string name="new_year_wish_1">月过得如何并不重要。你还有一年的时间做到比以往任何时候都更好。</string>
     <string name="cheers">干杯!</string>
