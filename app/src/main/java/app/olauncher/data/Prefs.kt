@@ -42,6 +42,16 @@ class Prefs(context: Context) {
     private val SCREEN_TIME_LAST_UPDATED = "SCREEN_TIME_LAST_UPDATED"
     private val LAUNCHER_RESTART_TIMESTAMP = "LAUNCHER_RECREATE_TIMESTAMP"
     private val SHOWN_ON_DAY_OF_YEAR = "SHOWN_ON_DAY_OF_YEAR"
+    // Oasis panel
+    private val OASIS_SHOW_TODO = "OASIS_SHOW_TODO"
+    private val OASIS_SHOW_NOTES = "OASIS_SHOW_NOTES"
+    private val OASIS_SHOW_CALENDAR = "OASIS_SHOW_CALENDAR"
+    private val OASIS_SHOW_POMODORO = "OASIS_SHOW_POMODORO"
+    private val OASIS_TODOS = "OASIS_TODOS"
+    private val OASIS_NOTES = "OASIS_NOTES"
+    private val OASIS_POMO_WORK = "OASIS_POMO_WORK"
+    private val OASIS_POMO_SHORT = "OASIS_POMO_SHORT"
+    private val OASIS_POMO_LONG = "OASIS_POMO_LONG"
     // Home button for recents feature disabled
     // private val HOME_BUTTON_SHOW_RECENTS = "HOME_BUTTON_SHOW_RECENTS"
 
@@ -143,6 +153,45 @@ class Prefs(context: Context) {
     var lockModeOn: Boolean
         get() = prefs.getBoolean(LOCK_MODE, false)
         set(value) = prefs.edit { putBoolean(LOCK_MODE, value).apply() }
+
+    // ----- Oasis panel -----
+    var oasisShowTodo: Boolean
+        get() = prefs.getBoolean(OASIS_SHOW_TODO, true)
+        set(value) = prefs.edit { putBoolean(OASIS_SHOW_TODO, value).apply() }
+
+    var oasisShowNotes: Boolean
+        get() = prefs.getBoolean(OASIS_SHOW_NOTES, true)
+        set(value) = prefs.edit { putBoolean(OASIS_SHOW_NOTES, value).apply() }
+
+    var oasisShowCalendar: Boolean
+        get() = prefs.getBoolean(OASIS_SHOW_CALENDAR, true)
+        set(value) = prefs.edit { putBoolean(OASIS_SHOW_CALENDAR, value).apply() }
+
+    var oasisShowPomodoro: Boolean
+        get() = prefs.getBoolean(OASIS_SHOW_POMODORO, true)
+        set(value) = prefs.edit { putBoolean(OASIS_SHOW_POMODORO, value).apply() }
+
+    // JSON blobs (org.json) for the to-do list and the notes pages
+    var oasisTodos: String
+        get() = prefs.getString(OASIS_TODOS, "[]") ?: "[]"
+        set(value) = prefs.edit { putString(OASIS_TODOS, value).apply() }
+
+    var oasisNotes: String
+        get() = prefs.getString(OASIS_NOTES, "[]") ?: "[]"
+        set(value) = prefs.edit { putString(OASIS_NOTES, value).apply() }
+
+    // Pomodoro: last-used duration per mode, in seconds (defaults 25 / 5 / 10 min)
+    var oasisPomoWork: Int
+        get() = prefs.getInt(OASIS_POMO_WORK, 25 * 60)
+        set(value) = prefs.edit { putInt(OASIS_POMO_WORK, value).apply() }
+
+    var oasisPomoShort: Int
+        get() = prefs.getInt(OASIS_POMO_SHORT, 5 * 60)
+        set(value) = prefs.edit { putInt(OASIS_POMO_SHORT, value).apply() }
+
+    var oasisPomoLong: Int
+        get() = prefs.getInt(OASIS_POMO_LONG, 10 * 60)
+        set(value) = prefs.edit { putInt(OASIS_POMO_LONG, value).apply() }
 
     var autoShowKeyboard: Boolean
         get() = prefs.getBoolean(AUTO_SHOW_KEYBOARD, true)

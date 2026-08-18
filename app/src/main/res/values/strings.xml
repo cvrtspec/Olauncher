@@ -167,4 +167,43 @@
     <string name="cheers">Cheers!</string>
     <string name="notification_bar">Notification bar</string>
     <string name="private_space">Private space</string>
+
+    <!-- Oasis panel -->
+    <string name="oasis_title">Oasis</string>
+    <string name="oasis_settings">Oasis settings</string>
+    <string name="oasis_todo">To-do</string>
+    <string name="oasis_todo_hint">Add a task…</string>
+    <string name="oasis_todo_empty">Nothing to do</string>
+    <string name="oasis_notes">Notes</string>
+    <string name="oasis_notes_hint">Write a note…</string>
+    <string name="oasis_notes_save">Save</string>
+    <string name="oasis_calendar">Calendar</string>
+    <string name="oasis_calendar_empty">No events</string>
+    <string name="oasis_calendar_all_day">All day</string>
+    <string name="oasis_calendar_untitled">(untitled)</string>
+    <string name="oasis_calendar_permission">Tap to allow calendar access</string>
+    <string name="oasis_calendar_today">Today</string>
+    <string name="oasis_calendar_open">Open</string>
+    <string name="oasis_calendar_refresh">↻</string>
+    <string name="oasis_pomodoro">Pomodoro timer</string>
+    <string name="oasis_pomo_work">Pomodoro</string>
+    <string name="oasis_pomo_short">Short break</string>
+    <string name="oasis_pomo_long">Long break</string>
+    <string name="oasis_pomo_start">Start</string>
+    <string name="oasis_pomo_pause">Pause</string>
+    <string name="oasis_pomo_reset">Reset</string>
+    <string name="oasis_pomo_done">Timer finished</string>
+    <string name="oasis_pomo_set_title">Set minutes</string>
+    <string name="oasis_pomo_edit_hint">Tap the time to set minutes</string>
+    <string name="oasis_show_todo">Show To-do</string>
+    <string name="oasis_show_notes">Show Notes</string>
+    <string name="oasis_show_calendar">Show Calendar</string>
+    <string name="oasis_show_pomodoro">Show Pomodoro</string>
+    <string name="oasis_prev">◀</string>
+    <string name="oasis_next">▶</string>
+    <string name="oasis_add">＋</string>
+    <string name="oasis_delete">✕</string>
+    <string name="oasis_done">✓</string>
+    <string name="oasis_permission_required">Calendar permission is required</string>
+
 </resources>
