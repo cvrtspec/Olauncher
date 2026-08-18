@@ -143,16 +143,10 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
     }
 
     private fun initObservers() {
-        if (prefs.firstSettingsOpen) {
-            binding.firstRunTips.visibility = View.VISIBLE
-            binding.setDefaultLauncher.visibility = View.GONE
-        } else binding.firstRunTips.visibility = View.GONE
-
         viewModel.refreshHome.observe(viewLifecycleOwner) {
             populateHomeScreen(it)
         }
         viewModel.isOlauncherDefault.observe(viewLifecycleOwner, Observer {
-            if (binding.firstRunTips.isVisible) return@Observer
             binding.setDefaultLauncher.isVisible = it.not() && prefs.hideSetDefaultLauncher.not()
         })
         viewModel.toggleDateTime.observe(viewLifecycleOwner) {
@@ -222,6 +216,9 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
 
     private fun populateHomeScreen(appCountUpdated: Boolean) {
         if (appCountUpdated) hideHomeApps()
+        // The home list is only what was added from the app list: drop empty slots (and slots
+        // whose app was uninstalled on the previous pass) so no placeholder rows are shown.
+        if (prefs.compactHomeApps()) hideHomeApps()
         populateDateTime()
 
         val homeAppsNum = prefs.homeAppsNum

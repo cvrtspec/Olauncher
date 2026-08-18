@@ -32,7 +32,6 @@
     <string name="follow">Follow</string>
     <string name="email">Email</string>
     <string name="donate">Donate</string>
-    <string name="swipe_up_for_apps">1. Swipe up for all apps\n2. Settings: gear icon at the top of the app list\n3. Swipe right for the Oasis panel</string>
     <string name="dock_phone">Phone</string>
     <string name="dock_messages">Messages</string>
     <string name="dock_mail">Mail</string>

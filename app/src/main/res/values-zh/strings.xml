@@ -42,7 +42,6 @@
     <string name="email">电子邮件</string>
 
     <string name="donate">捐赠</string>
-    <string name="swipe_up_for_apps">1. 向上滑动查看所有应用\n2.长按任意位置进行设置</string>
     <string name="left">左对齐</string>
     <string name="right">右对齐</string>
     <string name="center">居中</string>

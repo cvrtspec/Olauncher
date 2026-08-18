@@ -7,5 +7,5 @@
 
     <dimen name="time_size">66sp</dimen>
     <dimen name="date_size">18sp</dimen>
-    <dimen name="home_date_size">54sp</dimen>
+    <dimen name="home_date_size">43sp</dimen>
 </resources>

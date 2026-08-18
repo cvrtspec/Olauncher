@@ -633,6 +633,21 @@ class Prefs(context: Context) {
         return true
     }
 
+    /** Drops empty slots (no name and no package) and closes the gaps. Returns true when anything changed. */
+    fun compactHomeApps(): Boolean {
+        val n = homeAppsNum
+        var kept = 0
+        for (i in 1..n) {
+            if (getAppName(i).isBlank() && getAppPackage(i).isBlank()) continue
+            kept++
+            if (kept != i) copyHomeSlot(i, kept)
+        }
+        if (kept == n) return false
+        for (i in (kept + 1)..n) setHomeSlot(i, "", "", "", "", false, "")
+        homeAppsNum = kept
+        return true
+    }
+
     fun homeContains(packageName: String, user: String, isShortcut: Boolean, shortcutId: String): Boolean =
         (1..homeAppsNum).any {
             getAppPackage(it) == packageName && getAppUser(it) == user &&
