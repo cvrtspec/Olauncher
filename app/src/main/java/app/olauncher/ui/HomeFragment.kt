@@ -288,6 +288,15 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
         isShortcut: Boolean,
         shortcutId: String?,
     ): Boolean {
+        // A folder placed on the home list: name (may be blank) plus a folder icon.
+        if (packageName == Constants.FOLDER_PACKAGE) {
+            textView.text = appName
+            textView.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_folder, 0)
+            textView.compoundDrawablePadding = (8 * resources.displayMetrics.density).toInt()
+            return true
+        }
+        textView.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, 0, 0)
+
         // Get user handle for the app/shortcut
         val userHandle = getUserHandleFromString(requireContext(), userString)
 
@@ -398,6 +407,10 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
     }
 
     private fun homeAppClicked(location: Int) {
+        if (prefs.getAppPackage(location) == Constants.FOLDER_PACKAGE) {
+            showAppList(Constants.FLAG_LAUNCH_APP, folderId = prefs.getShortcutId(location))
+            return
+        }
         launchAppOrShortcut(
             appName = prefs.getAppName(location),
             packageName = prefs.getAppPackage(location),
@@ -447,14 +460,15 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
         )
     }
 
-    private fun showAppList(flag: Int, rename: Boolean = false, includeHiddenApps: Boolean = false) {
+    private fun showAppList(flag: Int, rename: Boolean = false, includeHiddenApps: Boolean = false, folderId: String? = null) {
         viewModel.getAppList(includeHiddenApps)
         try {
             findNavController().navigate(
                 R.id.action_mainFragment_to_appListFragment,
                 bundleOf(
                     Constants.Key.FLAG to flag,
-                    Constants.Key.RENAME to rename
+                    Constants.Key.RENAME to rename,
+                    Constants.Key.FOLDER to folderId
                 )
             )
         } catch (e: Exception) {

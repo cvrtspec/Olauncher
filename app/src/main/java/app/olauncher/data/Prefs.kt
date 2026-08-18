@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.edit
+import org.json.JSONArray
+import org.json.JSONObject
 
 class Prefs(context: Context) {
     private val PREFS_FILENAME = "app.olauncher"
@@ -14,6 +16,7 @@ class Prefs(context: Context) {
     private val FIRST_HIDE = "FIRST_HIDE"
     private val USER_STATE = "USER_STATE"
     private val HOME_APPS_NUM = "HOME_APPS_NUM"
+    private val FOLDERS = "FOLDERS"
     private val AUTO_SHOW_KEYBOARD = "AUTO_SHOW_KEYBOARD"
     private val KEYBOARD_MESSAGE = "KEYBOARD_MESSAGE"
     private val STATUS_BAR = "STATUS_BAR"
@@ -573,6 +576,90 @@ class Prefs(context: Context) {
             8 -> isShortcut8
             else -> false
         }
+    }
+
+    // ---- Folders (app list). JSON: [{"id":..,"name":..,"apps":["package|user",...]}]. An app is in at most one folder. ----
+    data class Folder(val id: String, var name: String, val apps: MutableList<String>)
+
+    fun getFolders(): MutableList<Folder> {
+        val list = mutableListOf<Folder>()
+        try {
+            val arr = JSONArray(prefs.getString(FOLDERS, "[]") ?: "[]")
+            for (i in 0 until arr.length()) {
+                val o = arr.getJSONObject(i)
+                val apps = mutableListOf<String>()
+                val a = o.optJSONArray("apps")
+                if (a != null) for (j in 0 until a.length()) apps.add(a.getString(j))
+                list.add(Folder(o.getString("id"), o.optString("name", ""), apps))
+            }
+        } catch (_: Exception) {
+        }
+        return list
+    }
+
+    fun saveFolders(folders: List<Folder>) {
+        val arr = JSONArray()
+        for (f in folders) {
+            val o = JSONObject()
+            o.put("id", f.id)
+            o.put("name", f.name)
+            val a = JSONArray()
+            for (k in f.apps) a.put(k)
+            o.put("apps", a)
+            arr.put(o)
+        }
+        prefs.edit { putString(FOLDERS, arr.toString()) }
+    }
+
+    fun addFolder(name: String): Folder {
+        val folders = getFolders()
+        val folder = Folder("f${System.currentTimeMillis()}", name, mutableListOf())
+        folders.add(folder)
+        saveFolders(folders)
+        return folder
+    }
+
+    fun renameFolder(id: String, name: String) {
+        val folders = getFolders()
+        folders.find { it.id == id }?.name = name
+        saveFolders(folders)
+        for (i in 1..homeAppsNum)
+            if (getAppPackage(i) == Constants.FOLDER_PACKAGE && getShortcutId(i) == id)
+                setHomeSlot(i, name, Constants.FOLDER_PACKAGE, "", "", false, id)
+    }
+
+    fun deleteFolder(id: String) {
+        val folders = getFolders()
+        folders.removeAll { it.id == id }
+        saveFolders(folders)
+        removeFolderFromHome(id)
+    }
+
+    /** Puts the app (key = "package|user") in the folder, taking it out of any other folder. */
+    fun assignAppToFolder(id: String, key: String) {
+        val folders = getFolders()
+        for (f in folders) f.apps.remove(key)
+        folders.find { it.id == id }?.apps?.add(key)
+        saveFolders(folders)
+    }
+
+    fun removeAppFromFolders(key: String) {
+        val folders = getFolders()
+        for (f in folders) f.apps.remove(key)
+        saveFolders(folders)
+    }
+
+    fun folderedAppKeys(): Set<String> = getFolders().flatMap { it.apps }.toSet()
+
+    fun homeContainsFolder(id: String): Boolean =
+        (1..homeAppsNum).any { getAppPackage(it) == Constants.FOLDER_PACKAGE && getShortcutId(it) == id }
+
+    fun addFolderToHome(folder: Folder): Boolean =
+        !homeContainsFolder(folder.id) && addHomeApp(folder.name, Constants.FOLDER_PACKAGE, "", "", false, folder.id)
+
+    fun removeFolderFromHome(id: String) {
+        for (i in homeAppsNum downTo 1)
+            if (getAppPackage(i) == Constants.FOLDER_PACKAGE && getShortcutId(i) == id) removeHomeApp(i)
     }
 
     // ---- Home list management (Settings -> Home apps; "Home" in the app list). Slots 1..8. ----

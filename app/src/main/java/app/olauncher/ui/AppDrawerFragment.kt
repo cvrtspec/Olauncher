@@ -6,6 +6,9 @@ import android.os.Bundle
 import android.os.Process
 import android.text.Spannable
 import android.view.Gravity
+import androidx.appcompat.app.AlertDialog
+import android.widget.FrameLayout
+import android.widget.EditText
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,6 +20,7 @@ import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.activityViewModels
 import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
+import app.olauncher.databinding.FolderRowBinding
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Recycler
@@ -48,6 +52,7 @@ class AppDrawerFragment : BaseFragment() {
 
     private var flag = Constants.FLAG_LAUNCH_APP
     private var canRename = false
+    private var currentFolderId: String? = null
     private var currentAppList: List<AppModel>? = null
     private var currentPrivateSpaceApps: List<AppModel>? = null
     private var currentPrivateSpaceLocked: Boolean = true
@@ -72,6 +77,7 @@ class AppDrawerFragment : BaseFragment() {
         arguments?.let {
             flag = it.getInt(Constants.Key.FLAG, Constants.FLAG_LAUNCH_APP)
             canRename = it.getBoolean(Constants.Key.RENAME, false)
+            currentFolderId = it.getString(Constants.Key.FOLDER)
         }
 
         initViews()
@@ -79,6 +85,7 @@ class AppDrawerFragment : BaseFragment() {
         initAdapter()
         initObservers()
         initClickListeners()
+        renderFolders()
     }
 
     private fun initViews() {
@@ -166,6 +173,7 @@ class AppDrawerFragment : BaseFragment() {
                 val message = viewModel.addToHome(appModel)
                 if (message != 0) requireContext().showToast(getString(message))
             },
+            appFolderListener = { appModel -> onFolderAction(appModel) },
             appInfoListener = {
                 openAppInfo(
                     requireContext(),
@@ -310,8 +318,166 @@ class AppDrawerFragment : BaseFragment() {
             }
         }
 
-        adapter.setAppList(combined)
+        // Folders: in the plain list, apps that live in a folder are shown only inside that folder.
+        val listForMode: MutableList<AppModel> = if (flag != Constants.FLAG_LAUNCH_APP) combined else {
+            val folderId = currentFolderId
+            if (folderId != null) {
+                val members = prefs.getFolders().find { it.id == folderId }?.apps?.toSet() ?: emptySet()
+                combined.filter { it is AppModel.App && folderKey(it) in members }.toMutableList()
+            } else {
+                val foldered = prefs.folderedAppKeys()
+                if (foldered.isEmpty()) combined
+                else combined.filter { !(it is AppModel.App && folderKey(it) in foldered) }.toMutableList()
+            }
+        }
+        adapter.inFolder = flag == Constants.FLAG_LAUNCH_APP && currentFolderId != null
+        adapter.setAppList(listForMode)
         adapter.filter.filter(binding.search.query)
+    }
+
+    // ---------------- Folders (plain app list only) ----------------
+
+    private fun folderKey(app: AppModel.App) = "${app.appPackage}|${app.user}"
+
+    private fun folderLabel(folder: Prefs.Folder) = folder.name
+
+    private fun renderFolders() {
+        val container = binding.foldersContainer
+        container.removeAllViews()
+        if (flag != Constants.FLAG_LAUNCH_APP) {
+            container.isVisible = false
+            return
+        }
+        val folders = prefs.getFolders()
+        val current = currentFolderId?.let { id -> folders.find { it.id == id } }
+        if (currentFolderId != null && current == null) currentFolderId = null
+        if (current != null) {
+            val row = FolderRowBinding.inflate(layoutInflater, container, false)
+            row.folderName.text = getString(R.string.folder_back, folderLabel(current))
+            row.folderCount.text = current.apps.size.toString()
+            row.root.setOnClickListener { exitFolder() }
+            row.root.setOnLongClickListener { showFolderActions(current); true }
+            container.addView(row.root)
+            container.isVisible = true
+            binding.search.queryHint = folderLabel(current).ifBlank { getString(R.string.folder) }
+            return
+        }
+        binding.search.queryHint = " ___"
+        if (folders.isEmpty()) {
+            container.isVisible = false
+            return
+        }
+        for (folder in folders) {
+            val row = FolderRowBinding.inflate(layoutInflater, container, false)
+            row.folderName.text = folderLabel(folder)
+            row.folderCount.text = folder.apps.size.toString()
+            row.root.setOnClickListener { enterFolder(folder.id) }
+            row.root.setOnLongClickListener { showFolderActions(folder); true }
+            container.addView(row.root)
+        }
+        container.isVisible = true
+    }
+
+    private fun enterFolder(id: String) {
+        currentFolderId = id
+        binding.search.setQuery("", false)
+        renderFolders()
+        updateCombinedAppList()
+    }
+
+    private fun exitFolder() {
+        currentFolderId = null
+        binding.search.setQuery("", false)
+        renderFolders()
+        updateCombinedAppList()
+    }
+
+    private fun onFolderAction(appModel: AppModel) {
+        val app = appModel as? AppModel.App ?: return
+        if (currentFolderId != null) {
+            prefs.removeAppFromFolders(folderKey(app))
+            requireContext().showToast(getString(R.string.folder_removed_from))
+            renderFolders()
+            updateCombinedAppList()
+        } else showChooseFolderDialog(app)
+    }
+
+    private fun showChooseFolderDialog(app: AppModel.App) {
+        val folders = prefs.getFolders()
+        val labels = folders.map { folderLabel(it).ifBlank { getString(R.string.folder) } } + getString(R.string.folder_new)
+        AlertDialog.Builder(requireContext())
+            .setTitle(R.string.folder_choose)
+            .setItems(labels.toTypedArray()) { _, which ->
+                if (which == folders.size) {
+                    showFolderNameDialog(R.string.folder_new, "") { name ->
+                        val folder = prefs.addFolder(name)
+                        prefs.assignAppToFolder(folder.id, folderKey(app))
+                        requireContext().showToast(getString(R.string.folder_moved))
+                        renderFolders()
+                        updateCombinedAppList()
+                    }
+                } else {
+                    prefs.assignAppToFolder(folders[which].id, folderKey(app))
+                    requireContext().showToast(getString(R.string.folder_moved))
+                    renderFolders()
+                    updateCombinedAppList()
+                }
+            }
+            .show()
+    }
+
+    /** Folder name input; blank names (or spaces) are allowed and show as an icon-only folder. */
+    private fun showFolderNameDialog(titleRes: Int, initial: String, onDone: (String) -> Unit) {
+        val input = EditText(requireContext())
+        input.setSingleLine(true)
+        input.hint = getString(R.string.folder_name_hint)
+        input.setText(initial)
+        input.setSelection(initial.length)
+        val pad = (20 * resources.displayMetrics.density).toInt()
+        val wrapper = FrameLayout(requireContext())
+        wrapper.setPadding(pad, pad / 2, pad, 0)
+        wrapper.addView(input)
+        AlertDialog.Builder(requireContext())
+            .setTitle(titleRes)
+            .setView(wrapper)
+            .setPositiveButton(android.R.string.ok) { _, _ -> onDone(input.text.toString().replace("\n", "")) }
+            .setNegativeButton(android.R.string.cancel, null)
+            .show()
+    }
+
+    private fun showFolderActions(folder: Prefs.Folder) {
+        val onHome = prefs.homeContainsFolder(folder.id)
+        val actions = arrayOf(
+            getString(if (onHome) R.string.folder_remove_from_home else R.string.folder_add_to_home),
+            getString(R.string.folder_rename),
+            getString(R.string.folder_delete)
+        )
+        AlertDialog.Builder(requireContext())
+            .setTitle(folderLabel(folder).ifBlank { getString(R.string.folder) })
+            .setItems(actions) { _, which ->
+                when (which) {
+                    0 -> {
+                        if (onHome) prefs.removeFolderFromHome(folder.id)
+                        else if (!prefs.addFolderToHome(folder)) requireContext().showToast(getString(R.string.home_apps_full))
+                        viewModel.refreshHome(true)
+                    }
+
+                    1 -> showFolderNameDialog(R.string.folder_rename, folder.name) { name ->
+                        prefs.renameFolder(folder.id, name)
+                        viewModel.refreshHome(true)
+                        renderFolders()
+                    }
+
+                    2 -> {
+                        prefs.deleteFolder(folder.id)
+                        if (currentFolderId == folder.id) currentFolderId = null
+                        viewModel.refreshHome(true)
+                        renderFolders()
+                        updateCombinedAppList()
+                    }
+                }
+            }
+            .show()
     }
 
     private fun initClickListeners() {

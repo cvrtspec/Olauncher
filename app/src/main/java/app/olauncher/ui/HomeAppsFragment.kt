@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import app.olauncher.MainViewModel
 import app.olauncher.R
+import app.olauncher.data.Constants
 import app.olauncher.data.Prefs
 import app.olauncher.databinding.FragmentHomeAppsBinding
 import app.olauncher.databinding.HomeAppRowBinding
@@ -48,7 +49,9 @@ class HomeAppsFragment : Fragment() {
         binding.homeAppsEmpty.isVisible = count == 0
         for (i in 1..count) {
             val row = HomeAppRowBinding.inflate(layoutInflater, binding.homeAppsContainer, false)
-            row.homeAppName.text = prefs.getAppName(i).ifBlank { getString(R.string.app) }
+            row.homeAppName.text =
+                if (prefs.getAppPackage(i) == Constants.FOLDER_PACKAGE) getString(R.string.folder_row_label, prefs.getAppName(i))
+                else prefs.getAppName(i).ifBlank { getString(R.string.app) }
             row.homeAppUp.alpha = if (i == 1) 0.3f else 1f
             row.homeAppDown.alpha = if (i == count) 0.3f else 1f
             row.homeAppUp.setOnClickListener {

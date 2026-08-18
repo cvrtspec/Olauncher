@@ -34,6 +34,7 @@ class AppDrawerAdapter(
     private val appHideListener: (AppModel, Int) -> Unit,
     private val appRenameListener: (AppModel, String) -> Unit,
     private val appAddHomeListener: (AppModel) -> Unit = {},
+    private val appFolderListener: (AppModel) -> Unit = {},
     private val privateSpaceToggleListener: () -> Unit = {},
     private val privateSpaceSettingsListener: () -> Unit = {},
 ) : ListAdapter<AppModel, RecyclerView.ViewHolder>(DIFF_CALLBACK), Filterable {
@@ -68,6 +69,8 @@ class AppDrawerAdapter(
     private val appFilter = createAppFilter()
     private val myUserHandle = android.os.Process.myUserHandle()
 
+    /** True while the drawer shows the contents of one folder (the Folder action then means "remove"). */
+    var inFolder = false
     var appsList: MutableList<AppModel> = mutableListOf()
     var appFilteredList: MutableList<AppModel> = mutableListOf()
 
@@ -121,7 +124,9 @@ class AppDrawerAdapter(
                     appInfoListener,
                     appHideListener,
                     appRenameListener,
-                    appAddHomeListener
+                    appAddHomeListener,
+                    appFolderListener,
+                    inFolder
                 )
             }
         } catch (e: Exception) {
@@ -236,6 +241,8 @@ class AppDrawerAdapter(
             appHideListener: (AppModel, Int) -> Unit,
             appRenameListener: (AppModel, String) -> Unit,
             appAddHomeListener: (AppModel) -> Unit,
+            appFolderListener: (AppModel) -> Unit,
+            inFolder: Boolean,
         ) = with(binding) {
             appHideLayout.visibility = View.GONE
             // "Home" (add to the home list) only from the plain app list
@@ -244,6 +251,14 @@ class AppDrawerAdapter(
                 appHideLayout.visibility = View.GONE
                 appTitle.visibility = View.VISIBLE
                 appAddHomeListener(appModel)
+            }
+            // "Folder" (move into a folder) / "Unfolder" (take out of the open folder), apps only
+            appFolder.isVisible = flag == Constants.FLAG_LAUNCH_APP && appModel is AppModel.App
+            appFolder.setText(if (inFolder) R.string.folder_remove else R.string.folder)
+            appFolder.setOnClickListener {
+                appHideLayout.visibility = View.GONE
+                appTitle.visibility = View.VISIBLE
+                appFolderListener(appModel)
             }
             renameLayout.visibility = View.GONE
             appTitle.visibility = View.VISIBLE

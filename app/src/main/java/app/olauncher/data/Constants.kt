@@ -5,7 +5,11 @@ object Constants {
     object Key {
         const val FLAG = "flag"
         const val RENAME = "rename"
+        const val FOLDER = "folder"
     }
+
+    /** Package marker used in a home slot that shows a folder (shortcutId holds the folder id). */
+    const val FOLDER_PACKAGE = "app.olauncher.folder"
 
     object Dialog {
         const val ABOUT = "ABOUT"
