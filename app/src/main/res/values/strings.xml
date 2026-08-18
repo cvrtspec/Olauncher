@@ -146,7 +146,7 @@
     <string name="oasis_calendar_untitled">(untitled)</string>
     <string name="oasis_calendar_permission">Tap to allow calendar access</string>
     <string name="oasis_calendar_today">Today</string>
-    <string name="oasis_calendar_open">Open</string>
+    <string name="oasis_calendar_month">Month</string>
     <string name="oasis_calendar_refresh">↻</string>
     <string name="oasis_pomodoro">Pomodoro timer</string>
     <string name="oasis_pomo_work">Pomodoro</string>

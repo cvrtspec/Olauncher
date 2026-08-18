@@ -38,7 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="6dp"
-            android:text="@string/oasis_calendar_open"
+            android:text="@string/oasis_calendar_month"
             android:textSize="20sp" />
 
         <TextView

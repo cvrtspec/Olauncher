@@ -343,6 +343,26 @@ fun openAlarmApp(context: Context) {
     }
 }
 
+/**
+ * Opens the calendar app at "now" asking for a specific view ("DAY", "WEEK", "MONTH", "AGENDA").
+ * The view hint is the "VIEW" extra understood by AOSP-derived calendars; apps that ignore it
+ * still open at today's date. Falls back to the plain calendar launch.
+ */
+fun openCalendarView(context: Context, view: String) {
+    try {
+        val calendarUri = CalendarContract.CONTENT_URI
+            .buildUpon()
+            .appendPath("time")
+            .appendPath(System.currentTimeMillis().toString())
+            .build()
+        val intent = Intent(Intent.ACTION_VIEW, calendarUri)
+        intent.putExtra("VIEW", view)
+        context.startActivity(intent)
+    } catch (e: Exception) {
+        openCalendar(context)
+    }
+}
+
 fun openCalendar(context: Context) {
     try {
         val calendarUri = CalendarContract.CONTENT_URI
