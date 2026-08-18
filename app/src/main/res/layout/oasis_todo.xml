@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/todoBlockRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/oasis_card"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/todoHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:text="@string/oasis_todo"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/todoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <TextView
+        android:id="@+id/todoEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="4dp"
+        android:text="@string/oasis_todo_empty"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="4dp">
+
+        <EditText
+            android:id="@+id/todoInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/oasis_todo_hint"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="text|textCapSentences"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/todoAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:minWidth="40dp"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="@string/oasis_add"
+            android:textSize="20sp" />
+    </LinearLayout>
+</LinearLayout>

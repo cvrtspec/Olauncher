@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/calBlockRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/oasis_card"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/calHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/oasis_calendar"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/calToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="@string/oasis_calendar_today"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/calOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="@string/oasis_calendar_open"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/calRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="@string/oasis_calendar_refresh"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingVertical="6dp">
+
+        <TextView
+            android:id="@+id/calPrev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="@string/oasis_prev"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/calDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/calNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="@string/oasis_next"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/eventsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <TextView
+        android:id="@+id/calEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="4dp"
+        android:text="@string/oasis_calendar_empty"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/calPermission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="8dp"
+        android:text="@string/oasis_calendar_permission"
+        android:textSize="15sp" />
+</LinearLayout>
