@@ -60,7 +60,7 @@
         android:orientation="vertical"
         android:paddingTop="@dimen/home_app_padding_vertical"
         android:paddingEnd="48dp"
-        android:paddingBottom="72dp">
+        android:paddingBottom="56dp">
 
         <TextView
             android:id="@+id/homeApp1"

@@ -60,7 +60,7 @@
         android:paddingStart="24dp"
         android:paddingTop="112dp"
         android:paddingEnd="64dp"
-        android:paddingBottom="136dp">
+        android:paddingBottom="84dp">
 
         <TextView
             android:id="@+id/homeApp1"
