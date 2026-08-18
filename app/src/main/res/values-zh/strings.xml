@@ -57,20 +57,10 @@
 
     <string name="donate">捐赠</string>
     <string name="swipe_up_for_apps">1. 向上滑动查看所有应用\n2.长按任意位置进行设置</string>
-    <string name="apps_on_home_screen">主屏幕上的应用程序</string>
     <string name="left">左对齐</string>
     <string name="right">右对齐</string>
     <string name="center">居中</string>
     <string name="swipe_left_app">向左滑动应用程序</string>
-    <string name="_0">0</string>
-    <string name="_1">1</string>
-    <string name="_2">2</string>
-    <string name="_3">3</string>
-    <string name="_4">4</string>
-    <string name="_5">5</string>
-    <string name="_6">6</string>
-    <string name="_7">7</string>
-    <string name="_8">8</string>
     <string name="auto_show_keyboard">自动显示键盘</string>
     <string name="hide">隐藏</string>
     <string name="status_bar">显示状态栏</string>

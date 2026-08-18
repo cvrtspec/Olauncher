@@ -263,6 +263,33 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         refreshHome(false)
     }
 
+    /** Adds the app/shortcut to the end of the home list. Returns the string to toast (0 = nothing). */
+    fun addToHome(appModel: AppModel): Int {
+        val added = when (appModel) {
+            is AppModel.PrivateSpaceHeader -> return 0
+            is AppModel.App -> {
+                if (prefs.homeContains(appModel.appPackage, appModel.user.toString(), false, ""))
+                    return R.string.home_app_already_added
+                prefs.addHomeApp(
+                    appModel.appLabel, appModel.appPackage, appModel.user.toString(),
+                    appModel.activityClassName, isShortcut = false, shortcutId = ""
+                )
+            }
+
+            is AppModel.PinnedShortcut -> {
+                if (prefs.homeContains(appModel.appPackage, appModel.user.toString(), true, appModel.shortcutId))
+                    return R.string.home_app_already_added
+                prefs.addHomeApp(
+                    appModel.appLabel, appModel.appPackage, appModel.user.toString(),
+                    null, isShortcut = true, shortcutId = appModel.shortcutId
+                )
+            }
+        }
+        if (!added) return R.string.home_apps_full
+        refreshHome(true)
+        return R.string.home_app_added
+    }
+
     private fun saveDockApp(appModel: AppModel, slot: Int) {
         when (appModel) {
             is AppModel.PrivateSpaceHeader -> return

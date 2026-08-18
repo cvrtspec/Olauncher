@@ -22,20 +22,10 @@
 
     <string name="donate">Donar</string>
     <string name="swipe_up_for_apps">1. Desliza hacia arriba para ver todas las aplicaciones\n2. Mantén pulsado en cualquier lugar para abrir la configuración</string>
-    <string name="apps_on_home_screen">Aplicaciones en la pantalla de inicio</string>
     <string name="left">Izquierda</string>
     <string name="right">Derecha</string>
     <string name="center">Centrado</string>
     <string name="swipe_left_app">Deslizar a la izquierda para abrir</string>
-    <string name="_0">0</string>
-    <string name="_1">1</string>
-    <string name="_2">2</string>
-    <string name="_3">3</string>
-    <string name="_4">4</string>
-    <string name="_5">5</string>
-    <string name="_6">6</string>
-    <string name="_7">7</string>
-    <string name="_8">8</string>
     <string name="app_drawer_tips">Sugerencia: Comienza a escribir el nombre de una aplicación para iniciarla automáticamente</string>
     <string name="okay">De acuerdo</string>
     <string name="cool">¡Guay!</string>

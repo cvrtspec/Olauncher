@@ -620,6 +620,87 @@ class Prefs(context: Context) {
         }
     }
 
+    // ---- Home list management (Settings -> Home apps; "Home" in the app list). Slots 1..8. ----
+    fun setHomeSlot(
+        location: Int, name: String, packageName: String, user: String,
+        activityClassName: String?, isShortcut: Boolean, shortcutId: String
+    ) {
+        when (location) {
+            1 -> {
+                appName1 = name; appPackage1 = packageName; appUser1 = user
+                appActivityClassName1 = activityClassName; isShortcut1 = isShortcut; shortcutId1 = shortcutId
+            }
+            2 -> {
+                appName2 = name; appPackage2 = packageName; appUser2 = user
+                appActivityClassName2 = activityClassName; isShortcut2 = isShortcut; shortcutId2 = shortcutId
+            }
+            3 -> {
+                appName3 = name; appPackage3 = packageName; appUser3 = user
+                appActivityClassName3 = activityClassName; isShortcut3 = isShortcut; shortcutId3 = shortcutId
+            }
+            4 -> {
+                appName4 = name; appPackage4 = packageName; appUser4 = user
+                appActivityClassName4 = activityClassName; isShortcut4 = isShortcut; shortcutId4 = shortcutId
+            }
+            5 -> {
+                appName5 = name; appPackage5 = packageName; appUser5 = user
+                appActivityClassName5 = activityClassName; isShortcut5 = isShortcut; shortcutId5 = shortcutId
+            }
+            6 -> {
+                appName6 = name; appPackage6 = packageName; appUser6 = user
+                appActivityClassName6 = activityClassName; isShortcut6 = isShortcut; shortcutId6 = shortcutId
+            }
+            7 -> {
+                appName7 = name; appPackage7 = packageName; appUser7 = user
+                appActivityClassName7 = activityClassName; isShortcut7 = isShortcut; shortcutId7 = shortcutId
+            }
+            8 -> {
+                appName8 = name; appPackage8 = packageName; appUser8 = user
+                appActivityClassName8 = activityClassName; isShortcut8 = isShortcut; shortcutId8 = shortcutId
+            }
+        }
+    }
+
+    private fun copyHomeSlot(from: Int, to: Int) = setHomeSlot(
+        to, getAppName(from), getAppPackage(from), getAppUser(from),
+        getAppActivityClassName(from), getIsShortcut(from), getShortcutId(from)
+    )
+
+    /** Appends to the end of the home list; false when all 8 slots are in use. */
+    fun addHomeApp(
+        name: String, packageName: String, user: String,
+        activityClassName: String?, isShortcut: Boolean, shortcutId: String
+    ): Boolean {
+        val n = homeAppsNum
+        if (n >= 8) return false
+        setHomeSlot(n + 1, name, packageName, user, activityClassName, isShortcut, shortcutId)
+        homeAppsNum = n + 1
+        return true
+    }
+
+    fun homeContains(packageName: String, user: String, isShortcut: Boolean, shortcutId: String): Boolean =
+        (1..homeAppsNum).any {
+            getAppPackage(it) == packageName && getAppUser(it) == user &&
+                    getIsShortcut(it) == isShortcut && (!isShortcut || getShortcutId(it) == shortcutId)
+        }
+
+    fun moveHomeApp(from: Int, to: Int) {
+        val n = homeAppsNum
+        if (from !in 1..n || to !in 1..n || from == to) return
+        val name = getAppName(from); val pkg = getAppPackage(from); val user = getAppUser(from)
+        val cls = getAppActivityClassName(from); val isShortcut = getIsShortcut(from); val shortcutId = getShortcutId(from)
+        copyHomeSlot(to, from)
+        setHomeSlot(to, name, pkg, user, cls, isShortcut, shortcutId)
+    }
+
+    fun removeHomeApp(location: Int) {
+        val n = homeAppsNum
+        if (location !in 1..n) return
+        for (i in location until n) copyHomeSlot(i + 1, i)
+        setHomeSlot(n, "", "", "", "", false, "")
+        homeAppsNum = n - 1
+    }
+
     fun setAppActivityClassName(location: Int, activityClassName: String) {
         when (location) {
             1 -> appActivityClassName1 = activityClassName

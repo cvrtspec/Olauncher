@@ -3,15 +3,6 @@
     <string name="app">Aplikacja</string>
     <string name="set_as_default_launcher">Ustaw jako domyślny program uruchamiający</string>
     <string name="set_as_default_launcher_u"><u>Ustaw jako domyślny program uruchamiający</u></string>
-    <string name="_0">0</string>
-    <string name="_1">1</string>
-    <string name="_2">2</string>
-    <string name="_3">3</string>
-    <string name="_4">4</string>
-    <string name="_5">5</string>
-    <string name="_6">6</string>
-    <string name="_7">7</string>
-    <string name="_8">8</string>
     <string name="app_drawer_tips">Wskazówka: zacznij wpisywać nazwę aplikacji, aby uruchomić ją automatycznie</string>
     <string name="okay">OK</string>
     <string name="cool">Fajny!</string>
@@ -65,7 +56,6 @@
 
     <string name="donate">Wspomóż</string>
     <string name="swipe_up_for_apps">1. Przesuń palcem w górę, aby wyświetlić wszystkie aplikacje\n2. Naciśnij i przytrzymaj dowolne miejsce, aby przejść do ustawień</string>
-    <string name="apps_on_home_screen">Aplikacje na ekranie głównym</string>
     <string name="left">Lewo</string>
     <string name="right">Prawo</string>
     <string name="center">Środek</string>

@@ -162,6 +162,10 @@ class AppDrawerFragment : BaseFragment() {
                 else
                     findNavController().popBackStack()
             },
+            appAddHomeListener = { appModel ->
+                val message = viewModel.addToHome(appModel)
+                if (message != 0) requireContext().showToast(getString(message))
+            },
             appInfoListener = {
                 openAppInfo(
                     requireContext(),

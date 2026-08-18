@@ -22,20 +22,10 @@
 
     <string name="donate">Donazioni</string>
     <string name="swipe_up_for_apps">1. Scorri verso l\'alto per tutte le app\n2. Premi a lungo in qualsiasi punto per le impostazioni</string>
-    <string name="apps_on_home_screen">App sulla schermata iniziale</string>
     <string name="left">Sinistra</string>
     <string name="right">Destra</string>
     <string name="center">Centrato</string>
     <string name="swipe_left_app">Scorri verso sinistra</string>
-    <string name="_0">0</string>
-    <string name="_1">1</string>
-    <string name="_2">2</string>
-    <string name="_3">3</string>
-    <string name="_4">4</string>
-    <string name="_5">5</string>
-    <string name="_6">6</string>
-    <string name="_7">7</string>
-    <string name="_8">8</string>
     <string name="app_drawer_tips">Suggerimento: inizia a digitare il nome di un\'app per avviarla automaticamente</string>
     <string name="okay">OK</string>
     <string name="cool">Freddo</string>

@@ -22,20 +22,10 @@
 
     <string name="donate">Пожертвовать</string>
     <string name="swipe_up_for_apps">1. Проведите вверх чтобы открыть все приложения.\n2. Длительным нажатием в любом месте открываются настройки</string>
-    <string name="apps_on_home_screen">Количество приложений на главном экране</string>
     <string name="left">Слева</string>
     <string name="right">Справа</string>
     <string name="center">Центр</string>
     <string name="swipe_left_app">Свайп влево</string>
-    <string name="_0">0</string>
-    <string name="_1">1</string>
-    <string name="_2">2</string>
-    <string name="_3">3</string>
-    <string name="_4">4</string>
-    <string name="_5">5</string>
-    <string name="_6">6</string>
-    <string name="_7">7</string>
-    <string name="_8">8</string>
     <string name="app_drawer_tips">Совет: начните вводить название приложения, чтобы запустить его автоматически.</string>
     <string name="okay">Хорошо</string>
     <string name="cool">Круто!</string>

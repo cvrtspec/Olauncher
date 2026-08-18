@@ -60,7 +60,20 @@
             app:exitAnim="@anim/fade_exit"
             app:popEnterAnim="@anim/fade_enter"
             app:popExitAnim="@anim/fade_exit" />
+        <action
+            android:id="@+id/action_settingsFragment_to_homeAppsFragment"
+            app:destination="@id/homeAppsFragment"
+            app:enterAnim="@anim/fade_enter"
+            app:exitAnim="@anim/fade_exit"
+            app:popEnterAnim="@anim/fade_enter"
+            app:popExitAnim="@anim/fade_exit" />
     </fragment>
+
+    <fragment
+        android:id="@+id/homeAppsFragment"
+        android:name="app.olauncher.ui.HomeAppsFragment"
+        android:label="HomeAppsFragment"
+        tools:layout="@layout/fragment_home_apps" />
 
 
     <fragment

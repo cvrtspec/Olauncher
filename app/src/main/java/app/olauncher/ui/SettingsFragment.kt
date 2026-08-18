@@ -65,7 +65,6 @@ class SettingsFragment : BaseFragment(), View.OnClickListener, View.OnLongClickL
         componentName = ComponentName(requireContext(), DeviceAdmin::class.java)
         checkAdminPermission()
 
-        binding.homeAppsNum.text = prefs.homeAppsNum.toString()
         populateProMessage()
         populateKeyboardText()
         populateScreenTimeOnOff()
@@ -89,7 +88,6 @@ class SettingsFragment : BaseFragment(), View.OnClickListener, View.OnLongClickL
     }
 
     override fun onClick(view: View) {
-        binding.appsNumSelectLayout.visibility = View.GONE
         binding.dateTimeSelectLayout.visibility = View.GONE
         binding.appThemeSelectLayout.visibility = View.GONE
         binding.swipeDownSelectLayout.visibility = View.GONE
@@ -109,7 +107,8 @@ class SettingsFragment : BaseFragment(), View.OnClickListener, View.OnLongClickL
             // Home button for recents feature disabled
             // R.id.homeButtonRecents -> toggleHomeButtonRecents()
             R.id.autoShowKeyboard -> toggleKeyboardText()
-            R.id.homeAppsNum -> binding.appsNumSelectLayout.visibility = View.VISIBLE
+            R.id.homeApps -> findNavController().navigate(R.id.action_settingsFragment_to_homeAppsFragment)
+            R.id.hiddenApps -> showHiddenApps()
             R.id.statusBar -> toggleStatusBar()
             R.id.dateTime -> binding.dateTimeSelectLayout.visibility = View.VISIBLE
             R.id.dateTimeOn -> toggleDateTime(Constants.DateTime.ON)
@@ -126,15 +125,6 @@ class SettingsFragment : BaseFragment(), View.OnClickListener, View.OnLongClickL
 
             R.id.tvGestures -> binding.flSwipeDown.visibility = View.VISIBLE
 
-            R.id.maxApps0 -> updateHomeAppsNum(0)
-            R.id.maxApps1 -> updateHomeAppsNum(1)
-            R.id.maxApps2 -> updateHomeAppsNum(2)
-            R.id.maxApps3 -> updateHomeAppsNum(3)
-            R.id.maxApps4 -> updateHomeAppsNum(4)
-            R.id.maxApps5 -> updateHomeAppsNum(5)
-            R.id.maxApps6 -> updateHomeAppsNum(6)
-            R.id.maxApps7 -> updateHomeAppsNum(7)
-            R.id.maxApps8 -> updateHomeAppsNum(8)
 
             R.id.textSizeMinus -> adjustTextSizePreview(-0.1f)
             R.id.textSizePlus -> adjustTextSizePreview(0.1f)
@@ -195,7 +185,8 @@ class SettingsFragment : BaseFragment(), View.OnClickListener, View.OnLongClickL
         binding.toggleLock.setOnClickListener(this)
         // Home button for recents feature disabled
         // binding.homeButtonRecents.setOnClickListener(this)
-        binding.homeAppsNum.setOnClickListener(this)
+        binding.homeApps.setOnClickListener(this)
+        binding.hiddenApps.setOnClickListener(this)
         binding.screenTimeOnOff.setOnClickListener(this)
         binding.statusBar.setOnClickListener(this)
         binding.dateTime.setOnClickListener(this)
@@ -225,15 +216,6 @@ class SettingsFragment : BaseFragment(), View.OnClickListener, View.OnLongClickL
         binding.privacy.setOnClickListener(this)
         binding.footer.setOnClickListener(this)
 
-        binding.maxApps0.setOnClickListener(this)
-        binding.maxApps1.setOnClickListener(this)
-        binding.maxApps2.setOnClickListener(this)
-        binding.maxApps3.setOnClickListener(this)
-        binding.maxApps4.setOnClickListener(this)
-        binding.maxApps5.setOnClickListener(this)
-        binding.maxApps6.setOnClickListener(this)
-        binding.maxApps7.setOnClickListener(this)
-        binding.maxApps8.setOnClickListener(this)
 
         binding.textSizeMinus.setOnClickListener(this)
         binding.textSizePlus.setOnClickListener(this)
@@ -389,13 +371,6 @@ class SettingsFragment : BaseFragment(), View.OnClickListener, View.OnLongClickL
         } catch (e: Exception) {
             e.printStackTrace()
         }
-    }
-
-    private fun updateHomeAppsNum(num: Int) {
-        binding.homeAppsNum.text = num.toString()
-        binding.appsNumSelectLayout.visibility = View.GONE
-        prefs.homeAppsNum = num
-        viewModel.refreshHome(true)
     }
 
     private var pendingTextSizeScale: Float = -1f

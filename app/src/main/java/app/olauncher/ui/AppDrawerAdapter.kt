@@ -33,6 +33,7 @@ class AppDrawerAdapter(
     private val appDeleteListener: (AppModel) -> Unit,
     private val appHideListener: (AppModel, Int) -> Unit,
     private val appRenameListener: (AppModel, String) -> Unit,
+    private val appAddHomeListener: (AppModel) -> Unit = {},
     private val privateSpaceToggleListener: () -> Unit = {},
     private val privateSpaceSettingsListener: () -> Unit = {},
 ) : ListAdapter<AppModel, RecyclerView.ViewHolder>(DIFF_CALLBACK), Filterable {
@@ -119,7 +120,8 @@ class AppDrawerAdapter(
                     appDeleteListener,
                     appInfoListener,
                     appHideListener,
-                    appRenameListener
+                    appRenameListener,
+                    appAddHomeListener
                 )
             }
         } catch (e: Exception) {
@@ -233,8 +235,16 @@ class AppDrawerAdapter(
             appInfoListener: (AppModel) -> Unit,
             appHideListener: (AppModel, Int) -> Unit,
             appRenameListener: (AppModel, String) -> Unit,
+            appAddHomeListener: (AppModel) -> Unit,
         ) = with(binding) {
             appHideLayout.visibility = View.GONE
+            // "Home" (add to the home list) only from the plain app list
+            appAddHome.isVisible = flag == Constants.FLAG_LAUNCH_APP
+            appAddHome.setOnClickListener {
+                appHideLayout.visibility = View.GONE
+                appTitle.visibility = View.VISIBLE
+                appAddHomeListener(appModel)
+            }
             renameLayout.visibility = View.GONE
             appTitle.visibility = View.VISIBLE
 
