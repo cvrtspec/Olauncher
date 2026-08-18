@@ -53,7 +53,6 @@
     <string name="right">Right</string>
     <string name="center">Center</string>
     <string name="swipe_left_app">Swipe left app</string>
-    <string name="swipe_right_app">Swipe right app</string>
     <string name="_0">0</string>
     <string name="_1">1</string>
     <string name="_2">2</string>
@@ -134,9 +133,7 @@
     <string name="unable_to_launch_app">Unable to launch app</string>
     <string name="search_for_Launcher_or_home_app">Search for Launcher or Home app</string>
     <string name="swipe_left_app_enabled">Swipe left app enabled</string>
-    <string name="swipe_right_app_enabled">Swipe right app enabled</string>
     <string name="swipe_left_app_disabled">Swipe left app disabled</string>
-    <string name="swipe_right_app_disabled">Swipe right app disabled</string>
     <string name="long_press_to_enable">Long press to enable</string>
     <string name="no_hidden_apps">No hidden apps</string>
     <string name="hidden_apps">Hidden apps</string>

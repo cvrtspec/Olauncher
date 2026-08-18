@@ -70,7 +70,6 @@
     <string name="right">Sağ</string>
     <string name="center">Merkez</string>
     <string name="swipe_left_app">Sola kaydırma uygulaması</string>
-    <string name="swipe_right_app">Sağa kaydırma uygulaması</string>
     <string name="auto_show_keyboard">Klavyeyi otomatik göster</string>
     <string name="hide">Sakla</string>
     <string name="status_bar">Durum çubuğunu göster</string>
@@ -112,9 +111,7 @@
     <string name="unable_to_launch_app">Uygulama başlatılamadı</string>
     <string name="search_for_Launcher_or_home_app">Başlatıcı veya Ana Menü uygulamasını arayın</string>
     <string name="swipe_left_app_enabled">Sola kaydırma uygulaması etkin</string>
-    <string name="swipe_right_app_enabled">Sağa kaydırma uygulaması etkin</string>
     <string name="swipe_left_app_disabled">Sola kaydırma uygulaması devre dışı</string>
-    <string name="swipe_right_app_disabled">Sağa kaydırma uygulaması devre dışı</string>
     <string name="are_you_using_your_phone_or_is_your_phone_using_you">Sen mi telefonunu, kullanıyorsun yoksa telefon mu seni kullanıyor?</string>
     <string name="about_olauncher">Olauncher Hakkında</string>
     <string name="learn_more">Daha fazla bilgi</string>

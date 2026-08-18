@@ -70,7 +70,6 @@
     <string name="right">Rechts</string>
     <string name="center">Mitte</string>
     <string name="swipe_left_app">Wischen Sie nach links über die App</string>
-    <string name="swipe_right_app">Wischen Sie nach rechts über die App</string>
     <string name="auto_show_keyboard">Tastatur automatisch anzeigen</string>
     <string name="hide">Verstecken</string>
     <string name="status_bar">Zeige Statusleiste</string>
@@ -112,9 +111,7 @@
     <string name="unable_to_launch_app">App kann nicht gestartet werden</string>
     <string name="search_for_Launcher_or_home_app">Suchen Sie nach Launcher oder Home-App</string>
     <string name="swipe_left_app_enabled">App nach links wischen aktiviert</string>
-    <string name="swipe_right_app_enabled">App nach rechts wischen aktiviert</string>
     <string name="swipe_left_app_disabled">App nach links wischen deaktiviert</string>
-    <string name="swipe_right_app_disabled">App nach rechts wischen deaktiviert</string>
     <string name="are_you_using_your_phone_or_is_your_phone_using_you">Benutzen Sie Ihr Telefon, oder nutzt Ihr Telefon Sie?</string>
     <string name="screen_time">Bildschirmzeit</string>
     <string name="about_olauncher">Über Olauncher</string>

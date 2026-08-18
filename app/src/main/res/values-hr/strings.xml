@@ -26,7 +26,6 @@
     <string name="right">Desno</string>
     <string name="center">Sredina</string>
     <string name="swipe_left_app">Aplikacija za lijevi potez</string>
-    <string name="swipe_right_app">Aplikacija za desni potez</string>
     <string name="_0">0</string>
     <string name="_1">1</string>
     <string name="_2">2</string>
@@ -111,9 +110,7 @@
     <string name="unable_to_launch_app">Nije moguće pokrenuti aplikaciju</string>
     <string name="search_for_Launcher_or_home_app">Pretraži Launcher ili Home aplikaciju</string>
     <string name="swipe_left_app_enabled">Povucite lijevo, aplikacija omogućena</string>
-    <string name="swipe_right_app_enabled">Povucite desno, aplikacija omogućena</string>
     <string name="swipe_left_app_disabled">Povucite lijevo, aplikacija onemogućena</string>
-    <string name="swipe_right_app_disabled">Povucite desno, aplikacija onemogućena</string>
     <string name="long_press_to_enable">Dugo pritisnite za omogućavanje</string>
     <string name="no_hidden_apps">Nema skrivenih aplikacija</string>
     <string name="hidden_apps">Skrivene aplikacije</string>

@@ -36,7 +36,6 @@ import app.olauncher.helper.isPackageInstalled
 import app.olauncher.helper.openAlarmApp
 import app.olauncher.helper.openCalendar
 import app.olauncher.helper.openCameraApp
-import app.olauncher.helper.openDialerApp
 import app.olauncher.helper.openSearch
 import app.olauncher.helper.showToast
 import app.olauncher.listener.OnSwipeTouchListener
@@ -467,19 +466,6 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
             shortcutId = prefs.getShortcutId(location),
             isShortcut = prefs.getIsShortcut(location),
             userString = prefs.getAppUser(location)
-        )
-    }
-
-    private fun openSwipeRightApp() {
-        if (!prefs.swipeRightEnabled) return
-        launchAppOrShortcut(
-            appName = prefs.appNameSwipeRight,
-            packageName = prefs.appPackageSwipeRight,
-            activityClassName = prefs.appActivityClassNameRight,
-            shortcutId = prefs.shortcutIdSwipeRight,
-            isShortcut = prefs.isShortcutSwipeRight,
-            userString = prefs.appUserSwipeRight,
-            fallback = { openDialerApp(requireContext()) }
         )
     }
 

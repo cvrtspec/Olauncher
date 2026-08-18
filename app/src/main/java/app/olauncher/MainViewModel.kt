@@ -84,8 +84,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             Constants.FLAG_SET_HOME_APP_7 -> saveHomeApp(appModel, 7)
             Constants.FLAG_SET_HOME_APP_8 -> saveHomeApp(appModel, 8)
 
-            Constants.FLAG_SET_SWIPE_LEFT_APP -> saveSwipeApp(appModel, isLeft = true)
-            Constants.FLAG_SET_SWIPE_RIGHT_APP -> saveSwipeApp(appModel, isLeft = false)
+            Constants.FLAG_SET_SWIPE_LEFT_APP -> saveSwipeLeftApp(appModel)
             Constants.FLAG_SET_CLOCK_APP -> saveClockApp(appModel)
             Constants.FLAG_SET_CALENDAR_APP -> saveCalendarApp(appModel)
             Constants.FLAG_SET_SCREEN_TIME_APP -> saveScreenTimeApp(appModel)
@@ -261,43 +260,26 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         refreshHome(false)
     }
 
-    private fun saveSwipeApp(appModel: AppModel, isLeft: Boolean) {
+    // Only the swipe-left app is configurable: swipe right opens the Oasis panel.
+    private fun saveSwipeLeftApp(appModel: AppModel) {
         when (appModel) {
             is AppModel.PrivateSpaceHeader -> return
             is AppModel.App -> {
-                if (isLeft) {
-                    prefs.appNameSwipeLeft = appModel.appLabel
-                    prefs.appPackageSwipeLeft = appModel.appPackage
-                    prefs.appUserSwipeLeft = appModel.user.toString()
-                    prefs.appActivityClassNameSwipeLeft = appModel.activityClassName
-                    prefs.isShortcutSwipeLeft = false
-                    prefs.shortcutIdSwipeLeft = ""
-                } else {
-                    prefs.appNameSwipeRight = appModel.appLabel
-                    prefs.appPackageSwipeRight = appModel.appPackage
-                    prefs.appUserSwipeRight = appModel.user.toString()
-                    prefs.appActivityClassNameRight = appModel.activityClassName
-                    prefs.isShortcutSwipeRight = false
-                    prefs.shortcutIdSwipeRight = ""
-                }
+                prefs.appNameSwipeLeft = appModel.appLabel
+                prefs.appPackageSwipeLeft = appModel.appPackage
+                prefs.appUserSwipeLeft = appModel.user.toString()
+                prefs.appActivityClassNameSwipeLeft = appModel.activityClassName
+                prefs.isShortcutSwipeLeft = false
+                prefs.shortcutIdSwipeLeft = ""
             }
 
             is AppModel.PinnedShortcut -> {
-                if (isLeft) {
-                    prefs.appNameSwipeLeft = appModel.appLabel
-                    prefs.appPackageSwipeLeft = appModel.appPackage
-                    prefs.appUserSwipeLeft = appModel.user.toString()
-                    prefs.appActivityClassNameSwipeLeft = null
-                    prefs.isShortcutSwipeLeft = true
-                    prefs.shortcutIdSwipeLeft = appModel.shortcutId
-                } else {
-                    prefs.appNameSwipeRight = appModel.appLabel
-                    prefs.appPackageSwipeRight = appModel.appPackage
-                    prefs.appUserSwipeRight = appModel.user.toString()
-                    prefs.appActivityClassNameRight = null
-                    prefs.isShortcutSwipeRight = true
-                    prefs.shortcutIdSwipeRight = appModel.shortcutId
-                }
+                prefs.appNameSwipeLeft = appModel.appLabel
+                prefs.appPackageSwipeLeft = appModel.appPackage
+                prefs.appUserSwipeLeft = appModel.user.toString()
+                prefs.appActivityClassNameSwipeLeft = null
+                prefs.isShortcutSwipeLeft = true
+                prefs.shortcutIdSwipeLeft = appModel.shortcutId
             }
         }
         updateSwipeApps()

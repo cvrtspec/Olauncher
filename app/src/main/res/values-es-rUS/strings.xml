@@ -27,7 +27,6 @@
     <string name="right">Derecha</string>
     <string name="center">Centro</string>
     <string name="swipe_left_app">Deslizar a la izquierda para abrir</string>
-    <string name="swipe_right_app">Deslizar a la derecha para abrir</string>
     <string name="_0">0</string>
     <string name="_1">1</string>
     <string name="_2">2</string>
@@ -105,9 +104,7 @@
     <string name="unable_to_launch_app">No se puede iniciar la aplicación</string>
     <string name="search_for_Launcher_or_home_app">Busca la aplicación Launcher o Home</string>
     <string name="swipe_left_app_enabled">Deslizar a la izquierda - Activado</string>
-    <string name="swipe_right_app_enabled">Deslizar a la derecha - Activado</string>
     <string name="swipe_left_app_disabled">Deslizar a la izquierda - Desactivado</string>
-    <string name="swipe_right_app_disabled">Deslizar a la derecha - Desactivado</string>
     <string name="long_press_to_enable">Mantenga presionado para habilitar</string>
     <string name="no_hidden_apps">Sin aplicaciones ocultas</string>
     <string name="hidden_apps">Aplicaciones ocultas</string>

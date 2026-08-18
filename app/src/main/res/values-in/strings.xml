@@ -27,7 +27,6 @@
     <string name="right">kanan</string>
     <string name="center">Tengah</string>
     <string name="swipe_left_app">Geser aplikasi ke kiri</string>
-    <string name="swipe_right_app">Geser aplikasi ke kanan</string>
     <string name="_0">0</string>
     <string name="_1">1</string>
     <string name="_2">2</string>
@@ -105,9 +104,7 @@
     <string name="unable_to_launch_app">Tidak dapat meluncurkan aplikasi</string>
     <string name="search_for_Launcher_or_home_app">Telusuri Peluncur atau aplikasi Beranda</string>
     <string name="swipe_left_app_enabled">Aplikasi geser ke kiri diaktifkan</string>
-    <string name="swipe_right_app_enabled">Aplikasi geser ke kanan diaktifkan</string>
     <string name="swipe_left_app_disabled">Aplikasi geser ke kiri dinonaktifkan</string>
-    <string name="swipe_right_app_disabled">Aplikasi geser ke kanan dinonaktifkan</string>
     <string name="long_press_to_enable">Tekan lama untuk mengaktifkan</string>
     <string name="no_hidden_apps">Aplikasi tersembunyi tidak ada</string>
     <string name="hidden_apps">Aplikasi tersembunyi</string>

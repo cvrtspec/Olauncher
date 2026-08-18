@@ -140,7 +140,6 @@ class SettingsFragment : BaseFragment(), View.OnClickListener, View.OnLongClickL
             R.id.textSizePlus -> adjustTextSizePreview(0.1f)
 
             R.id.swipeLeftApp -> showAppListIfEnabled(Constants.FLAG_SET_SWIPE_LEFT_APP)
-            R.id.swipeRightApp -> showAppListIfEnabled(Constants.FLAG_SET_SWIPE_RIGHT_APP)
             R.id.swipeDownAction -> binding.swipeDownSelectLayout.visibility = View.VISIBLE
             R.id.notifications -> updateSwipeDownAction(Constants.SwipeDownAction.NOTIFICATIONS)
             R.id.search -> updateSwipeDownAction(Constants.SwipeDownAction.SEARCH)
@@ -177,7 +176,6 @@ class SettingsFragment : BaseFragment(), View.OnClickListener, View.OnLongClickL
             }
 
             R.id.swipeLeftApp -> toggleSwipeLeft()
-            R.id.swipeRightApp -> toggleSwipeRight()
             R.id.toggleLock -> startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS))
         }
         return true
@@ -202,7 +200,6 @@ class SettingsFragment : BaseFragment(), View.OnClickListener, View.OnLongClickL
         binding.dateTimeOff.setOnClickListener(this)
         binding.dateOnly.setOnClickListener(this)
         binding.swipeLeftApp.setOnClickListener(this)
-        binding.swipeRightApp.setOnClickListener(this)
         binding.swipeDownAction.setOnClickListener(this)
         binding.search.setOnClickListener(this)
         binding.notifications.setOnClickListener(this)
@@ -237,7 +234,6 @@ class SettingsFragment : BaseFragment(), View.OnClickListener, View.OnLongClickL
 
         binding.appThemeText.setOnLongClickListener(this)
         binding.swipeLeftApp.setOnLongClickListener(this)
-        binding.swipeRightApp.setOnLongClickListener(this)
         binding.toggleLock.setOnLongClickListener(this)
     }
 
@@ -265,17 +261,6 @@ class SettingsFragment : BaseFragment(), View.OnClickListener, View.OnLongClickL
         } else {
             binding.swipeLeftApp.setTextColor(requireContext().getColorFromAttr(R.attr.primaryColorTrans50))
             requireContext().showToast(getString(R.string.swipe_left_app_disabled))
-        }
-    }
-
-    private fun toggleSwipeRight() {
-        prefs.swipeRightEnabled = !prefs.swipeRightEnabled
-        if (prefs.swipeRightEnabled) {
-            binding.swipeRightApp.setTextColor(requireContext().getColorFromAttr(R.attr.primaryColor))
-            requireContext().showToast(getString(R.string.swipe_right_app_enabled))
-        } else {
-            binding.swipeRightApp.setTextColor(requireContext().getColorFromAttr(R.attr.primaryColorTrans50))
-            requireContext().showToast(getString(R.string.swipe_right_app_disabled))
         }
     }
 
@@ -525,11 +510,8 @@ class SettingsFragment : BaseFragment(), View.OnClickListener, View.OnLongClickL
 
     private fun populateSwipeApps() {
         binding.swipeLeftApp.text = prefs.appNameSwipeLeft
-        binding.swipeRightApp.text = prefs.appNameSwipeRight
         if (!prefs.swipeLeftEnabled)
             binding.swipeLeftApp.setTextColor(requireContext().getColorFromAttr(R.attr.primaryColorTrans50))
-        if (!prefs.swipeRightEnabled)
-            binding.swipeRightApp.setTextColor(requireContext().getColorFromAttr(R.attr.primaryColorTrans50))
     }
 
 //    private fun populateDigitalWellbeing() {
@@ -540,10 +522,6 @@ class SettingsFragment : BaseFragment(), View.OnClickListener, View.OnLongClickL
 
     private fun showAppListIfEnabled(flag: Int) {
         if ((flag == Constants.FLAG_SET_SWIPE_LEFT_APP) and !prefs.swipeLeftEnabled) {
-            requireContext().showToast(getString(R.string.long_press_to_enable))
-            return
-        }
-        if ((flag == Constants.FLAG_SET_SWIPE_RIGHT_APP) and !prefs.swipeRightEnabled) {
             requireContext().showToast(getString(R.string.long_press_to_enable))
             return
         }

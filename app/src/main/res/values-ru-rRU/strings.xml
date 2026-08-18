@@ -27,7 +27,6 @@
     <string name="right">Справа</string>
     <string name="center">Центр</string>
     <string name="swipe_left_app">Свайп влево</string>
-    <string name="swipe_right_app">Свайп вправо</string>
     <string name="_0">0</string>
     <string name="_1">1</string>
     <string name="_2">2</string>
@@ -107,9 +106,7 @@
     <string name="unable_to_launch_app">Не удается запустить приложение</string>
     <string name="search_for_Launcher_or_home_app">Найдите приложение Launcher или Home</string>
     <string name="swipe_left_app_enabled">Приложение для левого свайпа включено</string>
-    <string name="swipe_right_app_enabled">Приложение для правого свайпа включено</string>
     <string name="swipe_left_app_disabled">Приложение для левого свайпа отключено</string>
-    <string name="swipe_right_app_disabled">Приложение для правого свайпа отключено</string>
     <string name="long_press_to_enable">Нажмите и удерживайте, чтобы включить</string>
     <string name="no_hidden_apps">Нет скрытых приложений</string>
     <string name="hidden_apps">Скрытые приложения</string>

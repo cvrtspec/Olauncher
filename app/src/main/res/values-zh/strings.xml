@@ -62,7 +62,6 @@
     <string name="right">右对齐</string>
     <string name="center">居中</string>
     <string name="swipe_left_app">向左滑动应用程序</string>
-    <string name="swipe_right_app">向右滑动应用程序</string>
     <string name="_0">0</string>
     <string name="_1">1</string>
     <string name="_2">2</string>
@@ -113,9 +112,7 @@
     <string name="unable_to_launch_app">无法启动应用程序</string>
     <string name="search_for_Launcher_or_home_app">搜索启动器或家庭应用程序</string>
     <string name="swipe_left_app_enabled">向左滑动应用程序启用</string>
-    <string name="swipe_right_app_enabled">向右滑动应用程序启用</string>
     <string name="swipe_left_app_disabled">向左滑动应用程序已禁用</string>
-    <string name="swipe_right_app_disabled">向右滑动应用程序已禁用</string>
     <string name="are_you_using_your_phone_or_is_your_phone_using_you">是你在用手机，还是手机在用你？</string>
     <string name="about_olauncher">关于 Olauncher</string>
     <string name="learn_more">了解更多</string>

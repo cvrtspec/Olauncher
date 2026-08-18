@@ -70,7 +70,6 @@
     <string name="right">Prawo</string>
     <string name="center">Środek</string>
     <string name="swipe_left_app">Przesuń w lewo aplikację</string>
-    <string name="swipe_right_app">Przesuń w prawo aplikację</string>
     <string name="auto_show_keyboard">Automatyczne wyświetlanie klawiatury</string>
     <string name="hide">Ukryj</string>
     <string name="status_bar">Pokaż pasek stanu</string>
@@ -110,9 +109,7 @@
     <string name="unable_to_launch_app">Nie można uruchomić aplikacji</string>
     <string name="search_for_Launcher_or_home_app">Wyszukaj program uruchamiający lub aplikację domową</string>
     <string name="swipe_left_app_enabled">Gest Przesuń w lewo jest włączony</string>
-    <string name="swipe_right_app_enabled">Gest Przesuń w prawo jest włączony</string>
     <string name="swipe_left_app_disabled">Gest Przesuń w lewo wyłączony</string>
-    <string name="swipe_right_app_disabled">Gest Przesuń w prawo jest wyłączony</string>
     <string name="are_you_using_your_phone_or_is_your_phone_using_you">Czy używasz telefonu, czy telefon używa ciebie?</string>
     <string name="about_olauncher">O Olauncher</string>
     <string name="screen_time">Czas ekranowy</string>

@@ -20,7 +20,6 @@
     <string name="no_hidden_apps">لا توجد تطبيقات مخفية</string>
     <string name="hidden_apps">تطبيقات مخفية</string>
     <string name="swipe_left_app_disabled">التمرير لليسار معطّل</string>
-    <string name="swipe_right_app_disabled">التمرير لليمين معطّل</string>
     <string name="hidden_apps_message">ملاحظة: اضغط على \"Olauncher\" أعلى الصفحة للعثور على تطبيقاتك المخفية.  المزيد من التفاصيل متوفرة في صفحة \"حول\" أدناه.</string>
     <string name="swipe_down_for">اسحب لأسفل من أجل</string>
     <string name="search">يبحث</string>
@@ -71,7 +70,6 @@
     <string name="right">يمين</string>
     <string name="center">مركز</string>
     <string name="swipe_left_app">افتح عند التمرير لليسار</string>
-    <string name="swipe_right_app">افتح عند التمرير لليمين</string>
     <string name="auto_show_keyboard">العرض التلقائي للوحة المفاتيح</string>
     <string name="hide">يخفي</string>
     <string name="status_bar">أظهر شريط الحالة</string>
@@ -111,7 +109,6 @@
     <string name="unable_to_launch_app">تعذر تشغيل التطبيق</string>
     <string name="search_for_Launcher_or_home_app">ابحث عن Launcher أو Home app</string>
     <string name="swipe_left_app_enabled">التمرير لليسار مفعّل</string>
-    <string name="swipe_right_app_enabled">التمرير لليمين مفعّل</string>
     <string name="are_you_using_your_phone_or_is_your_phone_using_you">هل تستخدم هاتفك أم أن هاتفك يستخدمك؟</string>
     <string name="about_olauncher">عن Olauncher</string>
     <string name="learn_more">تعلم أكثر</string>

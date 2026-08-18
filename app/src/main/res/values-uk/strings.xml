@@ -27,7 +27,6 @@
     <string name="right">Праворуч</string>
     <string name="center">По центру</string>
     <string name="swipe_left_app">Проведіть вліво для</string>
-    <string name="swipe_right_app">Проведіть вправо для</string>
     <string name="_0">0</string>
     <string name="_1">1</string>
     <string name="_2">2</string>
@@ -107,9 +106,7 @@
     <string name="unable_to_launch_app">Неможливо запустити програму</string>
     <string name="search_for_Launcher_or_home_app">Знайдіть додаток Launcher або Home</string>
     <string name="swipe_left_app_enabled">Додаток для лівого свайпа включено</string>
-    <string name="swipe_right_app_enabled">Додаток для правого свайпа включено</string>
     <string name="swipe_left_app_disabled">Додаток для лівого свайпа вимкнено</string>
-    <string name="swipe_right_app_disabled">Додаток для правого свайпа вимкнено</string>
     <string name="long_press_to_enable">Натисніть та утримуйте, щоб увімкнути</string>
     <string name="no_hidden_apps">Немає прихованих додатків</string>
     <string name="hidden_apps">Приховані додатків</string>
