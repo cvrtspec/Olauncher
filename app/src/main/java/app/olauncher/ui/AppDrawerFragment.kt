@@ -18,6 +18,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.activityViewModels
+import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import app.olauncher.databinding.FolderRowBinding
@@ -269,6 +270,10 @@ class AppDrawerFragment : BaseFragment() {
 
         binding.recyclerView.layoutManager = linearLayoutManager
         binding.recyclerView.adapter = adapter
+        ContextCompat.getDrawable(requireContext(), R.drawable.fast_scroll_thumb)?.let { grip ->
+            val density = resources.displayMetrics.density
+            QuickScroller(binding.recyclerView, grip, (34 * density).toInt(), (52 * density).toInt(), (4 * density).toInt())
+        }
         binding.recyclerView.addOnScrollListener(getRecyclerViewOnScrollListener())
         binding.recyclerView.itemAnimator = null
         if (requireContext().isEinkDisplay().not() && requireContext().isSystemAnimationsDisabled().not())
