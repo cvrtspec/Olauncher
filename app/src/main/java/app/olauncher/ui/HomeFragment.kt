@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.pm.LauncherApps
 import android.os.Build
 import android.os.Bundle
+import android.text.TextUtils
+import android.view.Gravity
 import android.view.WindowManager
 import android.view.Window
 import android.graphics.drawable.ColorDrawable
@@ -440,8 +442,16 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
         val dialog = Dialog(requireContext())
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(popup.root)
-        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        dialog.window?.setLayout((resources.displayMetrics.widthPixels * 0.78).toInt(), WindowManager.LayoutParams.WRAP_CONTENT)
+        // Narrow window anchored bottom-right, above the dock, over the app-list column.
+        dialog.window?.let { window ->
+            window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            window.setLayout((resources.displayMetrics.widthPixels * 0.42).toInt(), WindowManager.LayoutParams.WRAP_CONTENT)
+            val params = window.attributes
+            params.gravity = Gravity.BOTTOM or Gravity.END
+            params.x = padPx(40)
+            params.y = padPx(150)
+            window.attributes = params
+        }
         val pm = requireContext().packageManager
         if (folder.apps.isEmpty()) {
             val row = TextView(requireContext(), null, 0, R.style.TextSmallLight)
@@ -461,7 +471,9 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
             }
             val row = TextView(requireContext(), null, 0, R.style.TextLarge)
             row.text = label
-            row.setPadding(padPx(20), padPx(6), padPx(20), padPx(6))
+            row.maxLines = 1
+            row.ellipsize = TextUtils.TruncateAt.END
+            row.setPadding(padPx(16), padPx(6), padPx(16), padPx(6))
             row.setOnClickListener {
                 dialog.dismiss()
                 launchAppOrShortcut(
