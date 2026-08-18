@@ -303,6 +303,29 @@ fun openDialerApp(context: Context) {
     }
 }
 
+fun openMessagingApp(context: Context) {
+    try {
+        val intent = Intent.makeMainSelectorActivity(Intent.ACTION_MAIN, Intent.CATEGORY_APP_MESSAGING)
+        context.startActivity(intent)
+    } catch (e: Exception) {
+        e.printStackTrace()
+    }
+}
+
+fun openMailApp(context: Context) {
+    try {
+        val gmail = context.packageManager.getLaunchIntentForPackage("com.google.android.gm")
+        if (gmail != null) {
+            context.startActivity(gmail)
+            return
+        }
+        val intent = Intent.makeMainSelectorActivity(Intent.ACTION_MAIN, Intent.CATEGORY_APP_EMAIL)
+        context.startActivity(intent)
+    } catch (e: Exception) {
+        e.printStackTrace()
+    }
+}
+
 fun openCameraApp(context: Context) {
     try {
         val sendIntent = Intent(MediaStore.INTENT_ACTION_STILL_IMAGE_CAMERA)

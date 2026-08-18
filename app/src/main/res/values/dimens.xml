@@ -3,5 +3,9 @@
     <dimen name="alphabet_recycler_margin_bottom">16dp</dimen>
     <dimen name="alphabet_recycler_margin_end">10dp</dimen>
     <dimen name="alphabet_recycler_margin_start">320dp</dimen>
-    <dimen name="analog_clock_size">96dp</dimen>
+    <dimen name="analog_clock_size">288dp</dimen>
+    <dimen name="home_date_size">48sp</dimen>
+    <dimen name="dock_icon_size">72dp</dimen>
+    <dimen name="dock_margin_end">200dp</dimen>
+    <dimen name="dock_margin_bottom">52dp</dimen>
 </resources>

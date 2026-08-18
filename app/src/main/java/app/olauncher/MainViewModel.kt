@@ -85,6 +85,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             Constants.FLAG_SET_HOME_APP_8 -> saveHomeApp(appModel, 8)
 
             Constants.FLAG_SET_SWIPE_LEFT_APP -> saveSwipeLeftApp(appModel)
+            Constants.FLAG_SET_DOCK_1 -> saveDockApp(appModel, 1)
+            Constants.FLAG_SET_DOCK_2 -> saveDockApp(appModel, 2)
+            Constants.FLAG_SET_DOCK_3 -> saveDockApp(appModel, 3)
             Constants.FLAG_SET_CLOCK_APP -> saveClockApp(appModel)
             Constants.FLAG_SET_CALENDAR_APP -> saveCalendarApp(appModel)
             Constants.FLAG_SET_SCREEN_TIME_APP -> saveScreenTimeApp(appModel)
@@ -258,6 +261,22 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             }
         }
         refreshHome(false)
+    }
+
+    private fun saveDockApp(appModel: AppModel, slot: Int) {
+        when (appModel) {
+            is AppModel.PrivateSpaceHeader -> return
+            is AppModel.App -> prefs.setDockApp(
+                slot, appModel.appLabel, appModel.appPackage, appModel.user.toString(),
+                appModel.activityClassName, isShortcut = false, shortcutId = ""
+            )
+
+            is AppModel.PinnedShortcut -> prefs.setDockApp(
+                slot, appModel.appLabel, appModel.appPackage, appModel.user.toString(),
+                null, isShortcut = true, shortcutId = appModel.shortcutId
+            )
+        }
+        updateSwipeApps()
     }
 
     // Only the swipe-left app is configurable: swipe right opens the Oasis panel.

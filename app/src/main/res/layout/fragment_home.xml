@@ -28,8 +28,9 @@
         android:id="@+id/dateTimeLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="24dp"
+        android:layout_marginStart="64dp"
         android:layout_marginTop="56dp"
+        android:layout_marginEnd="24dp"
         android:gravity="start"
         android:orientation="vertical"
         android:visibility="gone"
@@ -50,22 +51,9 @@
             android:format12Hour="EEE, dd MMM"
             android:format24Hour="EEE, dd MMM"
             android:paddingHorizontal="3dp"
-            android:textSize="@dimen/date_size"
+            android:textSize="@dimen/home_date_size"
             tools:text="Thu, 30 Dec" />
     </LinearLayout>
-
-    <!-- All apps (opens the app list; swipe up still works too) -->
-    <ImageView
-        android:id="@+id/allApps"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_gravity="top|end"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="16dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="@string/all_apps"
-        android:padding="12dp"
-        android:src="@drawable/ic_folder" />
 
     <!-- Screen time-->
     <androidx.appcompat.widget.AppCompatTextView
@@ -90,9 +78,10 @@
         android:layout_height="match_parent"
         android:gravity="bottom|end"
         android:orientation="vertical"
-        android:paddingHorizontal="24dp"
+        android:paddingStart="24dp"
         android:paddingTop="112dp"
-        android:paddingBottom="48dp">
+        android:paddingEnd="84dp"
+        android:paddingBottom="224dp">
 
         <TextView
             android:id="@+id/homeApp1"
@@ -212,6 +201,62 @@
         android:text="@string/swipe_up_for_apps"
         android:visibility="gone"
         tools:visibility="visible" />
+
+    <!-- Dock: three shortcuts along the bottom-left, in the area left of the app list -->
+    <LinearLayout
+        android:id="@+id/dockLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginEnd="@dimen/dock_margin_end"
+        android:layout_marginBottom="@dimen/dock_margin_bottom"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1.5" />
+
+        <ImageView
+            android:id="@+id/dock1"
+            android:layout_width="@dimen/dock_icon_size"
+            android:layout_height="@dimen/dock_icon_size"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/dock_phone"
+            android:src="@drawable/ic_dock_phone" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/dock2"
+            android:layout_width="@dimen/dock_icon_size"
+            android:layout_height="@dimen/dock_icon_size"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/dock_messages"
+            android:src="@drawable/ic_dock_messages" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/dock3"
+            android:layout_width="@dimen/dock_icon_size"
+            android:layout_height="@dimen/dock_icon_size"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/dock_mail"
+            android:src="@drawable/ic_dock_mail" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1.5" />
+    </LinearLayout>
 
     <!-- Set default launcher -->
     <TextView

@@ -140,6 +140,9 @@ class SettingsFragment : BaseFragment(), View.OnClickListener, View.OnLongClickL
             R.id.textSizePlus -> adjustTextSizePreview(0.1f)
 
             R.id.swipeLeftApp -> showAppListIfEnabled(Constants.FLAG_SET_SWIPE_LEFT_APP)
+            R.id.dock1App -> showAppListIfEnabled(Constants.FLAG_SET_DOCK_1)
+            R.id.dock2App -> showAppListIfEnabled(Constants.FLAG_SET_DOCK_2)
+            R.id.dock3App -> showAppListIfEnabled(Constants.FLAG_SET_DOCK_3)
             R.id.swipeDownAction -> binding.swipeDownSelectLayout.visibility = View.VISIBLE
             R.id.notifications -> updateSwipeDownAction(Constants.SwipeDownAction.NOTIFICATIONS)
             R.id.search -> updateSwipeDownAction(Constants.SwipeDownAction.SEARCH)
@@ -200,6 +203,9 @@ class SettingsFragment : BaseFragment(), View.OnClickListener, View.OnLongClickL
         binding.dateTimeOff.setOnClickListener(this)
         binding.dateOnly.setOnClickListener(this)
         binding.swipeLeftApp.setOnClickListener(this)
+        binding.dock1App.setOnClickListener(this)
+        binding.dock2App.setOnClickListener(this)
+        binding.dock3App.setOnClickListener(this)
         binding.swipeDownAction.setOnClickListener(this)
         binding.search.setOnClickListener(this)
         binding.notifications.setOnClickListener(this)
@@ -509,6 +515,9 @@ class SettingsFragment : BaseFragment(), View.OnClickListener, View.OnLongClickL
     }
 
     private fun populateSwipeApps() {
+        binding.dock1App.text = prefs.getDockName(1).ifBlank { getString(R.string.dock_default) }
+        binding.dock2App.text = prefs.getDockName(2).ifBlank { getString(R.string.dock_default) }
+        binding.dock3App.text = prefs.getDockName(3).ifBlank { getString(R.string.dock_default) }
         binding.swipeLeftApp.text = prefs.appNameSwipeLeft
         if (!prefs.swipeLeftEnabled)
             binding.swipeLeftApp.setTextColor(requireContext().getColorFromAttr(R.attr.primaryColorTrans50))

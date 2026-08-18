@@ -516,6 +516,26 @@ class Prefs(context: Context) {
         get() = prefs.getBoolean(IS_SHORTCUT_SWIPE_LEFT, false)
         set(value) = prefs.edit { putBoolean(IS_SHORTCUT_SWIPE_LEFT, value) }
 
+    // ---- Dock (three bottom-left shortcuts). Slot 1..3; empty package = use the system default. ----
+    private fun dockKey(slot: Int, field: String) = "DOCK_${slot}_$field"
+    fun getDockName(slot: Int): String = prefs.getString(dockKey(slot, "NAME"), "").toString()
+    fun getDockPackage(slot: Int): String = prefs.getString(dockKey(slot, "PACKAGE"), "").toString()
+    fun getDockUser(slot: Int): String = prefs.getString(dockKey(slot, "USER"), "").toString()
+    fun getDockActivityClassName(slot: Int): String? = prefs.getString(dockKey(slot, "CLASS"), "")
+    fun getDockShortcutId(slot: Int): String = prefs.getString(dockKey(slot, "SHORTCUT_ID"), "").toString()
+    fun getDockIsShortcut(slot: Int): Boolean = prefs.getBoolean(dockKey(slot, "IS_SHORTCUT"), false)
+    fun setDockApp(
+        slot: Int, name: String, packageName: String, user: String,
+        activityClassName: String?, isShortcut: Boolean, shortcutId: String
+    ) = prefs.edit {
+        putString(dockKey(slot, "NAME"), name)
+        putString(dockKey(slot, "PACKAGE"), packageName)
+        putString(dockKey(slot, "USER"), user)
+        putString(dockKey(slot, "CLASS"), activityClassName ?: "")
+        putBoolean(dockKey(slot, "IS_SHORTCUT"), isShortcut)
+        putString(dockKey(slot, "SHORTCUT_ID"), shortcutId)
+    }
+
     fun getAppName(location: Int): String {
         return when (location) {
             1 -> prefs.getString(APP_NAME_1, "").toString()

@@ -36,6 +36,9 @@ import app.olauncher.helper.isPackageInstalled
 import app.olauncher.helper.openAlarmApp
 import app.olauncher.helper.openCalendar
 import app.olauncher.helper.openCameraApp
+import app.olauncher.helper.openDialerApp
+import app.olauncher.helper.openMailApp
+import app.olauncher.helper.openMessagingApp
 import app.olauncher.helper.openSearch
 import app.olauncher.helper.showToast
 import app.olauncher.listener.OnSwipeTouchListener
@@ -218,7 +221,9 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
         binding.setDefaultLauncher.setOnLongClickListener(this)
         binding.tvScreenTime.setOnClickListener(this)
         binding.tvScreenTime.setOnLongClickListener(this)
-        binding.allApps.setOnClickListener { showAppList(Constants.FLAG_LAUNCH_APP) }
+        binding.dock1.setOnClickListener { openDockApp(1) }
+        binding.dock2.setOnClickListener { openDockApp(2) }
+        binding.dock3.setOnClickListener { openDockApp(3) }
 
         // These fire only on d-pad/keyboard events; touch is consumed by ViewSwipeTouchListener
         binding.homeApp1.setOnClickListener(this)
@@ -467,6 +472,32 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
             isShortcut = prefs.getIsShortcut(location),
             userString = prefs.getAppUser(location)
         )
+    }
+
+    /** Dock slot 1..3: the chosen app/shortcut, or the system default (dialer / messaging / mail). */
+    private fun openDockApp(slot: Int) {
+        val packageName = prefs.getDockPackage(slot)
+        if (packageName.isBlank()) {
+            openDefaultDockApp(slot)
+            return
+        }
+        launchAppOrShortcut(
+            appName = prefs.getDockName(slot),
+            packageName = packageName,
+            activityClassName = prefs.getDockActivityClassName(slot),
+            shortcutId = prefs.getDockShortcutId(slot),
+            isShortcut = prefs.getDockIsShortcut(slot),
+            userString = prefs.getDockUser(slot),
+            fallback = { openDefaultDockApp(slot) }
+        )
+    }
+
+    private fun openDefaultDockApp(slot: Int) {
+        when (slot) {
+            1 -> openDialerApp(requireContext())
+            2 -> openMessagingApp(requireContext())
+            else -> openMailApp(requireContext())
+        }
     }
 
     private fun openSwipeLeftApp() {
