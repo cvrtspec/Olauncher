@@ -17,7 +17,6 @@
     <string name="notifications">Bildirimler</string>
     <string name="accessibility_disclosure">Kilitlemek için çift dokunma veya son uygulamalar için ana ekran düğmesi hareketlerini etkinleştirmek için lütfen cihazınızın ayarlarında Olauncher\'ın erişilebilirlik hizmetini açın.\n\nBu hizmetin yalnızca bu hareketler için kullanıldığını lütfen unutmayın. Erişilebilirlik hizmetimiz herhangi bir veri toplamaz veya paylaşmaz.</string>
     <string name="accept">Kabul et</string>
-    <string name="permission">İzin</string>
     <string name="double_tap_lock">Kilitlemek için iki kez dokunun</string>
     <string name="home_button_show_recents">Ana ekran düğmesi son uygulamalar için</string>
     <string name="enable">Etkinleştir</string>
@@ -75,10 +74,6 @@
         \n\nOlauncher\'ı arkadaşlarınızla paylaşma nezaketini gösterir misiniz lütfen? Teşekkür eder, harika bir gün geçirmenizi dileriz!</string>
     <string name="keyboard_message">Merhaba, klavye, Olauncher\'da uygulamaları bulmanın ve başlatmanın en hızlı yoludur. Birkaç gün daha kullanıp karar vermenizi rica ederiz.
         \n\nSeçim her zaman sizindir.</string>
-    <string name="digital_wellbeing_message">Belirli uygulamalar için zaman sınırları belirlemek istiyorsanız Android\'in Dijital Denge özelliği bunu yapmanıza yardımcı olacaktır.
-        \n\nLütfen telefon ayarlarınızda Dijital Denge\'yi arayın ve etkinleştirin.</string>
-    <string name="app_usage_message">Ana ekranınızda ekran sürenizi göstermek/gizlemek için lütfen uygulama kullanım iznini onaylayın veya reddedin.
-        \n\nNot: Uygulama kullanım verileri toplanmaz. Her şey cihazınızda işlenir.</string>
     <string name="pro_message">Olauncher\'ın Pro Launcher adında bir pro versiyonu da var. Hava durumu, widget\'lar, yazı tipleri, klasörler, AMOLED duvar kağıtları gibi ekstra özelliklere sahip.
         \n\nAyrıca Olauncher geliştiricilerini desteklemenin en iyi yoludur. Mutlaka inceleyin!</string>
     <string name="accessibility_service_description">Kilitlemek için çift dokunmayı ve son uygulamaları göstermek için ana ekran düğmesini etkinleştirmek için erişilebilirlik izni gereklidir. Olauncher tarafından bu hizmet aracılığıyla elde edilen hiçbir veri cihazınızdan ayrılmayacaktır.</string>
@@ -99,8 +94,6 @@
     <string name="swipe_left_app_enabled">Sola kaydırma uygulaması etkin</string>
     <string name="swipe_left_app_disabled">Sola kaydırma uygulaması devre dışı</string>
     <string name="are_you_using_your_phone_or_is_your_phone_using_you">Sen mi telefonunu, kullanıyorsun yoksa telefon mu seni kullanıyor?</string>
-    <string name="learn_more">Daha fazla bilgi</string>
-    <string name="screen_time">Ekran süresi</string>
     <string name="leave_a_review">Değerlendirme bırakın</string>
     <string name="review_message">Olauncher tamamen ücretsizdir ve her zaman ücretsiz olacaktır. Reklam yok, veri toplamaz ve en önemlisi ekran sürenizi azaltmanıza ve daha sağlıklı bir dijital yaşam sürmenize yardımcı olur.
         \n\nUmarım hoşunuza gider. Düşüncelerinizi mutlaka bizimle paylaşın!</string>

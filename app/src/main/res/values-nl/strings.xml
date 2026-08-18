@@ -45,10 +45,6 @@
     <!--         \n\nIf you have a moment to spare, could you please share Olauncher with others? Olauncher needs people. More importantly, people need Olauncher.</string>-->
     <string name="keyboard_message">Hoi, het toetsenbord is de snelste manier om apps te vinden en te starten in Olauncher. Mag ik je vragen dit nog een paar dagen ingeschakeld te laten en daarna te beslissen?
         \n\nDe keuze is altijd aan jou.</string>
-    <string name="digital_wellbeing_message">Als je tijdslimieten voor bepaalde apps wilt instellen, kan de Digital Wellbeing-functie van Android je daarbij helpen.
-        \n\nZoek in de instellingen van je telefoon naar Digital Wellbeing en schakel het in.</string>
-    <string name="app_usage_message">Om je schermtijd op het startscherm te tonen of te verbergen, geef of weiger de toestemming voor app-gebruik.
-        \n\nOpmerking: er worden geen app-gebruiksgegevens verzameld. Alles wordt op je apparaat verwerkt.</string>
     <string name="pro_message">Olauncher heeft ook een pro-versie genaamd Pro Launcher. Deze heeft extra functies zoals weer, widgets, lettertypen, mappen, AMOLED-achtergronden enz.
         \n\nHet is ook de beste manier om de ontwikkelaars van Olauncher te steunen. Bekijk het eens!</string>
     <string name="accessibility_service_description">De toegankelijkheidstoestemming is vereist om dubbel tikken om te vergrendelen en de startknop voor recente apps mogelijk te maken. Alle gegevens die Olauncher via deze service verkrijgt, verlaten je apparaat niet.</string>
@@ -70,7 +66,6 @@
     <string name="notifications">Meldingen</string>
     <string name="accessibility_disclosure">Schakel de toegankelijkheidsdienst van Olauncher in via de instellingen van je apparaat om de gebaren dubbel tikken om te vergrendelen of startknop voor recente apps te activeren.\n\nHoud er rekening mee dat deze service alleen wordt gebruikt voor deze gebaren. Onze toegankelijkheidsdienst verzamelt of deelt geen gegevens.</string>
     <string name="accept">Accepteren</string>
-    <string name="permission">Toestemming</string>
     <string name="double_tap_lock">Dubbel tik om te vergrendelen</string>
     <string name="home_button_show_recents">Startknop voor recente apps</string>
     <string name="enable">Inschakelen</string>
@@ -99,8 +94,6 @@
     <string name="adapter_show">Toon</string>
     <string name="adapter_hide">Verbergen</string>
     <string name="are_you_using_your_phone_or_is_your_phone_using_you">Gebruik je je telefoon, of gebruikt je telefoon jou?</string>
-    <string name="screen_time">Schermtijd</string>
-    <string name="learn_more">Meer informatie</string>
     <string name="leave_a_review">Laat een recensie achter</string>
     <string name="review_message">Olauncher is gratis en zal dat altijd blijven. Het heeft geen advertenties, verzamelt geen gegevens en vermindert je schermtijd, wat leidt tot een gezonder leven.\n\nWe hopen dat je ervan geniet. Vertel ons wat je ervan vindt.</string>
     <string name="home_screen">Startscherm</string>

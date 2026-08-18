@@ -43,10 +43,6 @@
         \n\nKan du dela Olauncher med dina vänner? Olauncher behöver människor, och människor behöver Olauncher.</string>
     <string name="keyboard_message">Hejsan, tangentbordet är det snabbaste sättet att hitta och starta appar i Olauncher. Får vi be dig att behålla denna På i några dagar till innan du bestämmer dig?
         \n\nValet är alltid ditt.</string>
-    <string name="digital_wellbeing_message">Om du vill ställa in tidsgränser för vissa appar, kan Digitalt välmående-funktionen i Android hjälpa dig att göra det.
-        \n\nVänligen sök efter Digitalt välmående i dina telefoninställningar och aktivera den.</string>
-    <string name="app_usage_message">För att visa/dölja din skärmtid på startsidan, vänligen tillåt eller neka appanvändningsbehörigheten.
-        \n\nObs: Inga data om appanvändning samlas in. Allt bearbetas på din enhet.</string>
     <string name="pro_message">Olauncher har också en pro-version som kallas Pro Launcher. Den har extra funktioner som väder, widgets, typsnitt, mappar, AMOLED-bakgrunder och så vidare.
         \n\nDet är också det bästa sättet att stödja utvecklarna av Olauncher. Kolla in det!</string>
     <string name="accessibility_service_description">Tillgänglighetsbehörigheten krävs för att aktivera dubbeltryck för att låsa och hemknappen för att visa senaste appar. Eventuella data förvärvade av Olauncher genom denna tjänst kommer inte att lämna din enhet.</string>
@@ -68,7 +64,6 @@
     <string name="notifications">Aviseringar</string>
     <string name="accessibility_disclosure">Vänligen sätt på Olaunchers tillgänglighetstjänst i din enhets inställningar för att aktivera gesterna dubbeltryck för att låsa eller hemknappen för senaste appar.\n\nObservera att denna tjänst bara används för dessa gester. Vår tillgänglighetstjänst samlar inte in eller delar några data.</string>
     <string name="accept">Godkänn</string>
-    <string name="permission">Behörighet</string>
     <string name="double_tap_lock">Dubbeltryck för att låsa</string>
     <string name="home_button_show_recents">Hemknapp för senaste appar</string>
     <string name="enable">Aktivera</string>
@@ -97,8 +92,6 @@
     <string name="adapter_show">Visa</string>
     <string name="adapter_hide">Dölj</string>
     <string name="are_you_using_your_phone_or_is_your_phone_using_you">Använder du din telefon, eller använder din telefon dig?</string>
-    <string name="screen_time">Skärmtid</string>
-    <string name="learn_more">Läs mer</string>
     <string name="leave_a_review">Lämna en recension</string>
     <string name="review_message">Olauncher är gratis och kommer alltid att vara det. Den har inga annonser. Den samlar inte in någon data. Viktigast av allt, det hjälper dig att minska din skärmtid och leva ett hälsosammare digitalt liv.
           \n\nVi tycker att det är ett utmärkt beslut att byta till en minimalistisk startskärmsapp. Även om vi uppenbarligen är partiska, hoppas vi att du gillar upplevelsen. Vi vill gärna höra dina tankar!</string>

@@ -17,7 +17,6 @@
     <string name="notifications">Benachrichtigungen</string>
     <string name="accessibility_disclosure">Bitte schalten Sie den Barrierefreiheitsdienst von Olauncher in den Einstellungen Ihres Geräts ein, um die Gesten Doppeltippen zum Sperren oder Home-Taste für letzte Apps zu aktivieren.\n\nBitte beachten Sie, dass dieser Dienst nur für diese Gesten verwendet wird. Unser Barrierefreiheitsdienst sammelt oder teilt keine Daten.</string>
     <string name="accept">Akzeptieren</string>
-    <string name="permission">Erlaubnis</string>
     <string name="double_tap_lock">Zum Sperren zweimal tippen</string>
     <string name="home_button_show_recents">Home-Taste für letzte Apps</string>
     <string name="enable">Aktivieren</string>
@@ -75,10 +74,6 @@
         \n\nWären Sie bitte so freundlich, Olauncher mit Ihren Freunden zu teilen? Vielen Dank und einen wunderschönen Tag!</string>
     <string name="keyboard_message">Hallo, die Tastatur ist der schnellste Weg, Apps in Olauncher zu finden und zu starten. Können wir Sie bitten, die Funktion noch ein paar Tage eingeschaltet zu lassen und dann zu entscheiden?
         \n\nDie Wahl liegt immer bei Ihnen.</string>
-    <string name="digital_wellbeing_message">Wenn Sie Zeitlimits für bestimmte Apps festlegen möchten, kann Ihnen die Digital Wellbeing-Funktion von Android dabei helfen.
-        \n\nBitte suchen Sie in Ihren Telefoneinstellungen nach Digital Wellbeing und aktivieren Sie es.</string>
-    <string name="app_usage_message">Um die Bildschirmzeit auf dem Startbildschirm anzuzeigen oder zu verbergen, erteilen Sie bitte die Erlaubnis für die App-Nutzung oder verweigern Sie sie.
-        \n\nHinweis: Es werden keine Daten zur App-Nutzung gesammelt. Alles wird auf Ihrem Gerät verarbeitet.</string>
     <string name="pro_message">Olauncher hat auch eine Pro-Version namens Pro Launcher. Sie bietet zusätzliche Funktionen wie Wetter, Widgets, Schriftarten, Ordner, AMOLED-Hintergründe usw.
         \n\nEs ist auch der beste Weg, die Entwickler von Olauncher zu unterstützen. Schau es dir an!</string>
     <string name="accessibility_service_description">Die Zugriffsberechtigung ist erforderlich, um das Sperren durch Doppeltippen und die Home-Taste zum Anzeigen der letzten Apps zu ermöglichen. Die von Olauncher über diesen Dienst erfassten Daten verlassen Ihr Gerät nicht.</string>
@@ -99,8 +94,6 @@
     <string name="swipe_left_app_enabled">App nach links wischen aktiviert</string>
     <string name="swipe_left_app_disabled">App nach links wischen deaktiviert</string>
     <string name="are_you_using_your_phone_or_is_your_phone_using_you">Benutzen Sie Ihr Telefon, oder nutzt Ihr Telefon Sie?</string>
-    <string name="screen_time">Bildschirmzeit</string>
-    <string name="learn_more">Erfahren Sie mehr</string>
     <string name="leave_a_review">Rezension</string>
     <string name="review_message">Olauncher ist und bleibt völlig kostenlos. Es gibt keine Werbung. Es werden keine Daten erfasst. Am wichtigsten ist, dass es Ihnen dabei hilft, Ihre Bildschirmzeit zu verkürzen und ein gesünderes digitales Leben zu führen.
         \n\nWir glauben, dass der Wechsel zu einem Minimal Launcher eine ausgezeichnete Entscheidung ist. Obwohl wir offensichtlich voreingenommen sind, hoffen wir, dass Ihnen die Erfahrung gefällt. Teilen Sie uns gerne Ihre Gedanken mit!</string>

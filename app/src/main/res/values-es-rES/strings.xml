@@ -44,10 +44,6 @@
         \n\n¿Serías tan amable de compartir Olauncher con tus amigos, por favor? ¡Gracias y tenga un maravilloso día!</string>
     <string name="keyboard_message">Hola, el teclado es la forma más rápida de encontrar y ejecutar aplicaciones en Olauncher. ¿Podemos pedirte que mantenga esto activado durante unos días más y luego decidir?
         \n\nLa decisión siempre es vuestra.</string>
-    <string name="digital_wellbeing_message">Si deseas establecer límites de tiempo para determinadas aplicaciones, la función Bienestar digital de Android puede ayudarte a hacerlo.
-        \n\nBusca Bienestar digital en la configuración de su teléfono y habilítelo.</string>
-    <string name="app_usage_message">Para mostrar/ocultar el tiempo de pantalla en la pantalla de inicio, permita o deniegue el permiso de uso de la aplicación.
-        \n\nNota: No se recopilan datos de uso de la aplicación. Todo se procesa en su dispositivo.</string>
     <string name="pro_message">Olauncher también tiene una versión pro llamada Pro Launcher. Tiene funciones adicionales como clima, widgets, fuentes, carpetas, fondos AMOLED, etc.
         \n\nTambién es la mejor manera de apoyar a los desarrolladores de Olauncher. ¡Échale un vistazo!</string>
     <string name="accessibility_service_description">Se requiere el permiso de accesibilidad para habilitar el doble toque para bloquear y el botón de inicio para mostrar aplicaciones recientes. Cualquier dato adquirido por Olauncher a través de este servicio no saldrá de su dispositivo.</string>
@@ -70,7 +66,6 @@
     <string name="notifications">Notificaciones</string>
     <string name="accessibility_disclosure">Active el servicio de accesibilidad de Olauncher en la configuración de su dispositivo para habilitar los gestos de doble toque para bloquear o botón de inicio para aplicaciones recientes.\n\nTenga en cuenta que este servicio solo se utiliza para estos gestos. Nuestro servicio de accesibilidad no recopila ni comparte ningún dato.</string>
     <string name="accept">Aceptar</string>
-    <string name="permission">Permiso</string>
     <string name="double_tap_lock">Tocar dos veces para bloquear</string>
     <string name="home_button_show_recents">Botón de inicio para recientes</string>
     <string name="enable">Activar</string>
@@ -99,8 +94,6 @@
     <string name="adapter_show">Mostrar</string>
     <string name="adapter_hide">Ocultar</string>
     <string name="are_you_using_your_phone_or_is_your_phone_using_you">¿Estás usando tu teléfono, o tu teléfono te está usando a ti?</string>
-    <string name="learn_more">Aprende más</string>
-    <string name="screen_time">Tiempo de pantalla</string>
     <string name="leave_a_review">Dejar un comentario</string>
     <string name="review_message">Olauncher es y será siempre completamente gratuito. No tiene anuncios. No recopila datos. Lo más importante es que te ayuda a reducir el tiempo que pasa frente a la pantalla y a vivir una vida digital más saludable.
         \n\nCreemos que cambiar a un lanzador mínimo es una excelente decisión. Aunque obviamente somos parciales, esperamos que disfrutes la experiencia. ¡No dudes en compartir tus pensamientos con nosotros!</string>

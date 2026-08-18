@@ -43,10 +43,6 @@
         \n\nHoćete li, molim vas, biti ljubazni podijeliti Olauncher sa svojim prijateljima? Hvala i ugodan dan!</string>
     <string name="keyboard_message">Bok, tipkovnica je najbrži način za pronalaženje i pokretanje aplikacija u Olauncheru. Možemo li vas zamoliti da to zadržite uključeno još nekoliko dana, a zatim odlučite?
         \n\nIzbor je uvijek vaš.</string>
-    <string name="digital_wellbeing_message">Ako želite postaviti vremenska ograničenja za određene aplikacije, značajka Digital Wellbeing na Androidu može vam pomoći u tome.
-        \n\nPotražite Digital Wellbeing u postavkama telefona i omogućite ga.</string>
-    <string name="app_usage_message">Da biste prikazali/sakrili vrijeme korištenja ekrana na početnom zaslonu, molimo dozvolite ili onemogućite dopuštenje korištenja aplikacije.
-        \n\nNapomena: Ne prikupljaju se podaci o korištenju aplikacije. Sve se obrađuje na vašem uređaju.</string>
     <string name="pro_message">Olauncher također ima pro verziju pod nazivom Pro Launcher. Ima dodatne značajke poput vremena, widgeta, fontova, mapa, AMOLED pozadina itd.
         \n\nTo je također najbolji način da podržite programere Olauncher-a. Pogledajte!</string>
     <string name="accessibility_service_description">Dozvola za pristupačnost potrebna je za omogućavanje zaključavanja dvostrukim dodirom i tipke Početna za prikaz nedavnih aplikacija. Bilo koji podatci prikupljeni ovim servisom neće napustiti tvoj uređaj.</string>
@@ -66,15 +62,12 @@
     <string name="swipe_down_for">Povuci prema dolje za</string>
     <string name="search">Pretraživanje</string>
     <string name="notifications">Obavijesti</string>
-    <string name="learn_more">Saznajte više</string>
-    <string name="screen_time">Vrijeme na ekranu</string>
     <string name="leave_a_review">Ostavite recenziju</string>
     <string name="review_message">Olauncher jest i uvijek će biti potpuno besplatan. Nema reklama. Ne prikuplja podatke. Što je najvažnije, pomaže vam u smanjenju vremena koje provodite pred ekranom i živite zdravijim digitalnim životom.
         \n\nVjerujemo da je prelazak na minimalni launcher izvrsna odluka. Iako smo očito pristrani, nadamo se da uživate u iskustvu. Slobodno podijelite svoje misli s nama!</string>
 
     <string name="accessibility_disclosure">Molimo vas da uključite Olauncherovu uslugu pristupa u postavkama vašeg uređaja kako biste omogućili geste dvostrukog dodira za zaključavanje ili tipke Početna za prikaz nedavnih aplikacija.\n\nImajte na umu da se ova usluga koristi samo za te geste. Naša usluga pristupa ne prikuplja niti dijeli bilo kakve podatke.</string>
     <string name="accept">Prihvati</string>
-    <string name="permission">Dozvola</string>
     <string name="double_tap_lock">Dvostruki dodir za zaključavanje</string>
     <string name="home_button_show_recents">Tipka za početnu stranicu za nedavne</string>
     <string name="enable">Omogući</string>

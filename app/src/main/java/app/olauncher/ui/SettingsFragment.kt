@@ -22,7 +22,6 @@ import app.olauncher.data.Constants
 import app.olauncher.data.Prefs
 import app.olauncher.databinding.FragmentSettingsBinding
 import app.olauncher.helper.animateAlpha
-import app.olauncher.helper.appUsagePermissionGranted
 import app.olauncher.helper.getColorFromAttr
 import app.olauncher.helper.isAccessServiceEnabled
 import app.olauncher.helper.isTablet
@@ -59,7 +58,6 @@ class SettingsFragment : BaseFragment(), View.OnClickListener, View.OnLongClickL
 
         populateProMessage()
         populateKeyboardText()
-        populateScreenTimeOnOff()
         populateLockSettings()
         // Home button for recents feature disabled
         // populateHomeButtonRecents()
@@ -84,7 +82,6 @@ class SettingsFragment : BaseFragment(), View.OnClickListener, View.OnLongClickL
             }
         }
         when (view.id) {
-            R.id.screenTimeOnOff -> viewModel.showDialog.postValue(Constants.Dialog.DIGITAL_WELLBEING)
             R.id.toggleLock -> toggleLockMode()
             // Home button for recents feature disabled
             // R.id.homeButtonRecents -> toggleHomeButtonRecents()
@@ -144,7 +141,6 @@ class SettingsFragment : BaseFragment(), View.OnClickListener, View.OnLongClickL
         // binding.homeButtonRecents.setOnClickListener(this)
         binding.homeApps.setOnClickListener(this)
         binding.hiddenApps.setOnClickListener(this)
-        binding.screenTimeOnOff.setOnClickListener(this)
         binding.statusBar.setOnClickListener(this)
         binding.dateTime.setOnClickListener(this)
         binding.dateTimeOn.setOnClickListener(this)
@@ -379,13 +375,6 @@ class SettingsFragment : BaseFragment(), View.OnClickListener, View.OnLongClickL
         binding.textSizeCurrent.text = formatted
     }
 
-    private fun populateScreenTimeOnOff() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            if (requireContext().appUsagePermissionGranted()) binding.screenTimeOnOff.text = getString(R.string.on)
-            else binding.screenTimeOnOff.text = getString(R.string.off)
-        } else binding.screenTimeLayout.visibility = View.GONE
-    }
-
     private fun populateKeyboardText() {
         if (prefs.autoShowKeyboard) binding.autoShowKeyboard.text = getString(R.string.on)
         else binding.autoShowKeyboard.text = getString(R.string.off)
@@ -444,12 +433,6 @@ class SettingsFragment : BaseFragment(), View.OnClickListener, View.OnLongClickL
         if (!prefs.swipeLeftEnabled)
             binding.swipeLeftApp.setTextColor(requireContext().getColorFromAttr(R.attr.primaryColorTrans50))
     }
-
-//    private fun populateDigitalWellbeing() {
-//        binding.digitalWellbeing.isVisible = requireContext().isPackageInstalled(Constants.DIGITAL_WELLBEING_PACKAGE_NAME).not()
-//                && requireContext().isPackageInstalled(Constants.DIGITAL_WELLBEING_SAMSUNG_PACKAGE_NAME).not()
-//                && prefs.hideDigitalWellbeing.not()
-//    }
 
     private fun appLabelOrDefault(packageName: String): String {
         if (packageName.isBlank()) return getString(R.string.dock_default)

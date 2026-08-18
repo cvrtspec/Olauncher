@@ -2,23 +2,17 @@ package app.olauncher.ui
 
 import android.app.admin.DevicePolicyManager
 import android.content.Context
-import android.content.Intent
 import android.content.pm.LauncherApps
-import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowInsets
-import android.widget.FrameLayout
 import android.widget.TextView
 import android.widget.Toast
-import androidx.annotation.RequiresApi
 import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
-import androidx.core.view.setPadding
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -28,8 +22,6 @@ import app.olauncher.data.AppModel
 import app.olauncher.data.Constants
 import app.olauncher.data.Prefs
 import app.olauncher.databinding.FragmentHomeBinding
-import app.olauncher.helper.appUsagePermissionGranted
-import app.olauncher.helper.dpToPx
 import app.olauncher.helper.expandNotificationDrawer
 import app.olauncher.helper.getUserHandleFromString
 import app.olauncher.helper.isPackageInstalled
@@ -91,7 +83,6 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
             R.id.clock -> openClockApp()
             R.id.date -> openCalendarApp()
             R.id.setDefaultLauncher -> viewModel.resetLauncherLiveData.call()
-            R.id.tvScreenTime -> openScreenTimeDigitalWellbeing()
 
             else -> {
                 try { // Launch app
@@ -144,13 +135,6 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
                 prefs.calendarAppUser = ""
             }
 
-            R.id.tvScreenTime -> {
-                showAppList(Constants.FLAG_SET_SCREEN_TIME_APP)
-                prefs.screenTimeAppPackage = ""
-                prefs.screenTimeAppClassName = ""
-                prefs.screenTimeAppUser = ""
-            }
-
             R.id.setDefaultLauncher -> {
                 prefs.hideSetDefaultLauncher = true
                 binding.setDefaultLauncher.visibility = View.GONE
@@ -178,9 +162,6 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
         })
         viewModel.toggleDateTime.observe(viewLifecycleOwner) {
             populateDateTime()
-        }
-        viewModel.screenTimeValue.observe(viewLifecycleOwner) {
-            it?.let { binding.tvScreenTime.text = it }
         }
         // Home button for recents feature disabled
         // viewModel.showRecentApps.observe(viewLifecycleOwner) {
@@ -211,8 +192,6 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
         binding.date.setOnLongClickListener(this)
         binding.setDefaultLauncher.setOnClickListener(this)
         binding.setDefaultLauncher.setOnLongClickListener(this)
-        binding.tvScreenTime.setOnClickListener(this)
-        binding.tvScreenTime.setOnLongClickListener(this)
         binding.dock1.setOnClickListener { openDockApp(1) }
         binding.dock2.setOnClickListener { openDockApp(2) }
         binding.dock3.setOnClickListener { openDockApp(3) }
@@ -247,37 +226,9 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
         binding.clock.refresh()
     }
 
-    @RequiresApi(Build.VERSION_CODES.Q)
-    private fun populateScreenTime() {
-        if (requireContext().appUsagePermissionGranted().not()) return
-
-        viewModel.getTodaysScreenTime()
-        binding.tvScreenTime.visibility = View.VISIBLE
-
-        // Fixed layout: clock top-left, all-apps button top-right, so the (opt-in) screen-time
-        // label sits at the right edge just below the all-apps button.
-        val isLandscape = resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
-        val horizontalMargin = if (isLandscape) 64.dpToPx() else 10.dpToPx()
-        val marginTop = if (isLandscape) 88.dpToPx() else 108.dpToPx()
-        val params = FrameLayout.LayoutParams(
-            FrameLayout.LayoutParams.WRAP_CONTENT,
-            FrameLayout.LayoutParams.WRAP_CONTENT
-        ).apply {
-            topMargin = marginTop
-            marginStart = horizontalMargin
-            marginEnd = horizontalMargin
-            gravity = Gravity.END
-        }
-        binding.tvScreenTime.layoutParams = params
-        binding.tvScreenTime.setPadding(10.dpToPx())
-    }
-
     private fun populateHomeScreen(appCountUpdated: Boolean) {
         if (appCountUpdated) hideHomeApps()
         populateDateTime()
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q)
-            populateScreenTime()
 
         val homeAppsNum = prefs.homeAppsNum
         if (homeAppsNum == 0) return
@@ -565,37 +516,6 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
             @Suppress("DEPRECATION")
             requireActivity().window.decorView.apply {
                 systemUiVisibility = View.SYSTEM_UI_FLAG_IMMERSIVE or View.SYSTEM_UI_FLAG_FULLSCREEN
-            }
-        }
-    }
-
-    private fun openScreenTimeDigitalWellbeing() {
-        if (prefs.screenTimeAppPackage.isNotBlank()) {
-            launchApp(
-                "Screen Time",
-                prefs.screenTimeAppPackage,
-                prefs.screenTimeAppClassName,
-                prefs.screenTimeAppUser
-            )
-            return
-        }
-        val intent = Intent()
-        try {
-            intent.setClassName(
-                Constants.DIGITAL_WELLBEING_PACKAGE_NAME,
-                Constants.DIGITAL_WELLBEING_ACTIVITY
-            )
-            startActivity(intent)
-        } catch (e: Exception) {
-            e.printStackTrace()
-            try {
-                intent.setClassName(
-                    Constants.DIGITAL_WELLBEING_SAMSUNG_PACKAGE_NAME,
-                    Constants.DIGITAL_WELLBEING_SAMSUNG_ACTIVITY
-                )
-                startActivity(intent)
-            } catch (e: Exception) {
-                e.printStackTrace()
             }
         }
     }

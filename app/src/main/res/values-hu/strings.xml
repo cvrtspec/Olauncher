@@ -45,10 +45,6 @@
     <!--        \n\nHa van egy kis ideje, kérjük, ossza meg másokkal is az Olauncher-t. Az Olauncher-nek szüksége van emberekre. De ami még fontosabb, az embereknek szüksége van az Olauncher-re..</string>-->
     <string name="keyboard_message">Üdvözöljük! A billentyűzet a leggyorsabb módja az alkalmazások megtalálásához és elindításához az Olauncherben. Megkérhetjük, hogy hagyja bekapcsolva még néhány napig, és utána döntsön?
         \n\nA választás mindig az Öné.</string>
-    <string name="digital_wellbeing_message">Ha időkorlátokat szeretne beállítani bizonyos alkalmazásokhoz, az Android Digital Wellbeing funkciója segíthet ebben.
-        \n\nKeresse meg a Digitális jólét elemet a telefon beállításai között, és engedélyezze.</string>
-    <string name="app_usage_message">A képernyőidő megjelenítéséhez/elrejtéséhez a kezdőképernyőn engedélyezze vagy tagadja meg az alkalmazás használati engedélyét.
-        \n\nMegjegyzés: Nem gyűjtünk alkalmazás-használati adatokat. Minden az Ön eszközén kerül feldolgozásra.</string>
     <string name="pro_message">Az Olauncher-nek van egy pro verziója is, amely Pro Launcher néven ismert. További funkciókat kínál, mint például időjárás, widgetek, betűtípusok, mappák, AMOLED háttérképek stb.
         \n\nEz a legjobb módja annak, hogy támogassa az Olauncher fejlesztőit. Tekintse meg őket!</string>
     <string name="accessibility_service_description">A hozzáférhetőségi engedély szükséges a dupla koppintás általi zároláshoz és a kezdőgomb megnyomásával a legutóbbi alkalmazások megjelenítéséhez. Az Olauncher által ezen a szolgáltatáson keresztül megszerzett adatok nem hagyják el a készüléket.</string>
@@ -72,7 +68,6 @@
     <string name="notifications">Értesítések</string>
     <string name="accessibility_disclosure">Kérjük, kapcsolja be az Olauncher hozzáférhetőségi szolgáltatását az eszköz beállításaiban a dupla koppintás zároláshoz vagy a kezdőgomb a legutóbbi alkalmazásokhoz gesztusok engedélyezéséhez.\n\nKérjük, vegye figyelembe, hogy ez a szolgáltatás csak ezekhez a gesztusokhoz használatos. Hozzáférhetőségi szolgáltatásunk nem gyűjt és nem oszt meg semmilyen adatot.</string>
     <string name="accept">Elfogad</string>
-    <string name="permission">Engedély</string>
     <string name="double_tap_lock">Dupla koppintás a lezáráshoz</string>
     <string name="home_button_show_recents">Kezdőlap gomb a legutóbbiakhoz</string>
     <string name="enable">Engedélyezés</string>
@@ -101,8 +96,6 @@
     <string name="adapter_show">Mutasd!</string>
     <string name="adapter_hide">Rejtsd el!</string>
     <string name="are_you_using_your_phone_or_is_your_phone_using_you">Ön használja a telefonját, vagy a telefonja használja Önt?</string>
-    <string name="screen_time">Képernyőidő</string>
-    <string name="learn_more">Tudjon meg többet</string>
     <string name="leave_a_review">Hagyjon véleményt</string>
     <string name="review_message">Az Olauncher teljesen ingyenes és mindig is az lesz. Nincsenek hirdetései, nem gyűjt adatokat, és segít csökkenteni a képernyő előtt töltött időt egy egészségesebb digitális élet végett.
         \n\nÚgy gondoljuk, hogy egy minimális indítóra váltás kiváló döntés, és reméljük, hogy élvezni fogja. Ossza meg másokkal is tapasztalatait!</string>

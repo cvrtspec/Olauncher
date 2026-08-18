@@ -14,7 +14,6 @@ object Constants {
         const val SHARE = "SHARE"
         const val HIDDEN = "HIDDEN"
         const val KEYBOARD = "KEYBOARD"
-        const val DIGITAL_WELLBEING = "DIGITAL_WELLBEING"
         const val PRO_MESSAGE = "PRO_MESSAGE"
     }
 
@@ -79,7 +78,6 @@ object Constants {
     const val FLAG_SET_SWIPE_LEFT_APP = 11
     const val FLAG_SET_CLOCK_APP = 13
     const val FLAG_SET_CALENDAR_APP = 14
-    const val FLAG_SET_SCREEN_TIME_APP = 15
     const val FLAG_SET_DOCK_1 = 21
     const val FLAG_SET_DOCK_2 = 22
     const val FLAG_SET_DOCK_3 = 23
@@ -108,10 +106,5 @@ object Constants {
     const val URL_NTS = "https://play.google.com/store/apps/details?id=com.makenotetoself"
     const val URL_PENTASTIC = "https://play.google.com/store/apps/details?id=app.pentastic"
     const val URL_DUCK_SEARCH = "https://duck.co/?q="
-    const val URL_DIGITAL_WELLBEING_LEARN_MORE = "https://tanujnotes.substack.com/p/digital-wellbeing-app-on-android?utm_source=olauncher"
 
-    const val DIGITAL_WELLBEING_PACKAGE_NAME = "com.google.android.apps.wellbeing"
-    const val DIGITAL_WELLBEING_ACTIVITY = "com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity"
-    const val DIGITAL_WELLBEING_SAMSUNG_PACKAGE_NAME = "com.samsung.android.forest"
-    const val DIGITAL_WELLBEING_SAMSUNG_ACTIVITY = "com.samsung.android.forest.launcher.LauncherActivity"
 }

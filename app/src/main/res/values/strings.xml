@@ -84,9 +84,6 @@
     <!--         \n\nIf you have a moment to spare, could you please share Olauncher with others? Olauncher needs people. More importantly, people need Olauncher.</string>-->
     <string name="keyboard_message">Hi, keyboard is the fastest way to find and launch apps in Olauncher. Can we request you to keep this On for a few more days and then decide?
         \n\nThe choice is always yours.</string>
-    <string name="digital_wellbeing_message">If you want to set time limits for certain apps, Digital Wellbeing feature of Android can help you do it.           Please search for Digital Wellbeing in your phone settings and enable it.</string>
-    <string name="app_usage_message">To show/hide your screen time on the home screen, please allow or disallow the app usage permission.
-        \n\nNote: No app usage data is collected. Everything is processed on your device.</string>
     <string name="pro_message">Olauncher also has a pro version called Pro Launcher. It has extra features like weather, widgets, fonts, folders, AMOLED wallpapers, and so on.
         \n\nIt\'s also the best way to support the developers of Olauncher. Check it out!</string>
     <string name="accessibility_service_description">The accessibility permission is required to enable the gesture - double tap to lock . Any data acquired by Olauncher via this service will not leave your device.</string>
@@ -109,7 +106,6 @@
     <string name="accessibility_disclosure">Please turn on Olauncher\'s accessibility service in your device\'s settings to enable Double tap to lock gesture.
     \n\nPlease note that this service is only used for this particular feature. Our accessibility service does not collect or share any data.</string>
     <string name="accept">Accept</string>
-    <string name="permission">Permission</string>
     <string name="double_tap_lock">Double tap to lock</string>
     <string name="enable">Enable</string>
     <string name="disable">Disable</string>
@@ -138,8 +134,6 @@
     <string name="adapter_show">Show</string>
     <string name="adapter_hide">Hide</string>
     <string name="are_you_using_your_phone_or_is_your_phone_using_you">Are you using your phone, or is your phone using you?</string>
-    <string name="screen_time">Screen time</string>
-    <string name="learn_more">Learn more</string>
     <string name="leave_a_review">Leave a review</string>
     <string name="review_message">Olauncher is free and always will be. It has no ads, collects no data, and reduces your screen time, resulting in a healthier life.
         \n\nWe hope you enjoy it. Tell us what you think.</string>
