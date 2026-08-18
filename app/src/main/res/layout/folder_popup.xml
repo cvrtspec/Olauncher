@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/folderPopupRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/folder_popup_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/folderPopupTitle"
+        style="@style/TextSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="52dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/folderPopupDivider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?attr/primaryColor" />
+
+    <LinearLayout
+        android:id="@+id/folderPopupList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="8dp" />
+</LinearLayout>

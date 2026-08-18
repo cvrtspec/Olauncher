@@ -579,7 +579,12 @@ class Prefs(context: Context) {
     }
 
     // ---- Folders (app list). JSON: [{"id":..,"name":..,"apps":["package|user",...]}]. An app is in at most one folder. ----
-    data class Folder(val id: String, var name: String, val apps: MutableList<String>)
+    data class Folder(
+        val id: String,
+        var name: String,
+        val apps: MutableList<String>,
+        val labels: MutableMap<String, String> = mutableMapOf()
+    )
 
     fun getFolders(): MutableList<Folder> {
         val list = mutableListOf<Folder>()
@@ -590,7 +595,10 @@ class Prefs(context: Context) {
                 val apps = mutableListOf<String>()
                 val a = o.optJSONArray("apps")
                 if (a != null) for (j in 0 until a.length()) apps.add(a.getString(j))
-                list.add(Folder(o.getString("id"), o.optString("name", ""), apps))
+                val labels = mutableMapOf<String, String>()
+                val l = o.optJSONObject("labels")
+                if (l != null) for (k in l.keys()) labels[k] = l.optString(k, "")
+                list.add(Folder(o.getString("id"), o.optString("name", ""), apps, labels))
             }
         } catch (_: Exception) {
         }
@@ -606,6 +614,9 @@ class Prefs(context: Context) {
             val a = JSONArray()
             for (k in f.apps) a.put(k)
             o.put("apps", a)
+            val l = JSONObject()
+            for ((k, v) in f.labels) if (k in f.apps) l.put(k, v)
+            o.put("labels", l)
             arr.put(o)
         }
         prefs.edit { putString(FOLDERS, arr.toString()) }
@@ -636,16 +647,25 @@ class Prefs(context: Context) {
     }
 
     /** Puts the app (key = "package|user") in the folder, taking it out of any other folder. */
-    fun assignAppToFolder(id: String, key: String) {
+    fun assignAppToFolder(id: String, key: String, label: String = "") {
         val folders = getFolders()
-        for (f in folders) f.apps.remove(key)
-        folders.find { it.id == id }?.apps?.add(key)
+        for (f in folders) {
+            f.apps.remove(key)
+            f.labels.remove(key)
+        }
+        folders.find { it.id == id }?.let {
+            it.apps.add(key)
+            if (label.isNotBlank()) it.labels[key] = label
+        }
         saveFolders(folders)
     }
 
     fun removeAppFromFolders(key: String) {
         val folders = getFolders()
-        for (f in folders) f.apps.remove(key)
+        for (f in folders) {
+            f.apps.remove(key)
+            f.labels.remove(key)
+        }
         saveFolders(folders)
     }
 

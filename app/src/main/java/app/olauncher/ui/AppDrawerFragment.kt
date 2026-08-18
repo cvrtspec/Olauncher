@@ -411,13 +411,13 @@ class AppDrawerFragment : BaseFragment() {
                 if (which == folders.size) {
                     showFolderNameDialog(R.string.folder_new, "") { name ->
                         val folder = prefs.addFolder(name)
-                        prefs.assignAppToFolder(folder.id, folderKey(app))
+                        prefs.assignAppToFolder(folder.id, folderKey(app), app.appLabel)
                         requireContext().showToast(getString(R.string.folder_moved))
                         renderFolders()
                         updateCombinedAppList()
                     }
                 } else {
-                    prefs.assignAppToFolder(folders[which].id, folderKey(app))
+                    prefs.assignAppToFolder(folders[which].id, folderKey(app), app.appLabel)
                     requireContext().showToast(getString(R.string.folder_moved))
                     renderFolders()
                     updateCombinedAppList()

@@ -4,6 +4,11 @@ import android.content.Context
 import android.content.pm.LauncherApps
 import android.os.Build
 import android.os.Bundle
+import android.view.WindowManager
+import android.view.Window
+import android.graphics.drawable.ColorDrawable
+import android.graphics.Color
+import android.app.Dialog
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,6 +25,7 @@ import app.olauncher.data.AppModel
 import app.olauncher.data.Constants
 import app.olauncher.data.Prefs
 import app.olauncher.databinding.FragmentHomeBinding
+import app.olauncher.databinding.FolderPopupBinding
 import app.olauncher.helper.expandNotificationDrawer
 import app.olauncher.helper.getUserHandleFromString
 import app.olauncher.helper.isPackageInstalled
@@ -291,8 +297,8 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
         // A folder placed on the home list: name (may be blank) plus a folder icon.
         if (packageName == Constants.FOLDER_PACKAGE) {
             textView.text = appName
-            textView.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_folder, 0)
-            textView.compoundDrawablePadding = (8 * resources.displayMetrics.density).toInt()
+            textView.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_folder_home, 0)
+            textView.compoundDrawablePadding = (10 * resources.displayMetrics.density).toInt()
             return true
         }
         textView.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, 0, 0)
@@ -408,7 +414,7 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
 
     private fun homeAppClicked(location: Int) {
         if (prefs.getAppPackage(location) == Constants.FOLDER_PACKAGE) {
-            showAppList(Constants.FLAG_LAUNCH_APP, folderId = prefs.getShortcutId(location))
+            showFolderPopup(prefs.getShortcutId(location))
             return
         }
         launchAppOrShortcut(
@@ -420,6 +426,55 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
             userString = prefs.getAppUser(location)
         )
     }
+
+    /** A folder on the home list opens as a small bordered window listing its apps (Oasis style). */
+    private fun showFolderPopup(folderId: String) {
+        val folder = prefs.getFolders().find { it.id == folderId }
+        if (folder == null) {
+            requireContext().showToast(getString(R.string.folder_missing))
+            viewModel.refreshHome(true)
+            return
+        }
+        val popup = FolderPopupBinding.inflate(layoutInflater)
+        popup.folderPopupTitle.text = folder.name
+        val dialog = Dialog(requireContext())
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setContentView(popup.root)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.window?.setLayout((resources.displayMetrics.widthPixels * 0.78).toInt(), WindowManager.LayoutParams.WRAP_CONTENT)
+        val pm = requireContext().packageManager
+        if (folder.apps.isEmpty()) {
+            val row = TextView(requireContext(), null, 0, R.style.TextSmallLight)
+            row.text = getString(R.string.folder_empty)
+            row.setPadding(padPx(20), padPx(10), padPx(20), padPx(10))
+            popup.folderPopupList.addView(row)
+        }
+        for (key in folder.apps) {
+            val packageName = key.substringBefore("|")
+            val userString = key.substringAfter("|", "")
+            val label = prefs.getAppRenameLabel(packageName).ifBlank { folder.labels[key] ?: "" }.ifBlank {
+                try {
+                    pm.getApplicationLabel(pm.getApplicationInfo(packageName, 0)).toString()
+                } catch (e: Exception) {
+                    packageName
+                }
+            }
+            val row = TextView(requireContext(), null, 0, R.style.TextLarge)
+            row.text = label
+            row.setPadding(padPx(20), padPx(6), padPx(20), padPx(6))
+            row.setOnClickListener {
+                dialog.dismiss()
+                launchAppOrShortcut(
+                    appName = label, packageName = packageName, activityClassName = null,
+                    shortcutId = null, isShortcut = false, userString = userString
+                )
+            }
+            popup.folderPopupList.addView(row)
+        }
+        dialog.show()
+    }
+
+    private fun padPx(dp: Int): Int = (dp * resources.displayMetrics.density).toInt()
 
     /** Dock slot 1..3: the chosen app/shortcut, or the system default (dialer / messaging / mail). */
     private fun openDockApp(slot: Int) {

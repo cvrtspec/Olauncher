@@ -38,6 +38,7 @@ import kotlinx.coroutines.withContext
 import java.text.Collator
 import kotlin.math.pow
 import kotlin.math.sqrt
+import java.util.Calendar
 
 fun Context.showToast(message: String?, duration: Int = Toast.LENGTH_SHORT) {
     if (message.isNullOrBlank()) return
@@ -344,24 +345,53 @@ fun openAlarmApp(context: Context) {
 }
 
 /**
- * Opens the calendar app at "now" asking for a specific view ("DAY", "WEEK", "MONTH", "AGENDA").
- * The view hint is the "VIEW" extra understood by AOSP-derived calendars; apps that ignore it
- * still open at today's date. Falls back to the plain calendar launch.
+ * Opens the calendar app at "now" in the requested view ("DAY" or "MONTH").
+ *
+ * What is actually addressable from an intent:
+ *  - AOSP-derived calendars (Samsung's included) read only the "VIEW"="DAY" extra; anything else,
+ *    including "MONTH", is ignored and the app opens in its last-used view.
+ *  - Google Calendar handles its own web deep links, which name the view explicitly
+ *    (.../calendar/u/0/r/month/YYYY/M/D); that path is used for MONTH when Google Calendar is
+ *    the handler, falling back to the plain time intent if the app does not accept the link.
  */
 fun openCalendarView(context: Context, view: String) {
-    try {
+    val now = Calendar.getInstance()
+    val timeIntent = try {
         val calendarUri = CalendarContract.CONTENT_URI
             .buildUpon()
             .appendPath("time")
-            .appendPath(System.currentTimeMillis().toString())
+            .appendPath(now.timeInMillis.toString())
             .build()
-        val intent = Intent(Intent.ACTION_VIEW, calendarUri)
-        intent.putExtra("VIEW", view)
-        context.startActivity(intent)
+        Intent(Intent.ACTION_VIEW, calendarUri)
+    } catch (e: Exception) {
+        openCalendar(context)
+        return
+    }
+    val handler = try {
+        context.packageManager.resolveActivity(timeIntent, 0)?.activityInfo?.packageName
+    } catch (e: Exception) {
+        null
+    }
+    if (view != "DAY" && handler == GOOGLE_CALENDAR_PACKAGE) {
+        val path = if (view == "MONTH") "month" else "week"
+        val url = "https://calendar.google.com/calendar/u/0/r/$path/" +
+                "${now.get(Calendar.YEAR)}/${now.get(Calendar.MONTH) + 1}/${now.get(Calendar.DAY_OF_MONTH)}"
+        try {
+            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)).setPackage(GOOGLE_CALENDAR_PACKAGE))
+            return
+        } catch (e: Exception) {
+            // not accepted - fall through to the time intent (opens in the last-used view)
+        }
+    }
+    timeIntent.putExtra("VIEW", view)
+    try {
+        context.startActivity(timeIntent)
     } catch (e: Exception) {
         openCalendar(context)
     }
 }
+
+private const val GOOGLE_CALENDAR_PACKAGE = "com.google.android.calendar"
 
 fun openCalendar(context: Context) {
     try {
