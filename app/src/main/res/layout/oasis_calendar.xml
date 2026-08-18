@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/oasis_calendar"
-            android:textSize="36sp" />
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/calToday"
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:padding="6dp"
             android:text="@string/oasis_calendar_today"
-            android:textSize="28sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/calOpen"
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:padding="6dp"
             android:text="@string/oasis_calendar_open"
-            android:textSize="28sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/calRefresh"
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:padding="6dp"
             android:text="@string/oasis_calendar_refresh"
-            android:textSize="40sp" />
+            android:textSize="28sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:padding="6dp"
             android:text="@string/oasis_prev"
-            android:textSize="40sp" />
+            android:textSize="28sp" />
 
         <TextView
             android:id="@+id/calDate"
@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:textSize="30sp" />
+            android:textSize="21sp" />
 
         <TextView
             android:id="@+id/calNext"
@@ -83,7 +83,7 @@
             android:layout_height="wrap_content"
             android:padding="6dp"
             android:text="@string/oasis_next"
-            android:textSize="40sp" />
+            android:textSize="28sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -99,7 +99,7 @@
         android:layout_height="wrap_content"
         android:paddingVertical="4dp"
         android:text="@string/oasis_calendar_empty"
-        android:textSize="30sp" />
+        android:textSize="21sp" />
 
     <TextView
         android:id="@+id/calPermission"
@@ -108,5 +108,5 @@
         android:layout_height="wrap_content"
         android:paddingVertical="8dp"
         android:text="@string/oasis_calendar_permission"
-        android:textSize="30sp" />
+        android:textSize="21sp" />
 </LinearLayout>

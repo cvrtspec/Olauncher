@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/oasis_notes"
-            android:textSize="36sp" />
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/notesPrev"
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:padding="6dp"
             android:text="@string/oasis_prev"
-            android:textSize="40sp" />
+            android:textSize="28sp" />
 
         <TextView
             android:id="@+id/notesPage"
@@ -40,7 +40,7 @@
             android:gravity="center"
             android:minWidth="44dp"
             android:text="1/5"
-            android:textSize="30sp" />
+            android:textSize="21sp" />
 
         <TextView
             android:id="@+id/notesNext"
@@ -49,7 +49,7 @@
             android:layout_height="wrap_content"
             android:padding="6dp"
             android:text="@string/oasis_next"
-            android:textSize="40sp" />
+            android:textSize="28sp" />
 
         <TextView
             android:id="@+id/notesSave"
@@ -59,7 +59,7 @@
             android:layout_marginStart="8dp"
             android:padding="6dp"
             android:text="@string/oasis_done"
-            android:textSize="45sp" />
+            android:textSize="31sp" />
     </LinearLayout>
 
     <EditText
@@ -74,5 +74,5 @@
         android:inputType="textMultiLine|textCapSentences"
         android:minLines="3"
         android:textColorHint="?attr/primaryColorTrans50"
-        android:textSize="30sp" />
+        android:textSize="21sp" />
 </LinearLayout>

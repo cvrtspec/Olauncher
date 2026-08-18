@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:paddingBottom="8dp"
         android:text="@string/oasis_pomodoro"
-        android:textSize="36sp" />
+        android:textSize="25sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,7 +31,7 @@
             android:gravity="center"
             android:padding="8dp"
             android:text="@string/oasis_pomo_work"
-            android:textSize="28sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/pomoShort"
@@ -42,7 +42,7 @@
             android:gravity="center"
             android:padding="8dp"
             android:text="@string/oasis_pomo_short"
-            android:textSize="28sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/pomoLong"
@@ -53,7 +53,7 @@
             android:gravity="center"
             android:padding="8dp"
             android:text="@string/oasis_pomo_long"
-            android:textSize="28sp" />
+            android:textSize="20sp" />
     </LinearLayout>
 
     <TextView
@@ -65,7 +65,7 @@
         android:gravity="center"
         android:paddingVertical="12dp"
         android:text="25:00"
-        android:textSize="96sp" />
+        android:textSize="67sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -80,7 +80,7 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:text="@string/oasis_pomo_start"
-            android:textSize="36sp" />
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/pomoReset"
@@ -90,6 +90,6 @@
             android:layout_marginStart="24dp"
             android:padding="10dp"
             android:text="@string/oasis_calendar_refresh"
-            android:textSize="45sp" />
+            android:textSize="31sp" />
     </LinearLayout>
 </LinearLayout>
