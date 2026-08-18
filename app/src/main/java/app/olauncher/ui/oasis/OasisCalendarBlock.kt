@@ -13,7 +13,7 @@ import app.olauncher.R
 import app.olauncher.data.Prefs
 import app.olauncher.databinding.OasisCalendarBinding
 import app.olauncher.databinding.OasisEventRowBinding
-import app.olauncher.helper.openCalendarView
+import app.olauncher.helper.openCalendar
 import app.olauncher.helper.showToast
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -23,7 +23,7 @@ import java.util.Locale
 /**
  * Calendar block: a per-day agenda read from CalendarContract.Instances (READ_CALENDAR,
  * requested at runtime), with date navigation, a jump-to-today control, an "open calendar
- * app" day/month views (openCalendarView), and a refresh.
+ * app" icon (Olauncher's openCalendar helper), and a refresh; tapping the date returns to today.
  */
 class OasisCalendarBlock(
     private val context: Context,
@@ -40,13 +40,12 @@ class OasisCalendarBlock(
         binding.apply {
             calPrev.setOnClickListener { shiftDay(-1) }
             calNext.setOnClickListener { shiftDay(1) }
-            calToday.setOnClickListener {
+            calOpenApp.setOnClickListener { openCalendar(context) }
+            calDate.setOnClickListener {
                 day.timeInMillis = System.currentTimeMillis()
                 day.toDayStart()
                 refresh()
-                openCalendarView(context, "DAY")
             }
-            calOpen.setOnClickListener { openCalendarView(context, "MONTH") }
             calRefresh.setOnClickListener { refresh() }
             calPermission.setOnClickListener { requestPermission() }
         }

@@ -23,23 +23,14 @@
             android:text="@string/oasis_calendar"
             android:textSize="25sp" />
 
-        <TextView
-            android:id="@+id/calToday"
-            style="@style/TextSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/calOpenApp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/oasis_calendar_open_app"
             android:padding="6dp"
-            android:text="@string/oasis_calendar_today"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/calOpen"
-            style="@style/TextSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="6dp"
-            android:text="@string/oasis_calendar_month"
-            android:textSize="20sp" />
+            android:src="@drawable/ic_calendar" />
 
         <TextView
             android:id="@+id/calRefresh"
