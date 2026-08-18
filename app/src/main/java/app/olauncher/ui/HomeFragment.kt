@@ -655,7 +655,8 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
 
             override fun onSwipeRight() {
                 super.onSwipeRight()
-                openSwipeRightApp()
+                if (findNavController().currentDestination?.id == R.id.mainFragment)
+                    findNavController().navigate(R.id.action_mainFragment_to_oasisFragment)
             }
 
             override fun onSwipeUp() {
@@ -703,7 +704,8 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
 
             override fun onSwipeRight() {
                 super.onSwipeRight()
-                openSwipeRightApp()
+                if (findNavController().currentDestination?.id == R.id.mainFragment)
+                    findNavController().navigate(R.id.action_mainFragment_to_oasisFragment)
             }
 
             override fun onSwipeUp() {

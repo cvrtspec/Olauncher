@@ -24,6 +24,13 @@
             app:exitAnim="@anim/fade_exit"
             app:popEnterAnim="@anim/fade_enter"
             app:popExitAnim="@anim/fade_exit" />
+        <action
+            android:id="@+id/action_mainFragment_to_oasisFragment"
+            app:destination="@id/oasisFragment"
+            app:enterAnim="@anim/slide_in_top"
+            app:exitAnim="@anim/fade_exit"
+            app:popEnterAnim="@anim/fade_enter"
+            app:popExitAnim="@anim/slide_out_top" />
     </fragment>
 
     <fragment
@@ -54,5 +61,26 @@
             app:popEnterAnim="@anim/fade_enter"
             app:popExitAnim="@anim/fade_exit" />
     </fragment>
+
+
+    <fragment
+        android:id="@+id/oasisFragment"
+        android:name="app.olauncher.ui.oasis.OasisFragment"
+        android:label="OasisFragment"
+        tools:layout="@layout/fragment_oasis">
+        <action
+            android:id="@+id/action_oasisFragment_to_oasisSettingsFragment"
+            app:destination="@id/oasisSettingsFragment"
+            app:enterAnim="@anim/fade_enter"
+            app:exitAnim="@anim/fade_exit"
+            app:popEnterAnim="@anim/fade_enter"
+            app:popExitAnim="@anim/fade_exit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/oasisSettingsFragment"
+        android:name="app.olauncher.ui.oasis.OasisSettingsFragment"
+        android:label="OasisSettingsFragment"
+        tools:layout="@layout/fragment_oasis_settings" />
 
 </navigation>
