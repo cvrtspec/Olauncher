@@ -13,7 +13,8 @@
         android:layout_height="wrap_content"
         android:minHeight="44dp"
         android:gravity="center_vertical"
-        android:paddingHorizontal="16dp"
+        android:paddingStart="40dp"
+        android:paddingEnd="12dp"
         android:paddingVertical="10dp"
         android:textSize="18sp" />
 

@@ -456,7 +456,7 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
         if (folder.apps.isEmpty()) {
             val row = TextView(requireContext(), null, 0, R.style.TextSmallLight)
             row.text = getString(R.string.folder_empty)
-            row.setPadding(padPx(20), padPx(10), padPx(20), padPx(10))
+            row.setPadding(padPx(40), padPx(10), padPx(12), padPx(10))
             popup.folderPopupList.addView(row)
         }
         for (key in folder.apps) {
@@ -473,7 +473,7 @@ class HomeFragment : BaseFragment(), View.OnClickListener, View.OnLongClickListe
             row.text = label
             row.maxLines = 1
             row.ellipsize = TextUtils.TruncateAt.END
-            row.setPadding(padPx(16), padPx(6), padPx(16), padPx(6))
+            row.setPadding(padPx(40), padPx(6), padPx(12), padPx(6))
             row.setOnClickListener {
                 dialog.dismiss()
                 launchAppOrShortcut(
