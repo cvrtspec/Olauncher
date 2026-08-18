@@ -87,6 +87,11 @@
         android:clipToPadding="false"
         android:fadingEdgeLength="24dp"
         android:requiresFadingEdge="vertical"
+        app:fastScrollEnabled="true"
+        app:fastScrollHorizontalThumbDrawable="@drawable/fast_scroll_thumb"
+        app:fastScrollHorizontalTrackDrawable="@drawable/fast_scroll_track"
+        app:fastScrollVerticalThumbDrawable="@drawable/fast_scroll_thumb"
+        app:fastScrollVerticalTrackDrawable="@drawable/fast_scroll_track"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 </LinearLayout>
