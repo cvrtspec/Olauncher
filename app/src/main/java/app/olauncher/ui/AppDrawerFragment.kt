@@ -173,6 +173,7 @@ class AppDrawerFragment : BaseFragment() {
             appAddHomeListener = { appModel ->
                 val message = viewModel.addToHome(appModel)
                 if (message != 0) requireContext().showToast(getString(message))
+                if (message == R.string.home_app_added) updateCombinedAppList()
             },
             appFolderListener = { appModel -> onFolderAction(appModel) },
             appInfoListener = {
@@ -330,9 +331,18 @@ class AppDrawerFragment : BaseFragment() {
                 val members = prefs.getFolders().find { it.id == folderId }?.apps?.toSet() ?: emptySet()
                 combined.filter { it is AppModel.App && folderKey(it) in members }.toMutableList()
             } else {
+                // Plain list: apps that live in a folder are reachable through the folder, and apps,
+                // shortcuts and folders that sit on the home screen are reachable from home.
                 val foldered = prefs.folderedAppKeys()
-                if (foldered.isEmpty()) combined
-                else combined.filter { !(it is AppModel.App && folderKey(it) in foldered) }.toMutableList()
+                val homeApps = prefs.homeAppKeys()
+                val homeShortcuts = prefs.homeShortcutKeys()
+                combined.filter {
+                    when (it) {
+                        is AppModel.App -> folderKey(it) !in foldered && folderKey(it) !in homeApps
+                        is AppModel.PinnedShortcut -> "${it.appPackage}|${it.user}|${it.shortcutId}" !in homeShortcuts
+                        else -> true
+                    }
+                }.toMutableList()
             }
         }
         adapter.inFolder = flag == Constants.FLAG_LAUNCH_APP && currentFolderId != null
@@ -368,11 +378,12 @@ class AppDrawerFragment : BaseFragment() {
             return
         }
         binding.search.queryHint = " ___"
-        if (folders.isEmpty()) {
+        val listFolders = folders.filterNot { prefs.homeContainsFolder(it.id) }
+        if (listFolders.isEmpty()) {
             container.isVisible = false
             return
         }
-        for (folder in folders) {
+        for (folder in listFolders) {
             val row = FolderRowBinding.inflate(layoutInflater, container, false)
             row.folderName.text = folderLabel(folder)
             row.folderCount.text = folder.apps.size.toString()
@@ -465,6 +476,7 @@ class AppDrawerFragment : BaseFragment() {
                         if (onHome) prefs.removeFolderFromHome(folder.id)
                         else if (!prefs.addFolderToHome(folder)) requireContext().showToast(getString(R.string.home_apps_full))
                         viewModel.refreshHome(true)
+                        renderFolders()
                     }
 
                     1 -> showFolderNameDialog(R.string.folder_rename, folder.name) { name ->

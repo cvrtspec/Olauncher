@@ -755,6 +755,18 @@ class Prefs(context: Context) {
         return true
     }
 
+    /** Keys ("package|user") of the plain apps currently on the home list (folder and shortcut slots excluded). */
+    fun homeAppKeys(): Set<String> = (1..homeAppsNum)
+        .filter { getAppPackage(it).isNotBlank() && getAppPackage(it) != Constants.FOLDER_PACKAGE && !getIsShortcut(it) }
+        .map { "${getAppPackage(it)}|${getAppUser(it)}" }
+        .toSet()
+
+    /** Keys ("package|user|shortcutId") of the pinned shortcuts currently on the home list. */
+    fun homeShortcutKeys(): Set<String> = (1..homeAppsNum)
+        .filter { getIsShortcut(it) }
+        .map { "${getAppPackage(it)}|${getAppUser(it)}|${getShortcutId(it)}" }
+        .toSet()
+
     fun homeContains(packageName: String, user: String, isShortcut: Boolean, shortcutId: String): Boolean =
         (1..homeAppsNum).any {
             getAppPackage(it) == packageName && getAppUser(it) == user &&
