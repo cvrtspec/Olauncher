@@ -24,6 +24,18 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        // Fixed debug key committed to the repo so every build - CI runners included - carries the
+        // same signature and the APK installs in place over the previous one. Debug-only key; the
+        // release build type is untouched.
+        debug {
+            storeFile rootProject.file('keystore/oasis-debug.keystore')
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+        }
+    }
+
     buildTypes {
         release {
             debuggable false
@@ -34,6 +46,7 @@ android {
             debuggable true
             minifyEnabled false
             applicationIdSuffix ".debug"
+            signingConfig signingConfigs.debug
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
