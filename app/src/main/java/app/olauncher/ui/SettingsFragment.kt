@@ -70,6 +70,7 @@ class SettingsFragment : BaseFragment(), View.OnClickListener, View.OnLongClickL
             // R.id.homeButtonRecents -> toggleHomeButtonRecents()
             R.id.autoShowKeyboard -> toggleKeyboardText()
             R.id.homeApps -> findNavController().navigate(R.id.action_settingsFragment_to_homeAppsFragment)
+            R.id.folders -> findNavController().navigate(R.id.action_settingsFragment_to_foldersFragment)
             R.id.hiddenApps -> showHiddenApps()
             R.id.statusBar -> toggleStatusBar()
             R.id.dateTime -> binding.dateTimeSelectLayout.visibility = View.VISIBLE
@@ -118,6 +119,7 @@ class SettingsFragment : BaseFragment(), View.OnClickListener, View.OnLongClickL
         // Home button for recents feature disabled
         // binding.homeButtonRecents.setOnClickListener(this)
         binding.homeApps.setOnClickListener(this)
+        binding.folders.setOnClickListener(this)
         binding.hiddenApps.setOnClickListener(this)
         binding.statusBar.setOnClickListener(this)
         binding.dateTime.setOnClickListener(this)

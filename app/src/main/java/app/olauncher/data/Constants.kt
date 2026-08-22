@@ -85,6 +85,8 @@ object Constants {
     const val FLAG_SET_DOCK_1 = 21
     const val FLAG_SET_DOCK_2 = 22
     const val FLAG_SET_DOCK_3 = 23
+    /** App picker opened from Settings -> Folders -> "Add app"; the folder id travels in Key.FOLDER. */
+    const val FLAG_ADD_TO_FOLDER = 31
 
     const val REQUEST_CODE_LAUNCHER_SELECTOR = 678
 

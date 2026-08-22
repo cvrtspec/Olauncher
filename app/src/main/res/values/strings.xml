@@ -65,6 +65,16 @@
     <string name="folder_moved">Moved to folder</string>
     <string name="folder_missing">That folder no longer exists</string>
     <string name="folder_empty">Empty folder – add apps from the app list</string>
+    <string name="home_and_folders">Home &amp; folders</string>
+    <string name="folders">Folders</string>
+    <string name="folders_hint">Tap a folder for home screen / rename / delete. Tap an app to move it to another folder; ✕ returns it to the app list. ▲ ▼ set the order, which is also the order of the folder window on the home screen.</string>
+    <string name="folders_empty">No folders yet. Create one below, or from the app list (long press an app, then Folder).</string>
+    <string name="folder_add_app">＋ Add app…</string>
+    <string name="folder_meta_on_home">%1$s · on home screen</string>
+    <plurals name="folder_app_count">
+        <item quantity="one">%1$d app</item>
+        <item quantity="other">%1$d apps</item>
+    </plurals>
     <string name="time">Time</string>
     <string name="settings">Settings</string>
     <string name="left">Left</string>

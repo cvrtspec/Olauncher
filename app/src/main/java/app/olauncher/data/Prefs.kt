@@ -682,6 +682,23 @@ class Prefs(context: Context) {
             if (getAppPackage(i) == Constants.FOLDER_PACKAGE && getShortcutId(i) == id) removeHomeApp(i)
     }
 
+    /** Moves a folder within the folder list (0-based positions); the app list shows folder rows in this order. */
+    fun moveFolder(from: Int, to: Int) {
+        val folders = getFolders()
+        if (from !in folders.indices || to !in folders.indices || from == to) return
+        folders.add(to, folders.removeAt(from))
+        saveFolders(folders)
+    }
+
+    /** Moves an app within its folder (0-based positions); the home-screen folder window lists apps in this order. */
+    fun moveFolderApp(id: String, from: Int, to: Int) {
+        val folders = getFolders()
+        val folder = folders.find { it.id == id } ?: return
+        if (from !in folder.apps.indices || to !in folder.apps.indices || from == to) return
+        folder.apps.add(to, folder.apps.removeAt(from))
+        saveFolders(folders)
+    }
+
     // ---- Home list management (Settings -> Home apps; "Home" in the app list). Slots 1..8. ----
     fun setHomeSlot(
         location: Int, name: String, packageName: String, user: String,

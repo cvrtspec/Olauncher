@@ -95,7 +95,8 @@ class AppDrawerFragment : BaseFragment() {
         if (flag == Constants.FLAG_HIDDEN_APPS)
             binding.search.queryHint = getString(R.string.hidden_apps)
         else if (flag in Constants.FLAG_SET_HOME_APP_1..Constants.FLAG_SET_CALENDAR_APP
-            || flag in Constants.FLAG_SET_DOCK_1..Constants.FLAG_SET_DOCK_3)
+            || flag in Constants.FLAG_SET_DOCK_1..Constants.FLAG_SET_DOCK_3
+            || flag == Constants.FLAG_ADD_TO_FOLDER)
             binding.search.queryHint = "Please select an app"
         try {
             searchTextView = binding.search.findViewById(R.id.search_src_text)
@@ -164,11 +165,15 @@ class AppDrawerFragment : BaseFragment() {
             flag,
             Gravity.START,
             appClickListener = { appModel ->
-                viewModel.selectedApp(appModel, flag)
-                if (flag == Constants.FLAG_LAUNCH_APP || flag == Constants.FLAG_HIDDEN_APPS)
-                    findNavController().popBackStack(R.id.mainFragment, false)
-                else
-                    findNavController().popBackStack()
+                if (flag == Constants.FLAG_ADD_TO_FOLDER) {
+                    addPickedAppToFolder(appModel)
+                } else {
+                    viewModel.selectedApp(appModel, flag)
+                    if (flag == Constants.FLAG_LAUNCH_APP || flag == Constants.FLAG_HIDDEN_APPS)
+                        findNavController().popBackStack(R.id.mainFragment, false)
+                    else
+                        findNavController().popBackStack()
+                }
             },
             appAddHomeListener = { appModel ->
                 val message = viewModel.addToHome(appModel)
@@ -325,7 +330,11 @@ class AppDrawerFragment : BaseFragment() {
         }
 
         // Folders: in the plain list, apps that live in a folder are shown only inside that folder.
-        val listForMode: MutableList<AppModel> = if (flag != Constants.FLAG_LAUNCH_APP) combined else {
+        val listForMode: MutableList<AppModel> = if (flag == Constants.FLAG_ADD_TO_FOLDER) {
+            // "Add app" picker (Settings -> Folders): apps only, minus the ones already in this folder.
+            val members = currentFolderId?.let { id -> prefs.getFolders().find { it.id == id }?.apps?.toSet() } ?: emptySet()
+            combined.filter { it is AppModel.App && folderKey(it) !in members }.toMutableList()
+        } else if (flag != Constants.FLAG_LAUNCH_APP) combined else {
             val folderId = currentFolderId
             if (folderId != null) {
                 val members = prefs.getFolders().find { it.id == folderId }?.apps?.toSet() ?: emptySet()
@@ -406,6 +415,20 @@ class AppDrawerFragment : BaseFragment() {
         binding.search.setQuery("", false)
         renderFolders()
         updateCombinedAppList()
+    }
+
+    /** Settings -> Folders -> "Add app": the picked app joins the folder (leaving any other folder it was in). */
+    private fun addPickedAppToFolder(appModel: AppModel) {
+        val app = appModel as? AppModel.App ?: return
+        val id = currentFolderId
+        if (id == null || prefs.getFolders().none { it.id == id }) {
+            requireContext().showToast(getString(R.string.folder_missing))
+            findNavController().popBackStack()
+            return
+        }
+        prefs.assignAppToFolder(id, folderKey(app), app.appLabel)
+        requireContext().showToast(getString(R.string.folder_moved))
+        findNavController().popBackStack()
     }
 
     private fun onFolderAction(appModel: AppModel) {
